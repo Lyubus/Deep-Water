@@ -1,10 +1,11 @@
 @import '../../../styles.scss';
-@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/colors.scss';
+@import '../../../assets/scss/sizes.scss';
 
 $report-header-height: 80px;
 
 .table-header-cell {
-  background-color: $color-accelium-blue;
+  background-color: $color-accelium-purpletheme-uno-blue;
   color: white;
   font-weight: bold !important;
 

@@ -1,5 +1,6 @@
 @import '../styles.scss';
-@import '../assets/scss/variables.scss';
+@import '../assets/scss/colors.scss';
+@import '../assets/scss/sizes.scss';
 
 .toolbar a {
   float: left;
@@ -111,5 +112,5 @@
 }
 
 .page-overlay {
-  padding: 100px 200px 20px 200px;
+  padding: 0 $standard-page-padding;
 }
