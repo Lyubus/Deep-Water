@@ -125,6 +125,257 @@ export const sampleProducts = [
         FirstOrderedOn: new Date(1996, 9, 19)
     },
     {
+        ProductID: 4,
+        ProductName: 'Chef Anton\'s Cajun Seasoning',
+        SupplierID: 2,
+        CategoryID: 2,
+        QuantityPerUnit: '48 - 6 oz jars',
+        UnitPrice: 22,
+        UnitsInStock: 53,
+        UnitsOnOrder: 0,
+        ReorderLevel: 0,
+        Discontinued: false,
+        Category: {
+            CategoryID: 2,
+            CategoryName: 'Condiments',
+            Description: 'Sweet and savory sauces, relishes, spreads, and seasonings'
+        },
+        FirstOrderedOn: new Date(1996, 9, 19)
+    },
+    {
+        ProductID: 4,
+        ProductName: 'Chef Anton\'s Cajun Seasoning',
+        SupplierID: 2,
+        CategoryID: 2,
+        QuantityPerUnit: '48 - 6 oz jars',
+        UnitPrice: 22,
+        UnitsInStock: 53,
+        UnitsOnOrder: 0,
+        ReorderLevel: 0,
+        Discontinued: false,
+        Category: {
+            CategoryID: 2,
+            CategoryName: 'Condiments',
+            Description: 'Sweet and savory sauces, relishes, spreads, and seasonings'
+        },
+        FirstOrderedOn: new Date(1996, 9, 19)
+    },
+    {
+        ProductID: 4,
+        ProductName: 'Chef Anton\'s Cajun Seasoning',
+        SupplierID: 2,
+        CategoryID: 2,
+        QuantityPerUnit: '48 - 6 oz jars',
+        UnitPrice: 22,
+        UnitsInStock: 53,
+        UnitsOnOrder: 0,
+        ReorderLevel: 0,
+        Discontinued: false,
+        Category: {
+            CategoryID: 2,
+            CategoryName: 'Condiments',
+            Description: 'Sweet and savory sauces, relishes, spreads, and seasonings'
+        },
+        FirstOrderedOn: new Date(1996, 9, 19)
+    },
+    {
+        ProductID: 4,
+        ProductName: 'Chef Anton\'s Cajun Seasoning',
+        SupplierID: 2,
+        CategoryID: 2,
+        QuantityPerUnit: '48 - 6 oz jars',
+        UnitPrice: 22,
+        UnitsInStock: 53,
+        UnitsOnOrder: 0,
+        ReorderLevel: 0,
+        Discontinued: false,
+        Category: {
+            CategoryID: 2,
+            CategoryName: 'Condiments',
+            Description: 'Sweet and savory sauces, relishes, spreads, and seasonings'
+        },
+        FirstOrderedOn: new Date(1996, 9, 19)
+    },
+    {
+        ProductID: 4,
+        ProductName: 'Chef Anton\'s Cajun Seasoning',
+        SupplierID: 2,
+        CategoryID: 2,
+        QuantityPerUnit: '48 - 6 oz jars',
+        UnitPrice: 22,
+        UnitsInStock: 53,
+        UnitsOnOrder: 0,
+        ReorderLevel: 0,
+        Discontinued: false,
+        Category: {
+            CategoryID: 2,
+            CategoryName: 'Condiments',
+            Description: 'Sweet and savory sauces, relishes, spreads, and seasonings'
+        },
+        FirstOrderedOn: new Date(1996, 9, 19)
+    },
+    {
+        ProductID: 4,
+        ProductName: 'Chef Anton\'s Cajun Seasoning',
+        SupplierID: 2,
+        CategoryID: 2,
+        QuantityPerUnit: '48 - 6 oz jars',
+        UnitPrice: 22,
+        UnitsInStock: 53,
+        UnitsOnOrder: 0,
+        ReorderLevel: 0,
+        Discontinued: false,
+        Category: {
+            CategoryID: 2,
+            CategoryName: 'Condiments',
+            Description: 'Sweet and savory sauces, relishes, spreads, and seasonings'
+        },
+        FirstOrderedOn: new Date(1996, 9, 19)
+    },{
+        ProductID: 4,
+        ProductName: 'Chef Anton\'s Cajun Seasoning',
+        SupplierID: 2,
+        CategoryID: 2,
+        QuantityPerUnit: '48 - 6 oz jars',
+        UnitPrice: 22,
+        UnitsInStock: 53,
+        UnitsOnOrder: 0,
+        ReorderLevel: 0,
+        Discontinued: false,
+        Category: {
+            CategoryID: 2,
+            CategoryName: 'Condiments',
+            Description: 'Sweet and savory sauces, relishes, spreads, and seasonings'
+        },
+        FirstOrderedOn: new Date(1996, 9, 19)
+    },
+    {
+        ProductID: 4,
+        ProductName: 'Chef Anton\'s Cajun Seasoning',
+        SupplierID: 2,
+        CategoryID: 2,
+        QuantityPerUnit: '48 - 6 oz jars',
+        UnitPrice: 22,
+        UnitsInStock: 53,
+        UnitsOnOrder: 0,
+        ReorderLevel: 0,
+        Discontinued: false,
+        Category: {
+            CategoryID: 2,
+            CategoryName: 'Condiments',
+            Description: 'Sweet and savory sauces, relishes, spreads, and seasonings'
+        },
+        FirstOrderedOn: new Date(1996, 9, 19)
+    },
+    {
+        ProductID: 4,
+        ProductName: 'Chef Anton\'s Cajun Seasoning',
+        SupplierID: 2,
+        CategoryID: 2,
+        QuantityPerUnit: '48 - 6 oz jars',
+        UnitPrice: 22,
+        UnitsInStock: 53,
+        UnitsOnOrder: 0,
+        ReorderLevel: 0,
+        Discontinued: false,
+        Category: {
+            CategoryID: 2,
+            CategoryName: 'Condiments',
+            Description: 'Sweet and savory sauces, relishes, spreads, and seasonings'
+        },
+        FirstOrderedOn: new Date(1996, 9, 19)
+    },
+    {
+        ProductID: 4,
+        ProductName: 'Chef Anton\'s Cajun Seasoning',
+        SupplierID: 2,
+        CategoryID: 2,
+        QuantityPerUnit: '48 - 6 oz jars',
+        UnitPrice: 22,
+        UnitsInStock: 53,
+        UnitsOnOrder: 0,
+        ReorderLevel: 0,
+        Discontinued: false,
+        Category: {
+            CategoryID: 2,
+            CategoryName: 'Condiments',
+            Description: 'Sweet and savory sauces, relishes, spreads, and seasonings'
+        },
+        FirstOrderedOn: new Date(1996, 9, 19)
+    },
+    {
+        ProductID: 4,
+        ProductName: 'Chef Anton\'s Cajun Seasoning',
+        SupplierID: 2,
+        CategoryID: 2,
+        QuantityPerUnit: '48 - 6 oz jars',
+        UnitPrice: 22,
+        UnitsInStock: 53,
+        UnitsOnOrder: 0,
+        ReorderLevel: 0,
+        Discontinued: false,
+        Category: {
+            CategoryID: 2,
+            CategoryName: 'Condiments',
+            Description: 'Sweet and savory sauces, relishes, spreads, and seasonings'
+        },
+        FirstOrderedOn: new Date(1996, 9, 19)
+    },
+    {
+        ProductID: 4,
+        ProductName: 'Chef Anton\'s Cajun Seasoning',
+        SupplierID: 2,
+        CategoryID: 2,
+        QuantityPerUnit: '48 - 6 oz jars',
+        UnitPrice: 22,
+        UnitsInStock: 53,
+        UnitsOnOrder: 0,
+        ReorderLevel: 0,
+        Discontinued: false,
+        Category: {
+            CategoryID: 2,
+            CategoryName: 'Condiments',
+            Description: 'Sweet and savory sauces, relishes, spreads, and seasonings'
+        },
+        FirstOrderedOn: new Date(1996, 9, 19)
+    },
+    {
+        ProductID: 4,
+        ProductName: 'Chef Anton\'s Cajun Seasoning',
+        SupplierID: 2,
+        CategoryID: 2,
+        QuantityPerUnit: '48 - 6 oz jars',
+        UnitPrice: 22,
+        UnitsInStock: 53,
+        UnitsOnOrder: 0,
+        ReorderLevel: 0,
+        Discontinued: false,
+        Category: {
+            CategoryID: 2,
+            CategoryName: 'Condiments',
+            Description: 'Sweet and savory sauces, relishes, spreads, and seasonings'
+        },
+        FirstOrderedOn: new Date(1996, 9, 19)
+    },
+    {
+        ProductID: 4,
+        ProductName: 'Chef Anton\'s Cajun Seasoning',
+        SupplierID: 2,
+        CategoryID: 2,
+        QuantityPerUnit: '48 - 6 oz jars',
+        UnitPrice: 22,
+        UnitsInStock: 53,
+        UnitsOnOrder: 0,
+        ReorderLevel: 0,
+        Discontinued: false,
+        Category: {
+            CategoryID: 2,
+            CategoryName: 'Condiments',
+            Description: 'Sweet and savory sauces, relishes, spreads, and seasonings'
+        },
+        FirstOrderedOn: new Date(1996, 9, 19)
+    },
+    {
         ProductID: 5,
         ProductName: 'Chef Anton\'s Gumbo Mix',
         SupplierID: 2,

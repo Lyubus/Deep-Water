@@ -89,7 +89,7 @@
   .toolbar {
     position: absolute;
     height: $height-standart-toolbar;
-    width: 100%;
+    width: 100vw;
     
 
     &.top {
@@ -100,11 +100,10 @@
     &.navigation {
       bottom: 0px;
       background-color: $color-accelium-bgDark;
-      padding: 0 300px;
     }
   }
 
-  img {
+  .header-image {
     position: absolute;
     width: 100%;
     height: inherit;

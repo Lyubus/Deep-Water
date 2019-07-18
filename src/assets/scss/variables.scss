@@ -2,6 +2,11 @@ $height-page-head: 474px;
 $height-standart-toolbar: 62px;
 $margin-content-containers: 12px;
 
+$small-icon-size: 18px;
+$medium-icon-size: 24px;
+$large-icon-size: 32px;
+$extra-large-icon-size: 48px;
+
 //colors
 $color-accelium-red: #e41e26;
 $color-accelium-yellow: #f99f1c;
@@ -12,3 +17,23 @@ $color-accelium-bgLight: #45566b;
 $color-accelium-bgMain: #242d38;
 $color-accelium-bgDark: #192028;
 $color-accelium-bgBlack: #0c1014;
+
+::ng-deep.small-icon {
+    width: $small-icon-size;
+    height: $small-icon-size;
+}
+
+::ng-deep.medium-icon {
+    width: $medium-icon-size;
+    height: $medium-icon-size;
+}
+
+::ng-deep.large-icon {
+    width: $large-icon-size;
+    height: $large-icon-size;
+}
+
+::ng-deep.extra-large-icon {
+    width: $extra-large-icon-size;
+    height: $extra-large-icon-size;
+}
