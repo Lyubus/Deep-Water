@@ -1,0 +1,40 @@
+@import '../../../styles.scss';
+@import '../../../assets/scss/variables.scss';
+
+$report-header-height: 80px;
+
+.table-header-cell {
+  background-color: $color-accelium-blue;
+  color: white;
+  font-weight: bold !important;
+
+  .k-icon,
+  .k-sort-order {
+    color: white;
+  }
+}
+
+.report-overlay {
+  width: 100%;
+  border-radius: 7px;
+  border: solid gray 1px;
+  box-shadow: 0 0 10px gray;
+  padding-bottom: 15px;
+
+  .header {
+    height: $report-header-height;
+    line-height: $report-header-height;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 26px;
+    padding: 10px 30px;
+    vertical-align: middle;
+  }
+
+}
+
+
+.div-with-height {
+  height: 5999px;
+  padding: 60px;
+}
