@@ -2,7 +2,7 @@
 @import '../../../assets/scss/colors.scss';
 @import '../../../assets/scss/sizes.scss';
 
-$report-header-height: 80px;
+
 
 .table-header-cell {
   background-color: $color-accelium-purpletheme-uno-blue;
@@ -15,13 +15,46 @@ $report-header-height: 80px;
   }
 }
 
-.report-overlay {
-  width: 100%;
-  border-radius: 7px;
-  border: solid gray 1px;
-  box-shadow: 0 0 10px gray;
-  padding-bottom: 15px;
+.content-overlay {
+  padding: 32px 78px 15px 78px;
+}
 
+.progress-component {
+
+  .row {
+    min-height: 130px;
+  }
+
+  span.header {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 26px;
+    display: block;
+  }
+
+  .info-section {
+    min-height: inherit;
+    display: table-cell;
+    vertical-align: middle;
+
+    span.info-label {
+      font-size: 14px;
+      color: grey;
+      word-wrap: break-word;
+
+    }
+  }
+
+  .progress-section {
+
+
+    div {
+      display: inline-block;
+    }
+  }
+}
+
+.report-component {
   .header {
     height: $report-header-height;
     line-height: $report-header-height;
@@ -29,9 +62,8 @@ $report-header-height: 80px;
     font-weight: 700;
     font-size: 26px;
     padding: 10px 30px;
-    vertical-align: middle;
+    display: block;
   }
-
 }
 
 

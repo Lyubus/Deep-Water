@@ -2,16 +2,45 @@
 @import './assets/scss/sizes.scss';
 @import "~@progress/kendo-theme-default/scss/all";
 
-*{
-    font-family: sans-serif;
+$report-header-height: 80px;
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    padding: 0;
-    margin: 0;
+body {
+  padding: 0;
+  margin: 0;
 }
 
-.content-container{
-    margin: $margin-content-containers;
+.content-container {
+  margin: $margin-content-containers;
+  width: 100%;
+  border-radius: 5px;
+  border: solid gray 1px;
+  box-shadow: 0 0 7px gray;
+
+  &.padded {
+    padding: 25px;
+  }
+
+  
 }
 
+img {
+  &.s-size {
+    width: $small-icon-size;
+  }
+
+  &.m-size {
+    width: $medium-icon-size;
+  }
+
+  &.l-size {
+    width: $large-icon-size;
+  }
+
+  &.xl-size {
+    width: $extra-large-icon-size;
+  }
+}

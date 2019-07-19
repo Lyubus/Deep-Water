@@ -1,27 +1,71 @@
-<div class="report-overlay content-container">
+<div class="content-overlay">
 
-  <div class="header">
-    etijureoigufughofihuoif
-  </div>
-  
-  <div>
-    <kendo-grid [data]="view" [sortable]="{mode: 'multiple'}" [sort]="sort"  (sortChange)="sortChange($event)">
-      <kendo-grid-column field="ProductID" title="ID" width="40" [headerClass]="'table-header-cell'">
-      </kendo-grid-column>
-      <kendo-grid-column field="ProductName" title="Name" width="250" [headerClass]="'table-header-cell'" >
-      </kendo-grid-column>
-      <kendo-grid-column field="Category.CategoryName" title="Category" [headerClass]="'table-header-cell'">
-      </kendo-grid-column>
-      <kendo-grid-column field="UnitPrice" title="Price" width="80" [headerClass]="'table-header-cell'">
-      </kendo-grid-column>
-      <kendo-grid-column field="UnitsInStock" title="In stock" width="80" [headerClass]="'table-header-cell'">
-      </kendo-grid-column>
-      <kendo-grid-column field="Discontinued" title="Discontinued" width="120" [headerClass]="'table-header-cell'">
-        <ng-template kendoGridCellTemplate let-dataItem>
-          <input type="checkbox" [checked]="dataItem.Discontinued" disabled />
-        </ng-template>
-      </kendo-grid-column>
-    </kendo-grid>
+  <div class="progress-component content-container padded">
+    <span class="header">
+      progress
+    </span>
+    <div class="row">
+      <div class="col-3 info-section">
+        <span class="info-label ">
+          fhgfhfghfghfghfghfghfghfghfghfghfhfhfghfgh
+          fhfghfghfghfghgfhfghfghfhf
+        </span>
+      </div>
 
+      <div class="col-2 progress-section">
+        <div class="">
+
+        </div>
+        <div class="">
+
+        </div>
+      </div>
+
+      <div class="col-2">
+
+      </div>
+
+      <div class="col-2">
+
+      </div>
+
+      <div class="col-2">
+
+      </div>
+
+      <div class="col-1">
+
+      </div>
+    </div>
   </div>
+
+  <div class="report-component content-container">
+
+    <div class="header">
+      report
+    </div>
+
+    <div>
+      <kendo-grid [data]="view" [sortable]="{mode: 'multiple'}" [sort]="sort" (sortChange)="sortChange($event)">
+        <kendo-grid-column field="ProductID" title="ID" width="40" [headerClass]="'table-header-cell'">
+        </kendo-grid-column>
+        <kendo-grid-column field="ProductName" title="Name" width="250" [headerClass]="'table-header-cell'">
+        </kendo-grid-column>
+        <kendo-grid-column field="Category.CategoryName" title="Category" [headerClass]="'table-header-cell'">
+        </kendo-grid-column>
+        <kendo-grid-column field="UnitPrice" title="Price" width="80" [headerClass]="'table-header-cell'">
+        </kendo-grid-column>
+        <kendo-grid-column field="UnitsInStock" title="In stock" width="80" [headerClass]="'table-header-cell'">
+        </kendo-grid-column>
+        <kendo-grid-column field="Discontinued" title="Discontinued" width="120" [headerClass]="'table-header-cell'">
+          <ng-template kendoGridCellTemplate let-dataItem>
+            <input type="checkbox" [checked]="dataItem.Discontinued" disabled />
+          </ng-template>
+        </kendo-grid-column>
+      </kendo-grid>
+
+    </div>
+  </div>
+
+
 </div>
