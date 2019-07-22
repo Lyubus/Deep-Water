@@ -2,10 +2,10 @@
 @import './assets/scss/sizes.scss';
 @import "~@progress/kendo-theme-default/scss/all";
 
-$report-header-height: 80px;
+$report-header-height: 50px;
 
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -15,7 +15,6 @@ body {
 
 .content-container {
   margin: $margin-content-containers;
-  width: 100%;
   border-radius: 5px;
   border: solid gray 1px;
   box-shadow: 0 0 7px gray;
@@ -24,23 +23,57 @@ body {
     padding: 25px;
   }
 
-  
+  .header{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 24px;
+    display: block;
+  }
 }
 
 img {
   &.s-size {
     width: $small-icon-size;
+    height: $small-icon-size;
   }
 
   &.m-size {
     width: $medium-icon-size;
+    height: $medium-icon-size;
   }
 
   &.l-size {
     width: $large-icon-size;
+    height: $large-icon-size;
   }
 
   &.xl-size {
     width: $extra-large-icon-size;
+    height: $extra-large-icon-size;
   }
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }

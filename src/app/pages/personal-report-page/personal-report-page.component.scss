@@ -4,70 +4,138 @@
 
 
 
-.table-header-cell {
-  background-color: $color-accelium-purpletheme-uno-blue;
-  color: white;
-  font-weight: bold !important;
+.achievements {
 
-  .k-icon,
-  .k-sort-order {
+    color: gray;
+
+    .content-container {
+        min-height: 300px;
+        position: relative;
+
+    }
+
+    li{
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .examinees {
+        .counter {
+            font-size: 60px;
+            color: $color-accelium-greentheme;
+
+
+            .material-icons-round {
+                font-size: 60px;
+            }
+        }
+    }
+}
+
+.table-header-cell {
+    background-color: $color-accelium-purpletheme-uno-blue;
     color: white;
-  }
+    font-weight: bold !important;
+
+    .k-icon,
+    .k-sort-order {
+        color: white;
+    }
 }
 
 .content-overlay {
-  padding: 32px 78px 15px 78px;
+    padding: 32px $standard-content-padding 15px $standard-content-padding;
 }
 
 .progress-component {
 
-  .row {
-    min-height: 130px;
-  }
+    .info-section {
 
-  span.header {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 26px;
-    display: block;
-  }
+        display: flex;
+        align-items: center;
+        word-break: break-word;
 
-  .info-section {
-    min-height: inherit;
-    display: table-cell;
-    vertical-align: middle;
-
-    span.info-label {
-      font-size: 14px;
-      color: grey;
-      word-wrap: break-word;
-
+        p {
+            font-size: 14px;
+            color: grey;
+        }
     }
-  }
 
-  .progress-section {
+    .progress-section {
 
+        display: inherit;
 
-    div {
-      display: inline-block;
+        span {
+            display: block;
+            text-align: center;
+            font-size: 24px;
+            color: gray;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        div {
+            display: inline-block;
+        }
+
+        .section-inline {
+            width: 85%;
+
+            .number {
+                font-size: 60px;
+                color: $color-accelium-greentheme;
+            }
+
+            &.caret {
+                width: 15%;
+                display: flex;
+                align-items: center;
+
+                i {
+                    color: gray;
+                    font-size: 50px;
+                }
+            }
+        }
     }
-  }
 }
 
 .report-component {
-  .header {
-    height: $report-header-height;
-    line-height: $report-header-height;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 26px;
-    padding: 10px 30px;
-    display: block;
-  }
+    .header {
+        height: $report-header-height;
+        line-height: $report-header-height;
+        margin: $margin-content-containers;
+    }
+}
+
+.general-insights-component {
+
+    .topic {
+        padding-top: 10px;
+
+        i {
+            color: $color-accelium-greentheme;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        div {
+            padding-left: 10px;
+            display: inline-block;
+            width: 95%;
+
+            span {
+                color: $color-accelium-greentheme;
+                font-weight: 700;
+            }
+
+            p {}
+        }
+    }
 }
 
 
 .div-with-height {
-  height: 5999px;
-  padding: 60px;
+    height: 5999px;
+    padding: 60px;
 }
