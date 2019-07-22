@@ -5,7 +5,7 @@
 .toolbar a {
   float: left;
   font-size: 16px;
-  color: white;
+  color: $color-white;
   text-align: center;
   padding: 7px 8px;
   text-decoration: none;
@@ -21,7 +21,7 @@
     font-size: 16px; 
     border: none;
     outline: none;
-    color: gray;
+    color: $color-gray;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
@@ -30,16 +30,29 @@
 
     &.active{
       border-bottom: solid 4px $color-accelium-yellow;
-      color: white;
+      color: $color-white;
+    }
+
+    &.organization-title{
+      color: $color-white;
+      padding: 0 15px;
+      border-radius: $default-organization-border-radius;
+      background-color: $color-accelium-blue;
     }
 
   }
 }
 
+/* The organization-dropdown container */
+.organization {
+  height: 34px;
+  margin-top: 14px;
+}
+
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  color: white;
+  color: $color-white;
 }
 
 /* Dropdown content (hidden by default) */
@@ -57,7 +70,7 @@
 
   a {
     float: none;
-    color: gray;
+    color: $color-gray;
     padding: 6px 8px;
     text-decoration: none;
     display: block;
@@ -67,19 +80,44 @@
 
     &.active{
       border-left: solid 4px $color-accelium-yellow;
-      color: white;
+      color: $color-white;
     }
 
     &:hover
     {
-      color: white;
+      color: $color-white;
     }
+  }
+}
+
+/* Dropdown organization content (hidden by default) */
+.organization-content{
+  /*display: none;*/
+  position: absolute;
+  width: 300%;
+  right: 15px;
+  top: 0;
+  background-color: $color-accelium-blue;
+  color: $color-white;
+  min-height: calc(#{$height-standart-toolbar} * 2);
+  border-radius: $default-organization-border-radius;
+  font-size: .8rem;
+  padding: 10px 0;
+  & > div {
+    float: left;
+  }
+
+  .h-100 > div:not(:last-child) {
+    border-right: 1px solid red;
   }
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+.dropdown:hover .organization-content {
+  display: flex;
 }
 
 //
@@ -90,7 +128,8 @@
   .toolbar {
     position: absolute;
     height: $height-standart-toolbar;
-    width: 100vw;
+    width: 100%;
+    padding: 0 $standard-page-padding;
     
 
     &.top {
@@ -101,6 +140,18 @@
     &.navigation {
       bottom: 0px;
       background-color: $color-accelium-bgDark;
+    }
+
+    .option-group{
+      position: absolute;
+      right: $default-right-margin;
+    }
+
+    .sign-out{
+      text-transform: uppercase;
+      color: $color-white;
+      cursor: pointer;
+      font-size: .9rem;
     }
   }
 

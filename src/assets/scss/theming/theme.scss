@@ -1,0 +1,24 @@
+@import '../../../assets/scss/sizes.scss';
+
+img{
+	&.xs{
+		height: $extra-small-size;
+		width: $extra-small-size;
+	}
+	&.sm{
+		height: $small-icon-size;
+		width: $small-icon-size;
+	}
+	&.md{
+		height: $medium-icon-size;
+		width: $medium-icon-size;
+	}
+	&.lg{
+		height: $large-icon-size;
+		width: $large-icon-size;
+	}
+	&.xl{
+		height: $extra-large-icon-size;
+		width: $extra-large-icon-size;
+	}
+}

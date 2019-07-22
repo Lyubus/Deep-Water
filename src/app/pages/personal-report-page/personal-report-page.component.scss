@@ -6,12 +6,12 @@ $report-header-height: 80px;
 
 .table-header-cell {
   background-color: $color-accelium-purpletheme-uno-blue;
-  color: white;
+  color: $color-white;
   font-weight: bold !important;
 
   .k-icon,
   .k-sort-order {
-    color: white;
+    color: $color-white;
   }
 }
 
