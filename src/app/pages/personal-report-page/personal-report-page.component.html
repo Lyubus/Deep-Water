@@ -2,159 +2,35 @@
 
   <div class="row no-gutters achievements">
     <div class="col-md-3 col-sm-12 col-xs-12">
-      <div class="examinees content-container padded">
-        <span class="header">
-          enrolled examinees
-        </span>
-
-        <div class="counter">
-          <i class="material-icons-round">person</i><span>28</span>
-        </div>
-      </div>
+      <deepwater-persons-count-component></deepwater-persons-count-component>
     </div>
 
     <div class="col-md-6 col-sm-12 col-xs-12">
-      <div class="content-container padded">
-        <span class="header">
-          completion rate
-        </span>
-
-        <div>
-         
-        </div>
-
-      </div>
+      <deepwater-completion-chart-component></deepwater-completion-chart-component>
     </div>
 
     <div class="col-md-3 col-sm-12 col-xs-12">
-      <div class="content-container padded">
-        <span class="header">
-          asessed skills
-        </span>
+      <deepwater-skills-list-component></deepwater-skills-list-component>
+    </div>
+  </div>
 
-        <div>
-            <ul>
-              <li>sdfsdfdfdsfdsfsdf</li>
-              <li>sdfsdfsdfsdfsdfsdfsdfsd</li>
-              <li>fdsfsdfsdfdsfsdfsdf</li>
-              <li>dsfsdfsdfdfsdfsdffffffffffffffffffffffffffffffffffffffff</li>
-            </ul>
-          </div>
-      </div>
+  <div class="row no-gutters">
+    <div class="col-12">
+      <deepwater-insights-component></deepwater-insights-component>
+    </div>
+  </div>
+
+  <div class="row no-gutters">
+    <div class="col-12">
+      <deepwater-progress-widget-component></deepwater-progress-widget-component>
     </div>
   </div>
 
 
-  <div class="general-insights-component content-container padded">
-    <span class="header">
-      general insights
-    </span>
-
-    <div class="topic">
-      <i class="material-icons-round">zoom_out_map</i>
-      <div>
-        <span>keyboard_arrow_right</span>
-        <p>ddfgfdfhghdfkgfdhgkdfhjghdfjghfdhgkdfhgjdfhgjdf
-          fdgdfgdfgdfgdfgfdgdfgdfffffffffffffffffffffff
-          dfggggggggggggggggggggggggggggggggggggggggggg
-          dfgggggggggggggggsggg</p>
-      </div>
-    </div>
-
-    <div class="topic">
-      <i class="material-icons-round">arrow_upward</i>
-      <div>
-        <span>keyboard_arrow_right</span>
-        <p>dgsggg</p>
-      </div>
-    </div>
-
-    <div class="topic">
-      <i class="material-icons-round">arrow_downward</i>
-      <div>
-        <span>keyboard_arrow_right</span>
-        <p>dgsggg</p>
-      </div>
+  <div class="row no-gutters">
+    <div class="col-12">
+      <deepwater-report-component></deepwater-report-component>
     </div>
   </div>
-
-
-  <div class="progress-component content-container padded">
-    <span class="header">
-      progress
-    </span>
-    <div class="row">
-      <div class="col-md-4 col-sm-12 col-xs-12 info-section">
-        <p>
-          fhgfhfghfghfghfghfghfghfghfghfghfhfhfghfgh
-          fhfghfghfghfghgfhfghfghfhf
-        </p>
-      </div>
-      <div class="col-md-2 col-sm-6 col-xs-12 progress-section">
-        <div class="section-inline">
-          <span class="number">43</span>
-          <span>Registered</span>
-        </div>
-        <div class="section-inline caret">
-          <i class="material-icons-round">keyboard_arrow_right</i>
-        </div>
-      </div>
-
-      <div class="col-md-2 col-sm-6 col-xs-12 progress-section">
-        <div class="section-inline">
-          <span class="number">2</span>
-          <span>Passive</span>
-        </div>
-        <div class="section-inline caret">
-          <i class="material-icons-round">keyboard_arrow_right</i>
-        </div>
-      </div>
-
-      <div class="col-md-2 col-sm-6 col-xs-12 progress-section">
-        <div class="section-inline">
-          <span class="number">1</span>
-          <span>Active</span>
-        </div>
-        <div class="section-inline caret">
-          <i class="material-icons-round">keyboard_arrow_right</i>
-        </div>
-      </div>
-
-      <div class="col-md-2 col-sm-6 col-xs-12 progress-section">
-        <div class="section-inline">
-          <span class="number">25</span>
-          <span>Completed</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="report-component content-container">
-    <span class="header">
-      report
-    </span>
-
-    <div>
-      <kendo-grid [data]="view" [sortable]="{mode: 'multiple'}" [sort]="sort" (sortChange)="sortChange($event)">
-        <kendo-grid-column field="ProductID" title="ID" width="40" [headerClass]="'table-header-cell'">
-        </kendo-grid-column>
-        <kendo-grid-column field="ProductName" title="Name" width="250" [headerClass]="'table-header-cell'">
-        </kendo-grid-column>
-        <kendo-grid-column field="Category.CategoryName" title="Category" [headerClass]="'table-header-cell'">
-        </kendo-grid-column>
-        <kendo-grid-column field="UnitPrice" title="Price" width="80" [headerClass]="'table-header-cell'">
-        </kendo-grid-column>
-        <kendo-grid-column field="UnitsInStock" title="In stock" width="80" [headerClass]="'table-header-cell'">
-        </kendo-grid-column>
-        <kendo-grid-column field="Discontinued" title="Discontinued" width="120" [headerClass]="'table-header-cell'">
-          <ng-template kendoGridCellTemplate let-dataItem>
-            <input type="checkbox" [checked]="dataItem.Discontinued" disabled />
-          </ng-template>
-        </kendo-grid-column>
-      </kendo-grid>
-
-    </div>
-  </div>
-
 
 </div>

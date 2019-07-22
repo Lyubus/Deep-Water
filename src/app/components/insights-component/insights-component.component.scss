@@ -1,0 +1,29 @@
+@import '../../../styles.scss';
+@import '../../../assets/scss/colors.scss';
+@import '../../../assets/scss/sizes.scss';
+
+.general-insights-component {
+
+    .topic {
+      padding-top: 10px;
+  
+      i {
+        color: $color-accelium-greentheme;
+        display: inline-block;
+        vertical-align: top;
+      }
+  
+      div {
+        padding-left: 10px;
+        display: inline-block;
+        width: 95%;
+  
+        span {
+          color: $color-accelium-greentheme;
+          font-weight: 700;
+        }
+  
+        p {}
+      }
+    }
+  }
