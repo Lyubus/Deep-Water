@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Observable } from 'rxjs';
-import { State, SortDescriptor, orderBy } from '@progress/kendo-data-query';
+import { SortDescriptor, orderBy } from '@progress/kendo-data-query';
 
 import {
     GridDataResult,

@@ -2,40 +2,140 @@
 @import '../../../assets/scss/colors.scss';
 @import '../../../assets/scss/sizes.scss';
 
-$report-header-height: 80px;
+
+
+.achievements {
+
+    color: gray;
+
+    .content-container {
+        min-height: 300px;
+        position: relative;
+
+    }
+
+    li{
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .examinees {
+        .counter {
+            font-size: 60px;
+            color: $color-accelium-greentheme;
+
+
+            .material-icons-round {
+                font-size: 60px;
+            }
+        }
+    }
+}
 
 .table-header-cell {
   background-color: $color-accelium-purpletheme-uno-blue;
   color: $color-white;
   font-weight: bold !important;
 
-  .k-icon,
-  .k-sort-order {
-    color: $color-white;
-  }
+    .k-icon,
+    .k-sort-order {
+        color: white;
+    }
 }
 
-.report-overlay {
-  width: 100%;
-  border-radius: 7px;
-  border: solid gray 1px;
-  box-shadow: 0 0 10px gray;
-  padding-bottom: 15px;
+.content-overlay {
+    padding: 32px $standard-content-padding 15px $standard-content-padding;
+}
 
-  .header {
-    height: $report-header-height;
-    line-height: $report-header-height;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 26px;
-    padding: 10px 30px;
-    vertical-align: middle;
-  }
+.progress-component {
 
+    .info-section {
+
+        display: flex;
+        align-items: center;
+        word-break: break-word;
+
+        p {
+            font-size: 14px;
+            color: grey;
+        }
+    }
+
+    .progress-section {
+
+        display: inherit;
+
+        span {
+            display: block;
+            text-align: center;
+            font-size: 24px;
+            color: gray;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        div {
+            display: inline-block;
+        }
+
+        .section-inline {
+            width: 85%;
+
+            .number {
+                font-size: 60px;
+                color: $color-accelium-greentheme;
+            }
+
+            &.caret {
+                width: 15%;
+                display: flex;
+                align-items: center;
+
+                i {
+                    color: gray;
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+}
+
+.report-component {
+    .header {
+        height: $report-header-height;
+        line-height: $report-header-height;
+        margin: $margin-content-containers;
+    }
+}
+
+.general-insights-component {
+
+    .topic {
+        padding-top: 10px;
+
+        i {
+            color: $color-accelium-greentheme;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        div {
+            padding-left: 10px;
+            display: inline-block;
+            width: 95%;
+
+            span {
+                color: $color-accelium-greentheme;
+                font-weight: 700;
+            }
+
+            p {}
+        }
+    }
 }
 
 
 .div-with-height {
-  height: 5999px;
-  padding: 60px;
+    height: 5999px;
+    padding: 60px;
 }
