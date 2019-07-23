@@ -1,0 +1,22 @@
+@import '../../../styles.scss';
+@import '../../../assets/scss/colors.scss';
+@import '../../../assets/scss/sizes.scss';
+
+.report-component {
+  .header {
+    height: $report-header-height;
+    line-height: $report-header-height;
+    margin: $margin-content-containers;
+  }
+}
+
+:host::ng-deep.table-header-cell {
+  background-color: $color-accelium-purpletheme-uno-blue;
+  color: $color-white;
+  font-weight: bold !important;
+
+  .k-icon,
+  .k-sort-order {
+    color: white;
+  }
+}

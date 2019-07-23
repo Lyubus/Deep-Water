@@ -1,0 +1,26 @@
+<div class="report-component content-container">
+  <span class="header">
+    report
+  </span>
+
+  <div>
+    <kendo-grid [data]="view" [sortable]="{mode: 'multiple'}" [sort]="sort" (sortChange)="sortChange($event)">
+      <kendo-grid-column field="ProductID" title="ID" width="40" [headerClass]="'table-header-cell'">
+      </kendo-grid-column>
+      <kendo-grid-column field="ProductName" title="Name" width="250" [headerClass]="'table-header-cell'">
+      </kendo-grid-column>
+      <kendo-grid-column field="Category.CategoryName" title="Category" [headerClass]="'table-header-cell'">
+      </kendo-grid-column>
+      <kendo-grid-column field="UnitPrice" title="Price" width="80" [headerClass]="'table-header-cell'">
+      </kendo-grid-column>
+      <kendo-grid-column field="UnitsInStock" title="In stock" width="80" [headerClass]="'table-header-cell'">
+      </kendo-grid-column>
+      <kendo-grid-column field="Discontinued" title="Discontinued" width="120" [headerClass]="'table-header-cell'">
+        <ng-template kendoGridCellTemplate let-dataItem>
+          <input type="checkbox" [checked]="dataItem.Discontinued" disabled />
+        </ng-template>
+      </kendo-grid-column>
+    </kendo-grid>
+
+  </div>
+</div>

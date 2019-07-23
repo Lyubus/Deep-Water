@@ -1,0 +1,14 @@
+@import '../../../styles.scss';
+@import '../../../assets/scss/colors.scss';
+@import '../../../assets/scss/sizes.scss';
+
+.examinees {
+    .counter {
+        font-size: 60px;
+        color: $color-accelium-greentheme;
+
+        .material-icons {
+            font-size: 60px;
+        }
+    }
+}

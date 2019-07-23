@@ -1,0 +1,23 @@
+@import '../../../styles.scss';
+@import '../../../assets/scss/colors.scss';
+@import '../../../assets/scss/sizes.scss';
+
+.material-icons {
+  font-size: 30px;
+}
+
+.username {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+span {
+  &.block {
+    display: block;
+  }
+
+  &.bold{
+      font-weight: 700;
+  }
+}
