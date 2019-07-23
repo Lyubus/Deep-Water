@@ -7,11 +7,11 @@ import {
 } from '@progress/kendo-angular-grid';
 
 @Component({
-  selector: 'deepwater-report-component',
-  templateUrl: './report-component.component.html',
-  styleUrls: ['./report-component.component.scss']
+  selector: 'deepwater-report-table',
+  templateUrl: './report-table.component.html',
+  styleUrls: ['./report-table.component.scss']
 })
-export class ReportComponentComponent implements OnInit {
+export class ReportTableComponent implements OnInit {
 
   data = sampleProducts;
 
