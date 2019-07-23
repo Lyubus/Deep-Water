@@ -31,3 +31,12 @@ body {
     display: block;
   }
 }
+
+.same-height{
+  & > div{
+    padding-bottom: 1.5rem;
+    .content-container{
+      height: 100%;
+    }
+  }
+}
