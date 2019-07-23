@@ -1,24 +1,31 @@
-@import '../../../assets/scss/sizes.scss';
+@import './bluetheme.scss';
+@import './greentheme.scss';
+@import './purpletheme.scss';
 
-img{
-	&.xs{
-		height: $extra-small-size;
-		width: $extra-small-size;
-	}
-	&.sm{
-		height: $small-icon-size;
-		width: $small-icon-size;
-	}
-	&.md{
-		height: $medium-icon-size;
-		width: $medium-icon-size;
-	}
-	&.lg{
-		height: $large-icon-size;
-		width: $large-icon-size;
-	}
-	&.xl{
-		height: $extra-large-icon-size;
-		width: $extra-large-icon-size;
-	}
+$themes: (
+  greentheme: $greentheme,
+  bluetheme: $bluetheme,
+  purpletheme: $purpletheme,
+);
+
+@mixin themify($themes: $themes) {
+  @each $theme, $map in $themes {
+
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+
+  }
 }
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+

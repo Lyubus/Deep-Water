@@ -1,0 +1,11 @@
+//colors related to theme which primary color is green
+$color-accelium-greentheme: #809400;
+$color-accelium-greentheme-uno-purple: rgb(121, 62, 133);
+$color-accelium-greentheme-duo-orange: rgb(251, 105, 0);
+$color-accelium-greentheme-tres-green: rgb(49, 198, 117);
+
+$greentheme: (
+    headlineColor: $color-accelium-greentheme,
+    headImage: '/assets/img/green.png',
+    tableHeaderColor: $color-accelium-greentheme
+)

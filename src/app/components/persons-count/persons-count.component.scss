@@ -1,14 +1,16 @@
 @import '../../../styles.scss';
-@import '../../../assets/scss/colors.scss';
-@import '../../../assets/scss/sizes.scss';
+@import '../../../assets/scss/theming/theme.scss';
 
 .examinees {
-    .counter {
-        font-size: 60px;
-        color: $color-accelium-greentheme;
+  .counter {
+    font-size: 60px;
 
-        .material-icons {
-            font-size: 60px;
-        }
+    @include themify($themes) {
+      color: themed('headlineColor');
     }
+
+    .material-icons {
+      font-size: 60px;
+    }
+  }
 }

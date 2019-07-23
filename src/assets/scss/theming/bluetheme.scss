@@ -1,0 +1,11 @@
+//colors related to theme which primary color is blue
+$color-accelium-bluetheme: #0f5da5;
+$color-accelium-bluetheme-uno-green: rgb(150, 172, 0);
+$color-accelium-bluetheme-duo-orange: rgb(251, 105, 0);
+$color-accelium-bluetheme-tres-green: rgb(49, 198, 117);
+
+$bluetheme: (
+    headlineColor: $color-accelium-bluetheme,
+    headImage: '/assets/img/blue.png',
+    tableHeaderColor: $color-accelium-bluetheme,
+)

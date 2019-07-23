@@ -1,57 +1,61 @@
 @import '../../../styles.scss';
 @import '../../../assets/scss/colors.scss';
 @import '../../../assets/scss/sizes.scss';
+@import '../../../assets/scss/theming/theme.scss';
+
 
 .progress-component {
 
-    .info-section {
-  
-      display: flex;
-      align-items: center;
-      word-break: break-word;
-  
-      p {
-        font-size: 14px;
-        color: grey;
-      }
+  .info-section {
+
+    display: flex;
+    align-items: center;
+    word-break: break-word;
+
+    p {
+      font-size: 14px;
+      color: grey;
     }
-  
-    .progress-section {
-  
-      display: inherit;
-  
-      span {
-        display: block;
-        text-align: center;
-        font-size: 24px;
-        color: gray;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-  
-      div {
-        display: inline-block;
-      }
-  
-      .section-inline {
-        width: 85%;
-  
-        .number {
-          font-size: 60px;
-          color: $color-accelium-greentheme;
+  }
+
+  .progress-section {
+
+    display: inherit;
+
+    span {
+      display: block;
+      text-align: center;
+      font-size: 24px;
+      color: gray;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    div {
+      display: inline-block;
+    }
+
+    .section-inline {
+      width: 85%;
+
+      .number {
+        font-size: 60px;
+
+        @include themify($themes) {
+          color: themed('headlineColor');
         }
-  
-        &.caret {
-          width: 15%;
-          display: flex;
-          align-items: center;
-  
-          i {
-            color: gray;
-            font-size: 50px;
-          }
+      }
+
+      &.caret {
+        width: 15%;
+        display: flex;
+        align-items: center;
+
+        i {
+          color: gray;
+          font-size: 50px;
         }
       }
     }
   }
-  
+}

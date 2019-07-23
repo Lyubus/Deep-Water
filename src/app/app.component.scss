@@ -1,6 +1,32 @@
 @import '../styles.scss';
 @import '../assets/scss/colors.scss';
 @import '../assets/scss/sizes.scss';
+@import '../assets/scss/theming/theme.scss';
+
+.theme-switcher {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  button {
+    min-height: 30px;
+    min-width: 30px;
+    border: none;
+
+    &.purple {
+      background-color: purple;
+    }
+
+    &.green {
+      background-color: green;
+    }
+
+    &.blue {
+      background-color: blue;
+    }
+  }
+}
 
 .toolbar a {
   float: left;
@@ -18,29 +44,34 @@
 
   .dropbtn {
     height: inherit;
-    font-size: 16px; 
+    font-size: 16px;
     border: none;
     outline: none;
     color: $color-gray;
     padding: 14px 16px;
     background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
+    font-family: inherit;
+    /* Important for vertical align on mobile phones */
+    margin: 0;
+    /* Important for vertical align on mobile phones */
     text-transform: uppercase;
 
-    &.active{
+    &.active {
       border-bottom: solid 4px $color-accelium-yellow;
       color: $color-white;
     }
 
-    &.organization-title{
+    &.organization-title {
       cursor: pointer;
       color: $color-white;
       max-width: 210px;
       text-align: left;
       padding: 0 15px;
       border-radius: $default-organization-border-radius;
-      background-color: $color-accelium-blue;
+
+      @include themify($themes) {
+        background-color: themed('headlineColor');  
+      }
     }
 
   }
@@ -54,7 +85,8 @@
 
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover,
+.dropdown:hover .dropbtn {
   color: $color-white;
 }
 
@@ -81,13 +113,12 @@
     text-transform: uppercase;
     border-left: solid 4px $color-accelium-bgDark;
 
-    &.active{
+    &.active {
       border-left: solid 4px $color-accelium-yellow;
       color: $color-white;
     }
 
-    &:hover
-    {
+    &:hover {
       color: $color-white;
     }
   }
@@ -100,18 +131,23 @@
   width: 200%;
   right: 1rem;
   top: 0;
-  background-color: $color-accelium-blue;
   color: $color-white;
   min-height: calc(#{$height-standart-toolbar} * 2);
   border-radius: $default-organization-border-radius;
   font-size: .8rem;
   padding: 15px 10px;
-  & > div {
+
+  @include themify($themes) {
+    background-color: themed('headlineColor');  
+  }
+
+  &>div {
     .organization-content-header {
       text-transform: uppercase;
       color: rgba($color-white, .3);
       margin-bottom: 0;
     }
+
     .organization-content-body {
       margin-bottom: 0;
     }
@@ -126,6 +162,10 @@
 .page-head {
   height: $height-page-head;
   position: relative;
+
+  @include themify($themes) {
+    background-image: url(themed('headImage'));  
+  }
 
   .toolbar {
     position: absolute;
@@ -144,12 +184,12 @@
       padding: 0 calc(#{$standard-content-padding} + #{$standard-page-padding});
     }
 
-    .option-group{
+    .option-group {
       position: absolute;
       right: $standard-content-padding;
     }
 
-    .sign-out{
+    .sign-out {
       text-transform: uppercase;
       color: $color-white;
       cursor: pointer;
