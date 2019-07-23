@@ -1,0 +1,12 @@
+//colors related to theme which primary color is purple
+$color-accelium-purpletheme: #793f85;
+$color-accelium-purpletheme-uno-blue: rgb(13, 162, 255);
+$color-accelium-purpletheme-duo-green: rgb(49, 198, 117);
+$color-accelium-purpletheme-tres-purple: rgb(121, 62, 133);
+
+
+$purpletheme: (
+    headlineColor: $color-accelium-purpletheme,
+  headImage: '/assets/img/purple.png',
+  tableHeaderColor:$color-accelium-purpletheme-uno-blue
+  )

@@ -9,7 +9,8 @@ import {
 @Component({
   selector: 'deepwater-report-table',
   templateUrl: './report-table.component.html',
-  styleUrls: ['./report-table.component.scss']
+  styleUrls: ['./report-table.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ReportTableComponent implements OnInit {
 

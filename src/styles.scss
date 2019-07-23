@@ -31,25 +31,3 @@ body {
     display: block;
   }
 }
-
-img {
-  &.s-size {
-    width: $small-icon-size;
-    height: $small-icon-size;
-  }
-
-  &.m-size {
-    width: $medium-icon-size;
-    height: $medium-icon-size;
-  }
-
-  &.l-size {
-    width: $large-icon-size;
-    height: $large-icon-size;
-  }
-
-  &.xl-size {
-    width: $extra-large-icon-size;
-    height: $extra-large-icon-size;
-  }
-}

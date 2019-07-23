@@ -1,120 +1,126 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="page-head">
-
-  <img class="header-image" src="/assets/img/15554663825950.jpg">
-
-  <div class="toolbar top no-gutters">
-    <div class="dropdown col-6">
-      <img src="" alt="">
-    </div>
-    <div class="dropdown organization col-5 text-right pr-3">
-      <button class="dropbtn organization-title w-100">
-        Organization info
-        <i (click)="isOrganizationMenuOpened = true" class="material-icons ml-1 position-absolute">expand_more</i>
-      </button>
-      <div *ngIf="isOrganizationMenuOpened" class="organization-content text-left row no-gutters">
-        <div class="col-lg-3 col-md-12">
-          <div class="row m-0 h-100">
-            <div class="col-12 col-md-7 col-sm-6">
-              <p class="organization-content-header">Organitation</p>
-              <p class="organization-content-body">slovakia banks</p>
-              <span class="d-none d-lg-block border-line"></span>
-            </div>
-            <div class="col-12 col-md-5 col-sm-6">
-              <p class="organization-content-header">Status</p>
-              <p class="organization-content-body">Open</p>
-              <span class="d-none d-lg-block border-line"></span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-12">
-          <div class="row m-0 h-100">
-            <div class="col-12 col-sm-6">
-              <p class="organization-content-header">period</p>
-              <p class="organization-content-body">31.12.2332 - 32.42.2424</p>
-              <span class="d-none d-lg-block border-line"></span>
-            </div>
-            <div class="col-12 col-sm-6">
-              <p class="organization-content-header">project code</p>
-              <p class="organization-content-body">23534</p>
-              <span class="d-none d-lg-block border-line"></span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-5 col-md-12">
-          <div class="row m-0 h-100">
-            <div class="col-12 col-sm-6">
-              <p class="organization-content-header">type banks</p>
-              <p class="organization-content-body">stryrtd</p>
-              <span class="d-none d-lg-block border-line"></span>
-            </div>
-            <div class="col-12 col-sm-5">
-              <p class="organization-content-header">content package</p>
-              <p class="organization-content-body">arrow_right ddfgfdfhghdfkgfdhgk</p>
-            </div>
-            <div class="col-1 d-none d-lg-block p-0">
-              <i (click)="isOrganizationMenuOpened = false" class="material-icons axpand-less">expand_less</i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="dropdown d-flex align-items-center col-1">
-      <p class="sign-out mb-0" (click)="onSignOut()">Sign out</p>
-    </div>
-  </div>
-
-
-
-  <div class="toolbar navigation">
-    <div class="col-2"></div>
-    <div class="dropdown col-3">
-      <button class="dropbtn active">Dropdown
-          <i class="fa fa-caret-down"></i>
-      </button>
-    </div>
-
-    <div class="dropdown col-3">
-      <button class="dropbtn">Dropdown
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    </div>
-
-    <div class="dropdown col-3">
-      <button class="dropbtn">Dropdown
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a class="active" href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    </div>
-
-    <div class="dropdown col-3">
-      <button class="dropbtn">Dropdown
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    </div>
-
-    <div class="col-1 d-flex align-items-center h-100 option-group">
-        <i class="material-icons mr-2">print</i>
-        <i class="material-icons">share</i>
-    </div>
-
-  </div>
+<div class="theme-switcher">
+  <button class="purple" (click)="themeName='theme-purpletheme'"></button>
+  <button class="green" (click)="themeName='theme-greentheme'"></button>
+  <button class="blue" (click)="themeName='theme-bluetheme'"></button>
 </div>
 
-<div class="page-overlay">
-  <router-outlet></router-outlet>
+<div [class]="themeName">
+
+  <div class="page-head">
+    <div class="toolbar top no-gutters">
+      <div class="dropdown col-6">
+        <img src="" alt="">
+      </div>
+      <div class="dropdown organization col-5 text-right pr-3">
+      <button class="dropbtn organization-title w-100">
+          Organization info
+        <i (click)="isOrganizationMenuOpened = true" class="material-icons ml-1 position-absolute">expand_more</i>
+        </button>
+        <div *ngIf="isOrganizationMenuOpened" class="organization-content text-left row no-gutters">
+          <div class="col-lg-3 col-md-12">
+          <div class="row m-0 h-100">
+            <div class="col-12 col-md-7 col-sm-6">
+                <p class="organization-content-header">Organitation</p>
+                <p class="organization-content-body">slovakia banks</p>
+              <span class="d-none d-lg-block border-line"></span>
+              </div>
+            <div class="col-12 col-md-5 col-sm-6">
+                <p class="organization-content-header">Status</p>
+                <p class="organization-content-body">Open</p>
+              <span class="d-none d-lg-block border-line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12">
+          <div class="row m-0 h-100">
+              <div class="col-12 col-sm-6">
+                <p class="organization-content-header">period</p>
+                <p class="organization-content-body">31.12.2332 - 32.42.2424</p>
+              <span class="d-none d-lg-block border-line"></span>
+              </div>
+              <div class="col-12 col-sm-6">
+                <p class="organization-content-header">project code</p>
+                <p class="organization-content-body">23534</p>
+              <span class="d-none d-lg-block border-line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-12">
+          <div class="row m-0 h-100">
+              <div class="col-12 col-sm-6">
+                <p class="organization-content-header">type banks</p>
+                <p class="organization-content-body">stryrtd</p>
+              <span class="d-none d-lg-block border-line"></span>
+              </div>
+              <div class="col-12 col-sm-5">
+                <p class="organization-content-header">content package</p>
+                <p class="organization-content-body">arrow_right ddfgfdfhghdfkgfdhgk</p>
+              </div>
+              <div class="col-1 d-none d-lg-block p-0">
+              <i (click)="isOrganizationMenuOpened = false" class="material-icons axpand-less">expand_less</i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown d-flex align-items-center col-1">
+        <p class="sign-out mb-0" (click)="onSignOut()">Sign out</p>
+      </div>
+    </div>
+
+
+
+    <div class="toolbar navigation">
+      <div class="col-2"></div>
+      <div class="dropdown col-3">
+        <button class="dropbtn active">Dropdown
+          <i class="fa fa-caret-down"></i>
+        </button>
+      </div>
+
+      <div class="dropdown col-3">
+        <button class="dropbtn">Dropdown
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+      <div class="dropdown col-3">
+        <button class="dropbtn">Dropdown
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a class="active" href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+      <div class="dropdown col-3">
+        <button class="dropbtn">Dropdown
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+      <div class="col-1 d-flex align-items-center h-100 option-group">
+        <i class="material-icons mr-2">print</i>
+        <i class="material-icons">share</i>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page-overlay">
+    <router-outlet></router-outlet>
+  </div>
+
 </div>

@@ -1,6 +1,7 @@
 @import '../../../styles.scss';
 @import '../../../assets/scss/colors.scss';
 @import '../../../assets/scss/sizes.scss';
+@import '../../../assets/scss/theming/theme.scss';
 
 .report-component {
   .header {
@@ -10,8 +11,13 @@
   }
 }
 
+
+
 :host::ng-deep.table-header-cell {
-  background-color: $color-accelium-purpletheme-uno-blue;
+  @include themify($themes) {
+    background-color: themed('tableHeaderColor') !important;
+  }
+
   color: $color-white;
   font-weight: bold !important;
 
