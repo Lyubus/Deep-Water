@@ -8,8 +8,9 @@
       <img src="" alt="">
     </div>
     <div class="dropdown organization col-5 text-right pr-3">
-      <button class="dropbtn organization-title w-100" (click)="isOrganizationMenuOpened = !isOrganizationMenuOpened">
+      <button class="dropbtn organization-title w-100">
         Organization info
+        <i (click)="isOrganizationMenuOpened = true" class="material-icons ml-1 position-absolute">expand_more</i>
       </button>
       <div *ngIf="isOrganizationMenuOpened" class="organization-content text-left row no-gutters">
         <div class="col-lg-3 col-md-12">
@@ -52,7 +53,7 @@
               <p class="organization-content-body">arrow_right ddfgfdfhghdfkgfdhgk</p>
             </div>
             <div class="col-1 d-none d-lg-block p-0">
-              <i (click)="isOrganizationMenuOpened = false" class="material-icons">expand_less</i>
+              <i (click)="isOrganizationMenuOpened = false" class="material-icons axpand-less">expand_less</i>
             </div>
           </div>
         </div>
@@ -107,8 +108,8 @@
     </div>
 
     <div class="col-1 d-flex align-items-center h-100 option-group">
-      <img class="md mr-2" src="/assets/img/icons/print.png" alt="">
-      <img class="md" src="/assets/img/icons/share.png" alt="">
+        <i class="material-icons mr-2">print</i>
+        <i class="material-icons">share</i>
     </div>
 
   </div>
