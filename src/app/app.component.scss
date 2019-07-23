@@ -34,7 +34,10 @@
     }
 
     &.organization-title{
+      cursor: pointer;
       color: $color-white;
+      max-width: 210px;
+      text-align: left;
       padding: 0 15px;
       border-radius: $default-organization-border-radius;
       background-color: $color-accelium-blue;
@@ -91,24 +94,27 @@
 }
 
 /* Dropdown organization content (hidden by default) */
-.organization-content{
-  /*display: none;*/
+.organization-content {
   position: absolute;
-  width: 300%;
-  right: 15px;
+  box-shadow: 0 0 15px $color-gray;
+  width: 200%;
+  right: 1rem;
   top: 0;
   background-color: $color-accelium-blue;
   color: $color-white;
   min-height: calc(#{$height-standart-toolbar} * 2);
   border-radius: $default-organization-border-radius;
   font-size: .8rem;
-  padding: 10px 0;
+  padding: 15px 10px;
   & > div {
-    float: left;
-  }
-
-  .h-100 > div:not(:last-child) {
-    border-right: 1px solid red;
+    .organization-content-header {
+      text-transform: uppercase;
+      color: rgba($color-white, .3);
+      margin-bottom: 0;
+    }
+    .organization-content-body {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -116,11 +122,7 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
-.dropdown:hover .organization-content {
-  display: flex;
-}
 
-//
 .page-head {
   height: $height-page-head;
   position: relative;
@@ -130,7 +132,6 @@
     height: $height-standart-toolbar;
     width: 100%;
     padding: 0 $standard-page-padding;
-    
 
     &.top {
       top: 0px;
@@ -140,11 +141,12 @@
     &.navigation {
       bottom: 0px;
       background-color: $color-accelium-bgDark;
+      padding: 0 calc(#{$standard-content-padding} + #{$standard-page-padding});
     }
 
     .option-group{
       position: absolute;
-      right: $default-right-margin;
+      right: $standard-content-padding;
     }
 
     .sign-out{
