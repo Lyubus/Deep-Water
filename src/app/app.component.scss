@@ -62,7 +62,6 @@
     }
 
     &.organization-title {
-      cursor: pointer;
       color: $color-white;
       max-width: 210px;
       text-align: left;
@@ -135,10 +134,16 @@
   min-height: calc(#{$height-standart-toolbar} * 2);
   border-radius: $default-organization-border-radius;
   font-size: .8rem;
-  padding: 15px 10px;
+  padding: 15px;
 
   @include themify($themes) {
     background-color: themed('headlineColor');  
+  }
+  
+   .axpand-less{
+    position: absolute;
+    top: -10px;
+    right: -10px;
   }
 
   &>div {
@@ -150,6 +155,13 @@
 
     .organization-content-body {
       margin-bottom: 0;
+    }
+    .border-line{
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      border-right: 1px solid rgba($color-white, .3);
     }
   }
 }
@@ -206,4 +218,9 @@
 
 .page-overlay {
   padding: 0 $standard-page-padding;
+}
+
+.material-icons{
+  color: $color-white;
+  cursor: pointer;
 }
