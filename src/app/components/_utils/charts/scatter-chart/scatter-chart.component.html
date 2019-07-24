@@ -1,0 +1,24 @@
+<kendo-chart [title]="{ text: 'Charge current vs. charge time' }">
+
+  <kendo-chart-series>
+    <kendo-chart-series-item *ngFor="let series of chargeData;" type="scatter"
+      [data]="series.stats" [color]="mainColor" [markers]="markerConfiguration" 
+      [labels]="labelConfiguration"
+      [tooltip]="tooltipConfiguration" xField="position" yField="score">
+
+    </kendo-chart-series-item>
+  </kendo-chart-series>
+
+  <kendo-chart-x-axis>
+    <kendo-chart-x-axis-item [labels]="{ format: '{0}' }">
+    </kendo-chart-x-axis-item>
+  </kendo-chart-x-axis>
+
+  <kendo-chart-y-axis>
+    <kendo-chart-y-axis-item [labels]="{ format: '{0}' }" [min]="40" [max]="100">
+    </kendo-chart-y-axis-item>
+  </kendo-chart-y-axis>
+
+  <kendo-chart-tooltip format="{1} in {0}"></kendo-chart-tooltip>
+
+</kendo-chart>
