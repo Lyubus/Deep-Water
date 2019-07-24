@@ -41,7 +41,7 @@ import { ComparisonGroupComponent } from './components/comparison-group/comparis
     UserInfoComponent,
     ScatterChartComponent,
     TopLeadersComponent,
-    ComparisonGroupComponent
+    ComparisonGroupComponent,
     ScoreDistributionComponent
   ],
   imports: [

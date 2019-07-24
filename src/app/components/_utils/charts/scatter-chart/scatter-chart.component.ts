@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ScatterTooltipOptions, ScatterMarkerOptions } from './scatter-chart.constants';
+import { defaultIterableDiffers } from '@angular/core/src/change_detection/change_detection';
 
 @Component({
   selector: 'deepwater-scatter-chart',
@@ -8,43 +10,26 @@ import { Component, OnInit } from '@angular/core';
 export class ScatterChartComponent implements OnInit {
 
   mainColor = '#809400';
-  public markerConfiguration = {
-    background: this.mainColor,
-    size: 5,
-    type: 'circle',
-    visible: true,
-    border: {
-      color: this.mainColor
-    }
+  markerConfiguration = ScatterMarkerOptions;
+  tooltipConfiguration = ScatterTooltipOptions;
+
+  xAxeLabelsConfig = {
+    // content: (e) => {
+    //   debugger;
+    //   return null;
+    // },
   };
 
-  public labelConfiguration =
-    {
-    };
-
-  public tooltipConfiguration = {
-    visible: true,
-    background: this.mainColor,
-    color: '#ffffff',
-    border: {
-      color: this.mainColor
-    }
+  xAxisCategories = {
+    categories: ['a', 'b', 'c', 'd', 'e']
   };
 
-  public chargeData = [{
-   // current: 'flexible thinking',
-    stats: [
-      { position: 'flexible thinking', score: 10 },
-      { position: 'flexible thinking', score: 20 },
-      { position: 'flexible thinking', score: 25 },
-      { position: 'flexible thinking', score: 40 },
-      { position: 'flexible thinking', score: 50 },
-      { position: 'flexible thinking', score: 60 },
-      { position: 'flexible thinking', score: 70 },
-      { position: 'flexible thinking', score: 80 },
-      { position: 'flexible thinking', score: 100 }
-    ]}
-   ];
+  public chargeData = [[
+    { position: 1, score: 56, display: 'sfdsf' },
+    { position: 1, score: 66, display: 'sfdsf' },
+    { position: 2, score: 76, display: 'sfdsf' },
+    { position: 4, score: 90, display: 'sfdsf' },
+    { position: 4, score: 50, display: 'sfdsf' }]  ];
 
   constructor() { }
 
