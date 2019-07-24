@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GridModule } from '@progress/kendo-angular-grid';
+import { ChartsModule } from '@progress/kendo-angular-charts';
+
+import 'hammerjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,8 +19,11 @@ import { ProgressWidgetComponent } from './components/progress-widget/progress-w
 import { InsightsComponent } from './components/insights/insights.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
+import { ScatterChartComponent } from './components/_utils/charts/scatter-chart/scatter-chart.component';
+import { ScoreDistributionComponent } from './components/score-distribution/score-distribution.component';
 import { TopLeadersComponent } from './components/top-leaders/top-leaders.component';
 import { ComparisonGroupComponent } from './components/comparison-group/comparison-group.component';
+
 
 @NgModule({
   declarations: [
@@ -33,14 +39,17 @@ import { ComparisonGroupComponent } from './components/comparison-group/comparis
     InsightsComponent,
     CommentsComponent,
     UserInfoComponent,
+    ScatterChartComponent,
     TopLeadersComponent,
     ComparisonGroupComponent
+    ScoreDistributionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GridModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
