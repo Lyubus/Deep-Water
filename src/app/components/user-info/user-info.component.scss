@@ -10,14 +10,16 @@
   text-transform: uppercase;
   font-weight: 900;
   font-size: 30px;
+  .material-icons{
+    font-size: 34px;
+  }
 }
 
-span {
-  &.block {
-    display: block;
-  }
+.d-block {
+  font-size: 20px;
+}
 
-  &.bold{
-      font-weight: 700;
-  }
+.opacity-icon {
+  opacity: .7;
+  font-size: 24px;
 }

@@ -7,12 +7,11 @@ import {
 } from '@progress/kendo-angular-grid';
 
 @Component({
-    selector: 'app-personal-report-page',
+    selector: 'deepwater-personal-report-page',
     templateUrl: './personal-report-page.component.html',
     styleUrls: ['./personal-report-page.component.scss'],
     encapsulation: ViewEncapsulation.None,
 })
 export class PersonalReportPageComponent {
-   
 
 }

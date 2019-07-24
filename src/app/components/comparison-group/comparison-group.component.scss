@@ -1,0 +1,14 @@
+select{
+	height: 30px;
+	width: 100%;
+	border-radius: 5px;
+	padding-left: 10px;
+	appearance: none;
+}
+
+.select-arrow {
+	position: absolute;
+	right: 10px;
+	opacity: .7;
+	height: 100%;
+}

@@ -1,0 +1,11 @@
+@import '../../../assets/scss/colors.scss';
+
+.score {
+	font-size: 140px;
+}
+
+.leaders-username {
+	opacity: .8;
+	color: $color-gray;
+	display: block;
+}

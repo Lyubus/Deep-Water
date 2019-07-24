@@ -15,13 +15,14 @@ body {
 }
 
 .content-container {
-  margin: $margin-content-containers;
+  cursor: default;
+  margin: $margin-content-containers 7px;
   border-radius: 5px;
   border: solid gray 1px;
-  box-shadow: 0 0 7px gray;
+  box-shadow: $default-box-shadow;
 
   &.padded {
-    padding: 25px;
+    padding: 15px 25px;
   }
 
   .header{
@@ -34,9 +35,19 @@ body {
 
 .same-height{
   & > div{
-    padding-bottom: 1.5rem;
+    padding-bottom: calc(#{$margin-content-containers} * 2);
     .content-container{
       height: 100%;
+      padding: 15px 10px;
     }
   }
+}
+
+.material-icons{
+  cursor: pointer;
+}
+
+.central-vertical-allign {
+  display: flex !important;
+  align-items: center;
 }

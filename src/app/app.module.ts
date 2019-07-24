@@ -21,6 +21,9 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
 import { ScatterChartComponent } from './components/_utils/charts/scatter-chart/scatter-chart.component';
 import { ScoreDistributionComponent } from './components/score-distribution/score-distribution.component';
+import { TopLeadersComponent } from './components/top-leaders/top-leaders.component';
+import { ComparisonGroupComponent } from './components/comparison-group/comparison-group.component';
+
 
 @NgModule({
   declarations: [
@@ -35,9 +38,10 @@ import { ScoreDistributionComponent } from './components/score-distribution/scor
     ProgressWidgetComponent,
     InsightsComponent,
     CommentsComponent,
-    CommentsComponent,
     UserInfoComponent,
     ScatterChartComponent,
+    TopLeadersComponent,
+    ComparisonGroupComponent
     ScoreDistributionComponent
   ],
   imports: [
