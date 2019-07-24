@@ -3,8 +3,7 @@
 
 .examinees {
   .counter {
-    font-size: 60px;
-
+    font-size: 55px;
     @include themify($themes) {
       color: themed('headlineColor');
     }
