@@ -178,6 +178,8 @@
   @include themify($themes) {
     background-image: url(themed('headImage'));  
     background-size: cover;
+    background-size: 100% calc(100% - #{$height-standart-toolbar});
+    background-repeat: no-repeat;
   }
 
   .page-head-title {
@@ -200,7 +202,7 @@
     }
 
     &.navigation {
-      height: calc(#{$height-standart-toolbar} - 3px);
+      height: $height-standart-toolbar;
       bottom: 0px;
       background-color: $color-accelium-bgDark;
       padding: 0 calc(#{$standard-content-padding} + #{$standard-page-padding});
