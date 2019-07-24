@@ -16,6 +16,8 @@ import { ProgressWidgetComponent } from './components/progress-widget/progress-w
 import { InsightsComponent } from './components/insights/insights.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
+import { TopLeadersComponent } from './components/top-leaders/top-leaders.component';
+import { ComparisonGroupComponent } from './components/comparison-group/comparison-group.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +32,9 @@ import { UserInfoComponent } from './components/user-info/user-info.component';
     ProgressWidgetComponent,
     InsightsComponent,
     CommentsComponent,
-    CommentsComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    TopLeadersComponent,
+    ComparisonGroupComponent
   ],
   imports: [
     BrowserModule,
