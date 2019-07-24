@@ -9,7 +9,7 @@
 .username {
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 30px;
+  font-size: 36px;
   .material-icons{
     font-size: 34px;
   }
@@ -17,6 +17,9 @@
 
 .d-block {
   font-size: 20px;
+  &:not(.font-weight-bold) {
+    opacity: .7;
+  }
 }
 
 .opacity-icon {
