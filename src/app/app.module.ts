@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// KendoUi
 import { GridModule } from '@progress/kendo-angular-grid';
 import { ChartsModule } from '@progress/kendo-angular-charts';
+import { GaugesModule } from '@progress/kendo-angular-gauges';
 
 import 'hammerjs';
 
@@ -23,6 +26,7 @@ import { ScatterChartComponent } from './components/_utils/charts/scatter-chart/
 import { ScoreDistributionComponent } from './components/score-distribution/score-distribution.component';
 import { TopLeadersComponent } from './components/top-leaders/top-leaders.component';
 import { ComparisonGroupComponent } from './components/comparison-group/comparison-group.component';
+import { RadialGaugeComponent } from './components/radial-gauge/radial-gauge.component';
 
 
 @NgModule({
@@ -42,14 +46,16 @@ import { ComparisonGroupComponent } from './components/comparison-group/comparis
     ScatterChartComponent,
     TopLeadersComponent,
     ComparisonGroupComponent,
-    ScoreDistributionComponent
+    ScoreDistributionComponent,
+    RadialGaugeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GridModule,
     BrowserAnimationsModule,
-    ChartsModule
+    ChartsModule,
+    GaugesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+@import './../../../assets/scss/theming/theme.scss';
+
+.gauge-value {
+	/*		unworking colors		*/
+    @include themify($themes) {
+		color: themed('headlineColor');  
+	  }
+	font-size: 60px;
+}

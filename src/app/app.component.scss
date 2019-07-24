@@ -5,7 +5,7 @@
 
 .theme-switcher {
   position: absolute;
-  top: 0;
+  top: 62px;
   left: 0;
   z-index: 2;
 
@@ -178,6 +178,8 @@
   @include themify($themes) {
     background-image: url(themed('headImage'));  
     background-size: cover;
+    background-size: 120% calc(100% - #{$height-standart-toolbar});
+    background-repeat: no-repeat;
   }
 
   .page-head-title {
@@ -200,10 +202,16 @@
     }
 
     &.navigation {
-      height: calc(#{$height-standart-toolbar} - 3px);
+      height: $height-standart-toolbar;
       bottom: 0px;
       background-color: $color-accelium-bgDark;
       padding: 0 calc(#{$standard-content-padding} + #{$standard-page-padding});
+    }
+
+    .icon{
+      background-image: url(./../assets/img/icon.png);
+      background-repeat: no-repeat;
+      background-position: left;
     }
 
     .option-group {
