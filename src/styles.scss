@@ -19,7 +19,7 @@ body {
   margin: $margin-content-containers 7px;
   border-radius: 5px;
   border: solid gray 1px;
-  box-shadow: 0 0 7px gray;
+  box-shadow: $default-box-shadow;
 
   &.padded {
     padding: 15px 25px;

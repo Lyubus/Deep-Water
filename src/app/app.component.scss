@@ -126,7 +126,7 @@
 /* Dropdown organization content (hidden by default) */
 .organization-content {
   position: absolute;
-  box-shadow: 0 0 15px $color-gray;
+  box-shadow: $default-box-shadow;
   width: 200%;
   right: 1rem;
   top: 0;
