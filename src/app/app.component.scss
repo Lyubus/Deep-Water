@@ -5,7 +5,7 @@
 
 .theme-switcher {
   position: absolute;
-  top: 0;
+  top: 62px;
   left: 0;
   z-index: 2;
 
@@ -204,6 +204,12 @@
       bottom: 0px;
       background-color: $color-accelium-bgDark;
       padding: 0 calc(#{$standard-content-padding} + #{$standard-page-padding});
+    }
+
+    .icon{
+      background-image: url(./../assets/img/icon.png);
+      background-repeat: no-repeat;
+      background-position: left;
     }
 
     .option-group {
