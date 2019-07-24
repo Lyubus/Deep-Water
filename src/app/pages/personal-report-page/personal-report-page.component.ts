@@ -13,6 +13,5 @@ import {
     encapsulation: ViewEncapsulation.None,
 })
 export class PersonalReportPageComponent {
-   
 
 }
