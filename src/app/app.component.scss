@@ -172,11 +172,20 @@
 }
 
 .page-head {
-  height: $height-page-head;
+  padding: $padding-page-head 0;
   position: relative;
 
   @include themify($themes) {
     background-image: url(themed('headImage'));  
+    background-size: cover;
+  }
+
+  .page-head-title {
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-white;
+    font-size: 30px;
+    margin: 0;
   }
 
   .toolbar {
@@ -191,6 +200,7 @@
     }
 
     &.navigation {
+      height: calc(#{$height-standart-toolbar} - 3px);
       bottom: 0px;
       background-color: $color-accelium-bgDark;
       padding: 0 calc(#{$standard-content-padding} + #{$standard-page-padding});
