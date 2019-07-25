@@ -16,5 +16,7 @@ export const ScatterTooltipOptions = {
     color: '#ffffff',
     border: {
         color: mainColor
-    }
+    },
+    format: '{1}'
+
 };
