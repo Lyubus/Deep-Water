@@ -27,6 +27,8 @@ import { ScoreDistributionComponent } from './components/score-distribution/scor
 import { TopLeadersComponent } from './components/top-leaders/top-leaders.component';
 import { ComparisonGroupComponent } from './components/comparison-group/comparison-group.component';
 import { RadialGaugeComponent } from './components/radial-gauge/radial-gauge.component';
+import { BarchartsComparisonComponent } from './components/barcharts-comparison/barcharts-comparison.component';
+import { BarchartsPairedVerticalComponent } from './components/_utils/charts/barcharts-paired-vertical/barcharts-paired-vertical.component';
 
 
 @NgModule({
@@ -47,7 +49,9 @@ import { RadialGaugeComponent } from './components/radial-gauge/radial-gauge.com
     TopLeadersComponent,
     ComparisonGroupComponent,
     ScoreDistributionComponent,
-    RadialGaugeComponent
+    RadialGaugeComponent,
+    BarchartsComparisonComponent,
+    BarchartsPairedVerticalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ScatterTooltipOptions, ScatterMarkerOptions } from './scatter-chart.constants';
-import { defaultIterableDiffers } from '@angular/core/src/change_detection/change_detection';
 
 @Component({
   selector: 'deepwater-scatter-chart',
