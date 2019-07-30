@@ -7,21 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BarChartsComponent implements OnInit {
 
+  chartHeight: number;
+  defaultTextColor: string = '#666666';
+
   valueLabelsConfig = {
     // content: (e) => `${e.value}%`,
     font: `font-family: 'Open Sans', sans-serif; font-size: 14px; `,
-    color: 'gray'
+    color: this.defaultTextColor
   };
 
   catLabelsConfig = {
-    font: `font-family: 'Open Sans', sans-serif; font-size: 16px; `,
-    color: 'gray'
+    font: `19pt 'Open Sans', sans-serif`,
+    padding: 10,
+    color: this.defaultTextColor
+  };
+
+  seriesLabelsConfig = {
+    border: {
+      width: 0
+    }
   };
 
   data = [{
     value: 45,
     color: 'red',
-    category: 'q',
+    category: 'MoveIt',
   },
   {
     value: 33,
@@ -31,12 +41,12 @@ export class BarChartsComponent implements OnInit {
   {
     value: 21,
     color: 'blue',
-    category: '9',
+    category: 'Open Sans',
   },
   {
     value: 0,
     color: 'black',
-    category: 'g',
+    category: 'font-size',
   },
   {
     value: 76,
@@ -56,24 +66,14 @@ export class BarChartsComponent implements OnInit {
     value: 69,
     color: 'brown',
     category: '[]',
-  },
-  {
-    value: 70,
-    color: 'purple',
-    category: 'pf',
-  },
-  {
-    value: 98,
-    color: 'yellow',
-    category: '22',
-  }
-  ];
+  }];
 
   categories = this.data.map(x => x.category);
 
   constructor() { }
 
   ngOnInit() {
+    this.chartHeight = this.categories.length * 40 + 50;
   }
 
 }

@@ -1,6 +1,6 @@
-<kendo-chart >
+<kendo-chart [style.height.px]="chartHeight">
 
-    <kendo-chart-title text="% Average completion rate"></kendo-chart-title>
+    <kendo-chart-title [color]="defaultTextColor" [align]="'left'" text="% Average completion rate"></kendo-chart-title>
 
     <kendo-chart-category-axis>
         <kendo-chart-category-axis-item [categories]="categories" [labels]="catLabelsConfig" 
@@ -19,7 +19,7 @@
       </kendo-chart-value-axis>
 
     <kendo-chart-series>
-      <kendo-chart-series-item type="bar" [gap]="1.5" [spacing]="2" [data]="data">
+      <kendo-chart-series-item type="bar" [gap]=".7" [spacing]=".7" [data]="data" [font]="{text-align: 'left'}" [border]="{width: 0}">
       </kendo-chart-series-item>
     </kendo-chart-series>
 
