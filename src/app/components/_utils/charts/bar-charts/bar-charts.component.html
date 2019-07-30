@@ -1,0 +1,27 @@
+<kendo-chart >
+
+    <kendo-chart-title text="% Average completion rate"></kendo-chart-title>
+
+    <kendo-chart-category-axis>
+        <kendo-chart-category-axis-item [categories]="categories" [labels]="catLabelsConfig" 
+        [majorGridLines]="{visible: false}" [minorGridLines]="{visible: false}"
+        [majorTicks]="{visible: false}" [minorTicks]="{visible: false}"
+        [line]="{color: 'transparent'}" [axisCrossingValue]="0">
+        </kendo-chart-category-axis-item>
+    </kendo-chart-category-axis>
+
+    <kendo-chart-value-axis>
+        <kendo-chart-value-axis-item [majorGridLines]="{visible: false}" 
+        [minorGridLines]="{visible: false}" [line]="{color: 'transparent'}"
+        [majorTicks]="{visible: false}" [minorTicks]="{visible: false}"
+        [labels]="valueLabelsConfig" [min]="0" [max]="100">
+        </kendo-chart-value-axis-item>
+      </kendo-chart-value-axis>
+
+    <kendo-chart-series>
+      <kendo-chart-series-item type="bar" [gap]="1.5" [spacing]="2" [data]="data">
+      </kendo-chart-series-item>
+    </kendo-chart-series>
+
+    <!-- <kendo-chart-tooltip format="{0}%"></kendo-chart-tooltip> -->
+  </kendo-chart>
