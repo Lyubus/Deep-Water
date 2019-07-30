@@ -1,0 +1,15 @@
+<kendo-chart [categoryAxis]="catConfigs" [valueAxis]="valConfigs">
+  <kendo-chart-series-defaults type="column" [labels]="seriesLabelsConfig" [gap]="4" [spacing]="0.2">
+  </kendo-chart-series-defaults>
+
+  <kendo-chart-series>
+    <kendo-chart-series-item *ngFor="let item of dataSets" [data]="item.values" 
+    [color]="item.color" [name]="item.name">
+    </kendo-chart-series-item>
+  </kendo-chart-series>
+
+  <kendo-chart-legend [align]="'start'" [orientation]="'horizontal'" [position]="'top'" 
+  [markers]="legendMarkersConfig" [labels]="legendLabelsConfig" [width]="100">
+  </kendo-chart-legend>
+
+</kendo-chart>

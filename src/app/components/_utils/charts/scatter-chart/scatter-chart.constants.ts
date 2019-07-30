@@ -11,10 +11,13 @@ export const ScatterMarkerOptions = {
 };
 
 export const ScatterTooltipOptions = {
-    visible: true,
+    visible: false,
     background: mainColor,
     color: '#ffffff',
     border: {
         color: mainColor
-    }
+    },
+   // format: '{1}'
+
+
 };

@@ -1,4 +1,4 @@
-<kendo-chart class="scatter-chart">
+<kendo-chart>
   <kendo-chart-series>
 
     <kendo-chart-series-item type="scatter" *ngFor="let series of chargeData" [color]="mainColor" [markers]="markerConfiguration"
@@ -17,7 +17,5 @@
     <kendo-chart-y-axis-item [labels]="{ format: '{0}' }" [min]="40" [max]="100">
     </kendo-chart-y-axis-item>
   </kendo-chart-y-axis>
-
-  <kendo-chart-tooltip format="{1} gdfgfgdgf {0}"></kendo-chart-tooltip>
-
+  
 </kendo-chart>

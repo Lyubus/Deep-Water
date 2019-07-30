@@ -27,6 +27,10 @@ import { ScoreDistributionComponent } from './components/score-distribution/scor
 import { TopLeadersComponent } from './components/top-leaders/top-leaders.component';
 import { ComparisonGroupComponent } from './components/comparison-group/comparison-group.component';
 import { RadialGaugeComponent } from './components/radial-gauge/radial-gauge.component';
+import { BarchartsComparisonComponent } from './components/barcharts-comparison/barcharts-comparison.component';
+import { BarchartsPairedVerticalComponent } from './components/_utils/charts/barcharts-paired-vertical/barcharts-paired-vertical.component';
+import { CompletionComponent } from './components/completion/completion.component';
+import { BarChartsComponent } from './components/_utils/charts/bar-charts/bar-charts.component';
 import { PersonalReportsComponent } from './components/personal-reports/personal-reports.component';
 import { SearchFieldComponent } from './components/_utils/search-field/search-field.component';
 
@@ -50,8 +54,12 @@ import { SearchFieldComponent } from './components/_utils/search-field/search-fi
     ComparisonGroupComponent,
     ScoreDistributionComponent,
     RadialGaugeComponent,
-    PersonalReportsComponent,
-    SearchFieldComponent
+    BarchartsComparisonComponent,
+    BarchartsPairedVerticalComponent,
+    CompletionComponent,
+      BarChartsComponent,
+      PersonalReportsComponent,
+      SearchFieldComponent
   ],
   imports: [
     BrowserModule,
