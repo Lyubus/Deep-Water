@@ -1,0 +1,53 @@
+@import '../../../assets/scss/colors.scss';
+
+.personal-report-component {
+
+    label {
+        margin-bottom: 0;
+        margin-right: 15px;
+        cursor: pointer;
+        user-select: none;
+        color: $color-dark-gray;
+    }
+
+    .material-icons {
+        vertical-align: middle;
+        color: $color-dark-gray;
+    }
+
+    input[type="checkbox"] {
+        cursor: pointer;
+        appearance: none;
+        outline: 0;
+        height: 18px;
+		width: 18px;
+		border: 1px solid $color-dark-gray;
+		outline: none;
+		border-radius: 2px;
+    }
+
+    input[type="checkbox"]:checked {
+        background: $color-dark-gray;
+    }
+
+    input[type="checkbox"]:hover {
+        filter: brightness(90%);
+    }
+
+    input[type="checkbox"]:after {
+        content: '';
+        position: relative;
+		left: 25%;
+		top: -5%;
+        width: 50%;
+        height: 85%;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        display: none;
+    }
+
+    input[type="checkbox"]:checked:after {
+        display: block;
+    }
+}

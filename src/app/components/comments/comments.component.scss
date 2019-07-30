@@ -3,38 +3,41 @@
 @import '../../../assets/scss/sizes.scss';
 @import '../../../assets/scss/theming/theme.scss';
 
-textarea {
-  width: 100%;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: $default-box-shadow;
-  min-height: 200px;
-  margin: 5px 0;
-}
-
-input {
-  min-width: 80px;
-  padding: 4px 7px;
-  border: none;
-  border-radius: 5px;
-  margin-right: 7px;
-
-
-  &[type="submit"] {
-    @include themify($themes) {
-      background-color: themed('headlineColor');  
+.comments-component {
+    textarea {
+        width: 100%;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: $default-box-shadow;
+        min-height: 200px;
+        margin: 5px 0;
     }
-    color: $color-white;
-  }
 
-  &[type="reset"] {
-    background-color: $color-white;
-    color: $color-gray;
-    border: 1px solid $color-gray;
-  }
+    input {
+        min-width: 80px;
+        padding: 4px 7px;
+        border: none;
+        border-radius: 5px;
+        margin-right: 7px;
 
-  &:disabled {
-    cursor: not-allowed;
-    opacity: .5;
-  }
+
+        &[type="submit"] {
+            @include themify($themes) {
+                background-color: themed('headlineColor');
+            }
+
+            color: $color-white;
+        }
+
+        &[type="reset"] {
+            background-color: $color-white;
+            color: $color-gray;
+            border: 1px solid $color-gray;
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            opacity: .5;
+        }
+    }
 }

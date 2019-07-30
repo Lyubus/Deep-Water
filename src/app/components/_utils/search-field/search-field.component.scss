@@ -1,0 +1,42 @@
+@import '../../../../assets/scss/colors.scss';
+
+.search-field {
+    .text-search-field {
+        border: none;
+        width: 30%;
+        transition: width .5s;
+        outline: none;
+        background-image: url('./../../../../assets/img/icons/search.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+
+        &::placeholder {
+            color: transparent;
+        }
+
+        &:focus {
+            width: 55%;
+            border-bottom: 1px solid $color-dark-gray;
+            background-image: none;
+
+            &::placeholder {
+                color: $color-dark-gray;
+            }
+        }
+    }
+
+    .material-icons {
+        color: $color-dark-gray;
+        width: 15%;
+    }
+
+    .csv {
+		width: 45%;
+		color: $color-dark-gray;
+		font-weight: bold;
+        img {
+            height: 20px;
+            cursor: pointer;
+        }
+    }
+}
