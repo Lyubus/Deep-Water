@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AxisLabelVisualArgs } from '@progress/kendo-angular-charts';
 
 @Component({
   selector: 'deepwater-bar-charts',
@@ -18,20 +19,28 @@ export class BarChartsComponent implements OnInit {
 
   catLabelsConfig = {
     font: `19pt 'Open Sans', sans-serif`,
-    padding: 10,
-    color: this.defaultTextColor
-  };
-
-  seriesLabelsConfig = {
-    border: {
-      width: 0
-    }
+    color: this.defaultTextColor,
+    // mirror: true,
+    padding: {
+      right: 10
+    },
+    content: (e) => {
+      const value = e.value;
+      if (value.length > 15) {
+        return value.substring(0, 15).concat('...');
+      } else {
+        return value;
+      }
+    },
+    // visual: (e: AxisLabelVisualArgs) => {
+    //   console.log(e.options);
+    // }
   };
 
   data = [{
     value: 45,
     color: 'red',
-    category: 'MoveIt',
+    category: 'MoveIt'
   },
   {
     value: 33,
@@ -65,7 +74,7 @@ export class BarChartsComponent implements OnInit {
   {
     value: 69,
     color: 'brown',
-    category: '[]',
+    category: 'categories = this.data.map(x => x.category);',
   }];
 
   categories = this.data.map(x => x.category);
