@@ -7,39 +7,28 @@
 
       <div class="row no-gutters">
         <div class="col-12">
-          <deepwater-comparison-group
-          [optionsCollection]="comparisonCollection"
-          [(selected)]="selectedComparer"></deepwater-comparison-group>
-        </div>
-      </div>
-
-
-      <div class="row no-gutters">
-        <div class="col-6">
-          <deepwater-completion-chart 
-          [title]="'anna_maria_g5'" 
-          [subtitle]="'Average score'" 
-          [value]="79"
-          [label]="'Medium high'"
-          [color]="'#0da3ff'"></deepwater-completion-chart>
-        </div>
-        <div class="col-6">
-          <deepwater-completion-chart 
-          [title]="'students around the world'" 
-          [subtitle]="'Average score'" 
-          [value]="77"
-          [label]="'Medium high'"
-          [color]="'#45566b'"></deepwater-completion-chart>
+          <deepwater-personal-reports></deepwater-personal-reports>
         </div>
       </div>
 
       <div class="row no-gutters">
         <div class="col-12">
-          <deepwater-personal-reports></deepwater-personal-reports>
+          <deepwater-comparison-group [optionsCollection]="comparisonCollection" [(selected)]="selectedComparer">
+          </deepwater-comparison-group>
         </div>
       </div>
 
 
+      <div class="row no-gutters">
+        <div class="col-6">
+          <deepwater-completion-chart [title]="'anna_maria_g5'" [subtitle]="'Average score'" [value]="79"
+            [label]="'Medium high'" [color]="'#0da3ff'"></deepwater-completion-chart>
+        </div>
+        <div class="col-6">
+          <deepwater-completion-chart [title]="'students around the world'" [subtitle]="'Average score'" [value]="77"
+            [label]="'Medium high'" [color]="'#45566b'"></deepwater-completion-chart>
+        </div>
+      </div>
     </div>
   </div>
 

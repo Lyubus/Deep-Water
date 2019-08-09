@@ -6,5 +6,5 @@ export interface IPersonalScore {
     PerformanceUnderPreassureValue: number;
     AdaptabilityValue: number;
     AverageScoreValue: number;
-    CopmletionValue: number;
+    CompletionValue: number;
 }

@@ -1,6 +1,31 @@
+@import '../../../styles.scss';
 @import '../../../assets/scss/colors.scss';
+@import '../../../assets/scss/sizes.scss';
+@import '../../../assets/scss/theming/theme.scss';
 
 .personal-report-component {
+
+
+    .header {
+        height: $report-header-height;
+        line-height: $report-header-height;
+        margin: $margin-content-containers;
+    }
+
+    .table-header-cell {
+        @include themify($themes) {
+            background-color: themed('tableHeaderColor');
+        }
+
+        color: $color-white;
+        font-weight: bold;
+
+        .k-icon,
+        .k-sort-order {
+            color: white;
+        }
+    }
+
 
     label {
         margin-bottom: 0;
@@ -20,10 +45,10 @@
         appearance: none;
         outline: 0;
         height: 18px;
-		width: 18px;
-		border: 1px solid $color-dark-gray;
-		outline: none;
-		border-radius: 2px;
+        width: 18px;
+        border: 1px solid $color-dark-gray;
+        outline: none;
+        border-radius: 2px;
     }
 
     input[type="checkbox"]:checked {
@@ -37,8 +62,8 @@
     input[type="checkbox"]:after {
         content: '';
         position: relative;
-		left: 25%;
-		top: -5%;
+        left: 25%;
+        top: -5%;
         width: 50%;
         height: 85%;
         border: solid #fff;
