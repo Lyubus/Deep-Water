@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BarChartsComponent implements OnInit {
 
+  majorTicksConfig =  {visible: true, width: 100 };
+
   valueLabelsConfig = {
     // content: (e) => `${e.value}%`,
     font: `font-family: 'Open Sans', sans-serif; font-size: 14px; `,
