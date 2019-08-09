@@ -5,6 +5,11 @@
 
 .personal-report-component {
 
+    padding-bottom: 20px;
+
+    .report-heading {
+        padding: 0 10px;
+    }
 
     .header {
         height: $report-header-height;
@@ -24,6 +29,10 @@
         .k-sort-order {
             color: white;
         }
+    }
+
+    .table-cell {
+        text-align: center;
     }
 
 
