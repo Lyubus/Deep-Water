@@ -176,10 +176,8 @@
   position: relative;
 
   @include themify($themes) {
-    background-image: url(themed('headImage'));  
-    background-size: cover;
+    background: url(themed('headImage')) center top no-repeat;
     background-size: 120% calc(100% - #{$height-standart-toolbar});
-    background-repeat: no-repeat;
   }
 
   .page-head-title {
