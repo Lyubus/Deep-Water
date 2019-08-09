@@ -33,6 +33,10 @@ import { BarChartsComponent } from './components/_utils/charts/bar-charts/bar-ch
 import { PersonalReportsComponent } from './components/personal-reports/personal-reports.component';
 import { SearchFieldComponent } from './components/_utils/search-field/search-field.component';
 import { RadialGaugeComponent } from './components/_utils/radial-gauge/radial-gauge.component';
+import { VioletPageComponent } from './pages/violet-page/violet-page.component';
+import { IndigoPageComponent } from './pages/indigo-page/indigo-page.component';
+import { GreenPageComponent } from './pages/green-page/green-page.component';
+import { PageHeadComponent } from './components/page-head/page-head.component';
 
 
 @NgModule({
@@ -59,7 +63,11 @@ import { RadialGaugeComponent } from './components/_utils/radial-gauge/radial-ga
     CompletionComponent,
       BarChartsComponent,
       PersonalReportsComponent,
-      SearchFieldComponent
+      SearchFieldComponent,
+      VioletPageComponent,
+      IndigoPageComponent,
+      GreenPageComponent,
+      PageHeadComponent
   ],
   imports: [
     BrowserModule,

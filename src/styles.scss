@@ -14,6 +14,10 @@ body {
   margin: 0;
 }
 
+.content-overlay {
+  padding: 32px $standard-content-padding 15px $standard-content-padding;
+}
+
 .content-container {
   cursor: default;
   margin: $margin-content-containers 7px;
@@ -50,4 +54,29 @@ body {
 .central-vertical-align {
   display: flex !important;
   align-items: center;
+}
+
+.theme-switcher {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  z-index: 2;
+
+  button {
+    min-height: 30px;
+    min-width: 30px;
+    border: none;
+
+    &.purple {
+      background-color: purple;
+    }
+
+    &.green {
+      background-color: green;
+    }
+
+    &.blue {
+      background-color: blue;
+    }
+  }
 }

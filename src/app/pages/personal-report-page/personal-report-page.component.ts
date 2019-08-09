@@ -1,10 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { SortDescriptor, orderBy } from '@progress/kendo-data-query';
-
-import {
-    GridDataResult,
-    DataStateChangeEvent
-} from '@progress/kendo-angular-grid';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
     selector: 'deepwater-personal-report-page',
@@ -14,4 +8,9 @@ import {
 })
 export class PersonalReportPageComponent {
 
+    title = 'deepwater';
+    isOrganizationMenuOpened: boolean = false;
+    themeName = 'theme-greentheme';
+  
+   
 }

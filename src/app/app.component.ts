@@ -6,11 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'deepwater';
-  isOrganizationMenuOpened: boolean = false;
-  themeName = 'theme-greentheme';
-
-  onSignOut() {
-
-  }
+  
 }
