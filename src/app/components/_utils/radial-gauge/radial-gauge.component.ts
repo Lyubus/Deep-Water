@@ -8,9 +8,10 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 })
 export class RadialGaugeComponent implements OnInit {
 
-  @Input('value') value: number;
-  @Input('color') color: string;
-  @Input('text') text: string;
+  @Input() value: number;
+  @Input() color: string;
+  @Input() text: string;
+  @Input() showLegend: boolean = false;
 
   constructor() { }
 

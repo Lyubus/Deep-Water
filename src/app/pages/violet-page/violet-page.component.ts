@@ -1,5 +1,9 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { IKeyValuePair } from 'src/app/_models/interfaces/key-value.interface';
+import { PERSONAL_SCORES } from 'src/app/_constant-mocks/personal-scores.constants';
+import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interface';
+import { IGameScore } from 'src/app/_models/interfaces/game-scores.interface';
+import { MEDIUM_GAMES_SCORES } from 'src/app/_constant-mocks/game-scores.constants';
 
 @Component({
   selector: 'deepwater-violet-page',
@@ -14,6 +18,31 @@ export class VioletPageComponent implements OnInit {
     { key: 2, value: 'item2' },
   ];
   selectedComparer = 0;
+
+  personalScoreData: IPersonalScore[] = PERSONAL_SCORES
+  gamesData: IGameScore[] = MEDIUM_GAMES_SCORES;
+  
+  comparer1Profile: IPersonalScore = {
+    examinee: 'Laila Piraino',
+    analyticalAbilityValue: 84,
+    quickThinkingValue: 27,
+    performanceUnderPreassureValue: 84,
+    adaptabilityValue: 27,
+    averageScoreValue: 84,
+    completionValue: 54,
+    color: '#0da3ff'
+  };
+
+  comparer2Profile: IPersonalScore = {
+    examinee: 'Queen Rudy',
+    analyticalAbilityValue: 12,
+    quickThinkingValue: 69,
+    performanceUnderPreassureValue: 45,
+    adaptabilityValue: 99,
+    averageScoreValue: 66,
+    completionValue: 90,
+    color: '#45566b'
+  };
 
   constructor() { }
 

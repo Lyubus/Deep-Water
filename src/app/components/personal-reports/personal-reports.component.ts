@@ -1,7 +1,6 @@
 import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interface';
 import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 import { SortDescriptor, orderBy } from '@progress/kendo-data-query';
-import { PERSONAL_SCORES } from 'src/app/_ constant-mocks/personal-scores.constants';
 import { GridDataResult, DataStateChangeEvent } from '@progress/kendo-angular-grid';
 
 @Component({
@@ -12,11 +11,10 @@ import { GridDataResult, DataStateChangeEvent } from '@progress/kendo-angular-gr
 })
 export class PersonalReportsComponent implements OnInit {
 
- // @Input() 
-  personalScoreData: IPersonalScore[] = PERSONAL_SCORES;
+  @Input() personalScoreData: IPersonalScore[];
 
   public sort: SortDescriptor[] = [{
-    field: 'Examinee',
+    field: 'examinee',
     dir: 'asc'
   }];
 
@@ -25,7 +23,6 @@ export class PersonalReportsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    debugger;
     this.loadProducts();
   }
 

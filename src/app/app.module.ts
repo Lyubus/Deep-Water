@@ -29,7 +29,7 @@ import { ComparisonGroupComponent } from './components/comparison-group/comparis
 import { BarchartsComparisonComponent } from './components/barcharts-comparison/barcharts-comparison.component';
 import { BarchartsPairedVerticalComponent } from './components/_utils/charts/barcharts-paired-vertical/barcharts-paired-vertical.component';
 import { CompletionComponent } from './components/completion/completion.component';
-import { BarChartsComponent } from './components/_utils/charts/bar-charts/bar-charts.component';
+import { GamesBarChartsComponent } from './components/_utils/charts/games-bar-charts/games-bar-charts.component';
 import { PersonalReportsComponent } from './components/personal-reports/personal-reports.component';
 import { SearchFieldComponent } from './components/_utils/search-field/search-field.component';
 import { RadialGaugeComponent } from './components/_utils/radial-gauge/radial-gauge.component';
@@ -61,7 +61,7 @@ import { PageHeadComponent } from './components/page-head/page-head.component';
     BarchartsComparisonComponent,
     BarchartsPairedVerticalComponent,
     CompletionComponent,
-      BarChartsComponent,
+      GamesBarChartsComponent,
       PersonalReportsComponent,
       SearchFieldComponent,
       VioletPageComponent,

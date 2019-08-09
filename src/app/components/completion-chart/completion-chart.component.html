@@ -1,14 +1,15 @@
 <div class="content-container padded">
   <span class="header text-center">
-    {{title}}
+    {{personalScore.examinee}}
   </span>
 
-  <span class="subheader text-center" *ngIf="subtitle">
-    {{subtitle}}
+  <span class="subheader text-center">
+    Average score
   </span>
 
   <div class="d-flex justify-content-center">
-    <deepwater-radial-gauge [value]="value" [text]="label" [color]="color"></deepwater-radial-gauge>
+    <deepwater-radial-gauge [value]="average" [text]="'Mark'"
+     [color]="personalScore.color"></deepwater-radial-gauge>
   </div>
 
 </div>

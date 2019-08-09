@@ -1,10 +1,11 @@
 export interface IPersonalScore {
 
-    Examinee: any;
-    AnalyticalAbilityValue: number;
-    QuickThinkingValue: number;
-    PerformanceUnderPreassureValue: number;
-    AdaptabilityValue: number;
-    AverageScoreValue: number;
-    CompletionValue: number;
+    examinee: any;
+    analyticalAbilityValue: number;
+    quickThinkingValue: number;
+    performanceUnderPreassureValue: number;
+    adaptabilityValue: number;
+    averageScoreValue: number;
+    completionValue: number;
+    color: string;
 }

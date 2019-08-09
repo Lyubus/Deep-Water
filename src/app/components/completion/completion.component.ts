@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IGameScore } from 'src/app/_models/interfaces/game-scores.interface';
+import { MEDIUM_GAMES_SCORES } from '../../_constant-mocks/game-scores.constants';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'deepwater-completion',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompletionComponent implements OnInit {
 
+  @Input() gamesData: IGameScore[];
+  average: number = 0;
+
   constructor() { }
 
   ngOnInit() {
+    if (this.gamesData.length) {
+      this.average = Math.round(_.meanBy(this.gamesData, (p) => p.score));
+    }
   }
 
 }
