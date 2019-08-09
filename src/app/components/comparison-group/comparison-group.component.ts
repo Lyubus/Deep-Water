@@ -9,7 +9,7 @@ import { IKeyValuePair } from 'src/app/_models/interfaces/key-value.interface';
 })
 export class ComparisonGroupComponent implements OnInit {
 
-  @Input() selected: any = null;
+  @Input() selected: number = null;
   @Output() selectedChange: EventEmitter<any> = new EventEmitter<any>();
 
   @Input() optionsCollection: IKeyValuePair[] = [];

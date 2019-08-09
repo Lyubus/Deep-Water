@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interface';
 
 @Component({
   selector: 'deepwater-personal-reports',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./personal-reports.component.scss']
 })
 export class PersonalReportsComponent implements OnInit {
+
+  @Input() personalScoreData: IPersonalScore[] = [];
 
   constructor() { }
 

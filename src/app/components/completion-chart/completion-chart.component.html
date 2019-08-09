@@ -1,10 +1,14 @@
 <div class="content-container padded">
   <span class="header text-center">
-    completion rate
+    {{title}}
   </span>
 
-  <div>
+  <span class="subheader text-center" *ngIf="subtitle">
+    {{subtitle}}
+  </span>
 
+  <div class="d-flex justify-content-center">
+    <deepwater-radial-gauge [value]="value" [text]="label" [color]="color"></deepwater-radial-gauge>
   </div>
 
 </div>

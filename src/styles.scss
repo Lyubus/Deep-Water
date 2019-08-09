@@ -22,7 +22,7 @@ body {
   cursor: default;
   margin: $margin-content-containers 7px;
   border-radius: 5px;
-  border: solid gray 1px;
+  border: solid $color-gray 1px;
   box-shadow: $default-box-shadow;
 
   &.padded {
@@ -34,6 +34,13 @@ body {
     font-weight: 900;
     font-size: 24px;
     display: block;
+  }
+
+  .subheader{
+    font-weight: 500;
+    font-size: 22px;
+    display: block;
+    color: $color-dark-gray;
   }
 }
 

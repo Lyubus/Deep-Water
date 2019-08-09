@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
   selector: 'deepwater-completion-chart',
@@ -7,6 +7,12 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class CompletionChartComponent implements OnInit {
+
+  @Input() title: string = 'completion rate';
+  @Input() subtitle: string = null;
+  @Input() color: string = 'black';
+  @Input() value: number = 0;
+  @Input() label: string = null;
 
   constructor() { }
 
