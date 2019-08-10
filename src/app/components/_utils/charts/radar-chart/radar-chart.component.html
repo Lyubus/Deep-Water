@@ -1,20 +1,16 @@
-<kendo-chart 
+<kendo-chart [categoryAxis]="categoryAxisConfig"
+[valueAxis]="valueAxisConfig"
 [legend]="{visible:false}">
 
   <kendo-chart-series>
     <kendo-chart-series-item type="radarArea"
                              name="Market value as of 2007"
                              [color]="color"
-                             [data]="banksData"
-                             [opacity]="0.8"
-                              field="pre" categoryField="name">
+                             [data]="radarData"
+                             field="value" 
+                             [tooltip]="{visible:true, format: '{0}%'}"
+                             categoryField="name">
     </kendo-chart-series-item>
   </kendo-chart-series>
-
-  <kendo-chart-value-axis>
-      <kendo-chart-value-axis-item [labels]="{ format: '{0}' }"
-      [min]="0" [max]="100" [color]="'black'">
-      </kendo-chart-value-axis-item>
-  </kendo-chart-value-axis>
 
 </kendo-chart>

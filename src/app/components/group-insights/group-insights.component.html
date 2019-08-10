@@ -4,12 +4,15 @@
   </span>
 
   <div class="row no-gutters">
-    <div class="col-6">
-      <deepwater-insight *ngFor="let insight of insights" [insight]="insight"></deepwater-insight>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <deepwater-insight *ngFor="let insight of insights" 
+      [insight]="insight"></deepwater-insight>
     </div>
 
-    <div class="col-6">
-      <deepwater-radar-chart></deepwater-radar-chart>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <deepwater-radar-chart
+      [radarData]="radarChartData"
+      ></deepwater-radar-chart>
     </div>
   </div>
 </div>
