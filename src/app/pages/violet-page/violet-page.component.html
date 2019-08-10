@@ -7,8 +7,7 @@
 
       <div class="row no-gutters">
         <div class="col-12">
-          <deepwater-comparison-group [optionsCollection]="comparisonCollection" 
-          [(selected)]="selectedComparer">
+          <deepwater-comparison-group [optionsCollection]="comparisonCollection" [(selected)]="selectedComparer">
           </deepwater-comparison-group>
         </div>
       </div>
@@ -23,29 +22,41 @@
       </div>
 
       <div class="row no-gutters">
-          <div class="col-12">
-           <deepwater-completion
-           [gamesData]="gamesData"
-           ></deepwater-completion>
-          </div>
+        <div class="col-12">
+          <deepwater-barcharts-comparison [comparisonData]="[comparer1Profile, comparer2Profile]">
+          </deepwater-barcharts-comparison>
         </div>
-
-      <div class="row no-gutters">
-          <div class="col-12">
-           <deepwater-progress-widget
-           [registered]="25"
-           [passive]="2"
-           [active]="7"
-           [completed]="16"
-           ></deepwater-progress-widget>
-          </div>
-        </div>
+      </div>
 
       <div class="row no-gutters">
         <div class="col-12">
-          <deepwater-personal-reports
-          [personalScoreData]="personalScoreData"
-          ></deepwater-personal-reports>
+          <deepwater-completion [gamesData]="gamesData"></deepwater-completion>
+        </div>
+      </div>
+
+      <div class="row no-gutters">
+        <div class="col-12">
+          <deepwater-progress-widget [registered]="25" [passive]="2" [active]="7" [completed]="16">
+          </deepwater-progress-widget>
+        </div>
+      </div>
+
+
+
+      <div class="row no-gutters">
+        <div class="col-12">
+
+          <deepwater-personal-scores-distribution
+          [personalScores]="personalScoreData"
+          >
+          </deepwater-personal-scores-distribution>
+
+        </div>
+      </div>
+
+      <div class="row no-gutters">
+        <div class="col-12">
+          <deepwater-personal-reports [personalScoreData]="personalScoreData"></deepwater-personal-reports>
         </div>
       </div>
 

@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { AxisLabelVisualArgs } from '@progress/kendo-angular-charts';
+import { Component, Input, OnChanges } from '@angular/core';
 import { IGameScore } from 'src/app/_models/interfaces/game-scores.interface';
 
 @Component({
@@ -7,7 +6,7 @@ import { IGameScore } from 'src/app/_models/interfaces/game-scores.interface';
   templateUrl: './games-bar-charts.component.html',
   styleUrls: ['./games-bar-charts.component.scss']
 })
-export class GamesBarChartsComponent implements OnInit {
+export class GamesBarChartsComponent implements OnChanges {
 
   @Input() gamesData: IGameScore[] = [];
 
@@ -40,10 +39,12 @@ export class GamesBarChartsComponent implements OnInit {
     // }
   };
 
-  constructor() { }
 
-  ngOnInit() {
-    this.chartHeight = this.gamesData.length * 40 + 50;
+  ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
+    if (changes.gamesData) {
+      this.chartHeight = this.gamesData.length * 40 + 50;
+    }
   }
+
 
 }

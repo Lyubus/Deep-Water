@@ -4,10 +4,13 @@
   </span>
 
   <p>
-
+      The following graph shows the degree of dispersion of the group's scores in each of the assessed skills.
+      Each point represents an individual's skill score.
   </p>
 
   <div class="chart-overlay">
-    <deepwater-scatter-chart></deepwater-scatter-chart>
+    <deepwater-scatter-chart
+    [scatterChartData]="scatterChartData"
+    ></deepwater-scatter-chart>
   </div>
 </div>

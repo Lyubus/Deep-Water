@@ -1,27 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
+import { IColumnChartData } from 'src/app/_models/interfaces/columncharts-data.interface';
 
 @Component({
   selector: 'deepwater-barcharts-paired-vertical',
   templateUrl: './barcharts-paired-vertical.component.html',
   styleUrls: ['./barcharts-paired-vertical.component.scss']
 })
-export class BarchartsPairedVerticalComponent implements OnInit {
+export class BarchartsPairedVerticalComponent implements OnChanges {
+ 
 
-  dataSets = [
-    {
-      color: '#809400',
-      name: 'National bank of Slovakia',
-      values: [78, 72, 73, 74, 75]
-    },
-    {
-      color: '#45566b',
-      name: 'Bankers in Israel',
-      values: [77, 66, 95, 84, 83]
-    }
-  ];
+  @Input() chartsData: IColumnChartData;
 
-  catConfigs = {
-    categories: ['Analytical ability', 'Calculation', 'Quick thinking', 'Focus', 'Learning aptitude'],
+  catConfigs: any = {
     labels: {
       font: `font-family: 'Open Sans', sans-serif; font-size: 20px;`
     },
@@ -58,12 +48,10 @@ export class BarchartsPairedVerticalComponent implements OnInit {
     font: `font-family: 'Open Sans', sans-serif; font-size: 20px;`
   };
 
-  legendMarkersConfig = {type: 'circle'};
-
-
-  constructor() { }
-
-  ngOnInit() {
+  ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
+    if(changes.comparisonData){
+      this.catConfigs.categories = this.chartsData.categories;
+    }
   }
 
 }

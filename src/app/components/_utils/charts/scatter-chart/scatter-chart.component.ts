@@ -1,44 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { ScatterTooltipOptions, ScatterMarkerOptions } from './scatter-chart.constants';
+import { IScatterChartData } from 'src/app/_models/interfaces/scatterchart-data-interface';
 
 @Component({
   selector: 'deepwater-scatter-chart',
   templateUrl: './scatter-chart.component.html',
   styleUrls: ['./scatter-chart.component.scss']
 })
-export class ScatterChartComponent implements OnInit {
+export class ScatterChartComponent implements OnChanges {
 
-  mainColor = '#809400';
-  markerConfiguration = ScatterMarkerOptions;
-  tooltipConfiguration = ScatterTooltipOptions;
-  categoriesMap = new Map<number, string>([
-    [0, ''], [1, 'Flexible thinking'], [2, 'Performance under preasure'],
-    [3, 'Strategic thinking'], [4, 'Planning'], [5, 'Eficiency'],
-    [6, 'Analytical ability'], [7, 'Quick thinking'], [8, '']
-  ]);
+  @Input() scatterChartData: IScatterChartData;
+  @Input() color: string = '#339bd9';
+
+  markerConfiguration: any = ScatterMarkerOptions;
+  tooltipConfiguration: any = ScatterTooltipOptions;
+
+  foo(value){
+    debugger;
+  }
 
   xAxeLabelsConfig = {
     content: (e) => {
-      return this.categoriesMap.get(e.value).replace(' ', '\n');
+      if (this.scatterChartData && this.scatterChartData.categoriesMap) {
+        const map = this.scatterChartData.categoriesMap.get(e.value);
+        return map ? map.replace(' ', '\n') : '';
+      } else {
+        return '';
+      }
     },
     font: `font-family: 'Open Sans', sans-serif; font-size: 20px; `,
-
   };
 
-  xAxisCategories = {
-    categories: ['a', 'b', 'c', 'd', 'e']
-  };
-
-  public chargeData = [[
-    { position: 1, score: 66, display: 'sfdsf' },
-    { position: 2, score: 76, display: 'sfdsf' },
-    { position: 4, score: 90, display: 'sfdsf' },
-    { position: 4, score: 50, display: 'sfdsf' }
-  ]];
-
-  constructor() { }
-
-  ngOnInit() {
+  ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
+    this.markerConfiguration.border.color = this.color;
+    this.tooltipConfiguration.border.color = this.color;
+    this.markerConfiguration.background = this.color;
+    this.tooltipConfiguration.background = this.color;
   }
+
 
 }
