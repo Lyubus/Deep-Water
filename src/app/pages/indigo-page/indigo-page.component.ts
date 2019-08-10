@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { IGameScore } from 'src/app/_models/interfaces/game-scores.interface';
+import { MEDIUM_GAMES_SCORES } from 'src/app/_constant-mocks/game-scores.constants';
 
 @Component({
   selector: 'deepwater-indigo-page',
@@ -6,11 +8,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./indigo-page.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class IndigoPageComponent implements OnInit {
+export class IndigoPageComponent{
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  gamesData: IGameScore[] = MEDIUM_GAMES_SCORES;
+  
 }

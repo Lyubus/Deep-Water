@@ -37,6 +37,7 @@ import { VioletPageComponent } from './pages/violet-page/violet-page.component';
 import { IndigoPageComponent } from './pages/indigo-page/indigo-page.component';
 import { GreenPageComponent } from './pages/green-page/green-page.component';
 import { PageHeadComponent } from './components/page-head/page-head.component';
+import { TestimonialCompletionRateComponent } from './components/testimonial-completion-rate/testimonial-completion-rate.component';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { PageHeadComponent } from './components/page-head/page-head.component';
       VioletPageComponent,
       IndigoPageComponent,
       GreenPageComponent,
-      PageHeadComponent
+      PageHeadComponent,
+      TestimonialCompletionRateComponent
   ],
   imports: [
     BrowserModule,

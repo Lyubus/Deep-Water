@@ -6,4 +6,5 @@
   </ng-template>
 </kendo-arcgauge>
 <p class="text-center">{{text}}</p>
-<p class="text-center" *ngIf="showLegend"><span class="circle" [style.background-color]="color"></span>Score 410</p>
+<p class="text-center" *ngIf="legendText">
+  <span class="circle" [style.background-color]="color"></span>{{legendText}}</p>

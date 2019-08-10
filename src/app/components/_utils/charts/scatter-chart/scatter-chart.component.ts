@@ -15,10 +15,6 @@ export class ScatterChartComponent implements OnChanges {
   markerConfiguration: any = ScatterMarkerOptions;
   tooltipConfiguration: any = ScatterTooltipOptions;
 
-  foo(value){
-    debugger;
-  }
-
   xAxeLabelsConfig = {
     content: (e) => {
       if (this.scatterChartData && this.scatterChartData.categoriesMap) {
