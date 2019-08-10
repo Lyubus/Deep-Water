@@ -19,7 +19,7 @@ import { CompletionChartComponent } from './components/completion-chart/completi
 import { SkillsListComponent } from './components/skills-list/skills-list.component';
 import { TopWidgetComponent } from './components/top-widget/top-widget.component';
 import { ProgressWidgetComponent } from './components/progress-widget/progress-widget.component';
-import { InsightsComponent } from './components/insights/insights.component';
+import { InsightsComponent } from './components/_utils/insights/insights.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
 import { ScatterChartComponent } from './components/_utils/charts/scatter-chart/scatter-chart.component';
@@ -38,6 +38,9 @@ import { IndigoPageComponent } from './pages/indigo-page/indigo-page.component';
 import { GreenPageComponent } from './pages/green-page/green-page.component';
 import { PageHeadComponent } from './components/page-head/page-head.component';
 import { TestimonialCompletionRateComponent } from './components/testimonial-completion-rate/testimonial-completion-rate.component';
+import { GroupInsightsComponent } from './components/group-insights/group-insights.component';
+import { GeneralInsightsComponent } from './components/general-insights/general-insights.component';
+import { RadarChartComponent } from './components/_utils/charts/radar-chart/radar-chart.component';
 
 
 @NgModule({
@@ -69,7 +72,10 @@ import { TestimonialCompletionRateComponent } from './components/testimonial-com
       IndigoPageComponent,
       GreenPageComponent,
       PageHeadComponent,
-      TestimonialCompletionRateComponent
+      TestimonialCompletionRateComponent,
+      GroupInsightsComponent,
+      GeneralInsightsComponent,
+      RadarChartComponent
   ],
   imports: [
     BrowserModule,

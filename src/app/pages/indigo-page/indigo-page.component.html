@@ -11,11 +11,8 @@
         </div>
 
         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-          <deepwater-testimonial-completion-rate
-          [testimonial]="'Analitycal ability'"
-          [valueNumer]="4"
-          [allNumber]="28"
-          ></deepwater-testimonial-completion-rate>
+          <deepwater-testimonial-completion-rate [testimonial]="'Analitycal ability'" [valueNumer]="4" [allNumber]="28">
+          </deepwater-testimonial-completion-rate>
         </div>
 
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
@@ -25,7 +22,30 @@
 
       <div class="row no-gutters">
         <div class="col-12">
+          <deepwater-progress-widget 
+          [registered]="256" [passive]="20" 
+          [active]="7" [completed]="100">
+          </deepwater-progress-widget>
+        </div>
+      </div>
+
+      <div class="row no-gutters">
+        <div class="col-12">
           <deepwater-completion [gamesData]="gamesData"></deepwater-completion>
+        </div>
+      </div>
+
+      <div class="row no-gutters">
+        <div class="col-12">
+          <deepwater-group-insights
+          [insights]="insights"
+          ></deepwater-group-insights>
+        </div>
+      </div>
+
+      <div class="row no-gutters">
+        <div class="col-12">
+          <deepwater-comments></deepwater-comments>
         </div>
       </div>
 

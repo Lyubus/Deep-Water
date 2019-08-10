@@ -1,0 +1,15 @@
+<div class="general-insights-component content-container padded">
+  <span class="header">
+    general insights
+  </span>
+
+  <div class="row no-gutters">
+    <div class="col-8">
+      <deepwater-insight *ngFor="let insight of insights" [insight]="insight"></deepwater-insight>
+    </div>
+
+    <div class="col-4">
+      <deepwater-radar-chart></deepwater-radar-chart>
+    </div>
+  </div>
+</div>
