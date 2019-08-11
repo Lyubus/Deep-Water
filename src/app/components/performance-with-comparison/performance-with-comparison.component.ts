@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interface';
 
 @Component({
   selector: 'deepwater-performance-with-comparison',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerformanceWithComparisonComponent implements OnInit {
 
+  @Input() bulletChartData: IPersonalScore;
+  
   constructor() { }
 
   ngOnInit() {

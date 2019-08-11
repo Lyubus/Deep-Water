@@ -1,3 +1,30 @@
-<p>
-  bullet-charts works!
-</p>
+<div class="row no-gutters">
+<div class="col-3">
+
+</div>
+<div class="col-9">
+  <kendo-chart style="height: 40px;">
+    <kendo-chart-series>
+
+      <kendo-chart-series-item type="bullet" 
+      [data]="[[0, bulletChartData.analyticalAbilityValue]]" 
+      [color]="bulletChartData.color">
+      </kendo-chart-series-item>
+
+      <!-- <kendo-chart-category-axis>
+        <kendo-chart-category-axis-item [majorGridLines]="hidden" [minorGridLines]="hidden">
+        </kendo-chart-category-axis-item>
+      </kendo-chart-category-axis> -->
+
+      <kendo-chart-value-axis>
+        <kendo-chart-value-axis-item [majorGridLines]="hidden" [minorTicks]="hidden"
+                                     [min]="0" [max]="100" [plotBands]="plotBands">
+        </kendo-chart-value-axis-item>
+      </kendo-chart-value-axis>
+    </kendo-chart-series>
+  </kendo-chart>
+</div>
+</div>
+ 
+ 
+ 

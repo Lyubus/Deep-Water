@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interface';
 
 @Component({
   selector: 'deepwater-green-page',
@@ -6,11 +7,22 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./green-page.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class GreenPageComponent implements OnInit {
+export class GreenPageComponent {
 
-  constructor() { }
+  personReport: IPersonalScore = {
+    examinee: 'Rossana Fremont',
+    analyticalAbilityValue: 42,
+    quickThinkingValue: 86,
+    performanceUnderPreassureValue: 94,
+    adaptabilityValue: 97,
+    averageScoreValue: 55,
+    completionValue: 42,
+    color: 'red',
+    flexibleThinkingValue: 0,
+    strategicThinkingValue: 0,
+    planningValue: 0,
+    eficiencyValue: 0,
+};
 
-  ngOnInit() {
-  }
 
 }
