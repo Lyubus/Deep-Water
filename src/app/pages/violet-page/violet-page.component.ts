@@ -27,7 +27,11 @@ export class VioletPageComponent implements OnInit {
     adaptabilityValue: 27,
     averageScoreValue: 84,
     completionValue: 54,
-    color: '#0da3ff'
+    color: '#0da3ff',
+    flexibleThinkingValue: 0,
+    strategicThinkingValue: 0,
+    planningValue: 0,
+    eficiencyValue: 0,
   };
 
   comparer2Profile: IPersonalScore = {
@@ -38,7 +42,11 @@ export class VioletPageComponent implements OnInit {
     adaptabilityValue: 99,
     averageScoreValue: 66,
     completionValue: 90,
-    color: '#45566b'
+    color: '#45566b',
+    flexibleThinkingValue: 0,
+    strategicThinkingValue: 0,
+    planningValue: 0,
+    eficiencyValue: 0,
   };
 
   constructor() { }

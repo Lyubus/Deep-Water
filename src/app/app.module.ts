@@ -41,6 +41,8 @@ import { TestimonialCompletionRateComponent } from './components/testimonial-com
 import { GroupInsightsComponent } from './components/group-insights/group-insights.component';
 import { GeneralInsightsComponent } from './components/general-insights/general-insights.component';
 import { RadarChartComponent } from './components/_utils/charts/radar-chart/radar-chart.component';
+import { BulletChartsComponent } from './components/_utils/charts/bullet-charts/bullet-charts.component';
+import { PerformanceWithComparisonComponent } from './components/performance-with-comparison/performance-with-comparison.component';
 
 
 @NgModule({
@@ -75,7 +77,9 @@ import { RadarChartComponent } from './components/_utils/charts/radar-chart/rada
       TestimonialCompletionRateComponent,
       GroupInsightsComponent,
       GeneralInsightsComponent,
-      RadarChartComponent
+      RadarChartComponent,
+      BulletChartsComponent,
+      PerformanceWithComparisonComponent
   ],
   imports: [
     BrowserModule,
