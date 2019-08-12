@@ -125,25 +125,27 @@
 
 /* Dropdown organization content (hidden by default) */
 .organization-content {
+  z-index: 1;
   position: absolute;
   box-shadow: $default-box-shadow;
   width: 200%;
   right: 1rem;
   top: 0;
+  user-select: none;
   color: $color-white;
   min-height: calc(#{$height-standart-toolbar} * 2);
   border-radius: $default-organization-border-radius;
   font-size: .8rem;
-  padding: 15px;
+  padding: 15px 0;
 
   @include themify($themes) {
     background-color: themed('headlineColor');  
   }
   
-   .axpand-less{
+   .expand-less{
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: 5px;
+    right: 7px;
   }
 
   &>div {
@@ -177,7 +179,8 @@
 
   @include themify($themes) {
     background: url(themed('headImage')) center top no-repeat;
-    background-size: 120% calc(100% - #{$height-standart-toolbar});
+    background-position-x: 50%;
+    background-size: auto calc(100% - #{$height-standart-toolbar - 1px});
   }
 
   .page-head-title {
@@ -219,6 +222,7 @@
 
     .sign-out {
       text-transform: uppercase;
+      white-space: nowrap;
       color: $color-white;
       cursor: pointer;
       font-size: .9rem;
