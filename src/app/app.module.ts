@@ -11,8 +11,6 @@ import 'hammerjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PersonalReportPageComponent } from './pages/personal-report-page/personal-report-page.component';
-import { ReportTableComponent } from './components/report/report-table.component';
 import { ScoreChartComponent } from './components/score-chart/score-chart.component';
 import { PersonsCountComponent } from './components/persons-count/persons-count.component';
 import { CompletionChartComponent } from './components/completion-chart/completion-chart.component';
@@ -42,16 +40,15 @@ import { GroupInsightsComponent } from './components/group-insights/group-insigh
 import { GeneralInsightsComponent } from './components/general-insights/general-insights.component';
 import { RadarChartComponent } from './components/_utils/charts/radar-chart/radar-chart.component';
 import { BulletChartsComponent } from './components/_utils/charts/bullet-charts/bullet-charts.component';
-import { PerformanceWithComparisonComponent } from './components/performance-with-comparison/performance-with-comparison.component';
 import { LaurelLeafComponent } from './components/_utils/laurel-leaf/laurel-leaf.component';
 import { ScoreRateComponentComponent } from './components/_utils/score-rate-component/score-rate-component.component';
+import { ReportWithRankingComponent } from './components/report-with-ranking/report-with-ranking.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonalReportPageComponent,
-    ReportTableComponent,
     ScoreChartComponent,
     PersonsCountComponent,
     CompletionChartComponent,
@@ -81,9 +78,9 @@ import { ScoreRateComponentComponent } from './components/_utils/score-rate-comp
       GeneralInsightsComponent,
       RadarChartComponent,
       BulletChartsComponent,
-      PerformanceWithComparisonComponent,
       LaurelLeafComponent,
-      ScoreRateComponentComponent
+      ScoreRateComponentComponent,
+      ReportWithRankingComponent
   ],
   imports: [
     BrowserModule,
@@ -91,7 +88,8 @@ import { ScoreRateComponentComponent } from './components/_utils/score-rate-comp
     GridModule,
     BrowserAnimationsModule,
     ChartsModule,
-    GaugesModule
+    GaugesModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

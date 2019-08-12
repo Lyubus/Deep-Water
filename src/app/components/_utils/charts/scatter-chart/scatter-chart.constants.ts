@@ -1,5 +1,5 @@
 export const ScatterMarkerOptions = {
-    size: 6,
+    size: 5,
     type: 'circle',
     visible: true,
     border: {

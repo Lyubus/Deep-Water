@@ -7,26 +7,23 @@
       
       <div class="row no-gutters">
         <div class="col-12">
-          <deepwater-personal-reports [personalScoreData]="allPersonalReports"></deepwater-personal-reports>
-        </div>
-      </div>
-
-      <div class="row no-gutters">
-        <div class="col-12">
           <deepwater-user-info></deepwater-user-info>
         </div>
       </div>
 
+
       <div class="row no-gutters">
         <div class="col-12">
-          <deepwater-performance-with-comparison [bulletChartData]="personReport">
-          </deepwater-performance-with-comparison>
+          <deepwater-top-leaders></deepwater-top-leaders>
         </div>
       </div>
 
       <div class="row no-gutters">
         <div class="col-12">
-          <deepwater-top-leaders></deepwater-top-leaders>
+          <deepwater-report-with-ranking
+          [personalScoreData]="personalScoreReports"
+          >
+          </deepwater-report-with-ranking>
         </div>
       </div>
 

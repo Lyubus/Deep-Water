@@ -1,0 +1,166 @@
+<div class="report-component content-container">
+  <div class="row no-gutters central-vertical-align padded report-heading">
+
+    <div class="col-9">
+      <span class="header">
+        Personal Reports
+      </span>
+    </div>
+
+    <div class="col-2 text-right">
+      <label class="central-vertical-align">
+        <input type="checkbox" class="mr-2">
+        Define your criteria
+      </label>
+    </div>
+
+    <div class="col-1 criteria-search">
+      <deepwater-search-field [placeholder]="'Criteria'"></deepwater-search-field>
+    </div>
+  </div>
+
+  <div>
+
+    <div class="row no-gutters pb-4 score-rate-component">
+
+      <div class="col-12 pb-4 pt-2">
+        <div class="row no-gutters">
+          <div class="col-4">
+            <div class="table-header-cell pl-4">
+              Assesed skills
+            </div>
+          </div>
+          <div class="col-8 score-rate">
+            <div class="red"><span>Poor</span></div>
+            <div class="orange"><span>Fair</span></div>
+            <div class="green"><span>Good</span></div>
+            <div class="darkgreen"><span>Very Good</span></div>
+            <div class="purple"><span>Excellent</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="score-milestones">
+        <div class="col-12 px-4 " *ngFor="let skill of skillRankings">
+          <div class="row no-gutters">
+            <div class="col-4">
+              <p>{{ skill.title }}</p>
+            </div>
+            <div class="col-8">
+              <div class="row no-gutters input-field">
+                <div class="col-2">0</div>
+                <div class="col-2"><input type="number" min="1" max="99"
+                  [(ngModel)]="skill.poor" ></div>
+                <div class="col-2"><input type="number" [min]="skill.poor" max="99"
+                  [(ngModel)]="skill.fair" ></div>
+                <div class="col-2"><input type="number" min="1" max="99" 
+                  [(ngModel)]="skill.good" ></div>
+                <div class="col-2"><input type="number" min="1" max="99" 
+                  [(ngModel)]="skill.verygood" ></div>
+                <div class="col-2 text-right">100</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 px-4 buttons-bar d-none">
+        <button class="table-header-cell">Apply</button>
+        <button class="table-header-cell ml-2 mr-4">Cancel</button>
+        <button class="table-header-cell">Set to our criteria</button>
+      </div>
+    </div>
+    
+    <kendo-grid [data]="personScoreView" [sortable]="{mode: 'multiple'}" [sort]="sort"
+      (sortChange)="sortChange($event)">
+      <kendo-grid-column title="#" width="50" [headerClass]="'table-header-cell'" [class]="'table-cell'">
+          <ng-template kendoGridCellTemplate let-rowIndex="rowIndex" >
+              <span>{{ rowIndex + 1 }}</span>
+            </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column title="Examinees" width="150" [headerClass]="'table-header-cell'" [class]="'table-cell'">
+          <ng-template kendoGridCellTemplate let-dataItem >
+              <span >{{ dataItem.examinee }}</span>
+            </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column title="Analytical ability" [headerClass]="'table-header-cell'"
+        [class]="'table-cell'">
+        <ng-template kendoGridCellTemplate let-dataItem >
+            <span 
+            [class.red]="checkRange(dataItem.analyticalAbilityValue, 0, analyticalAbilityRate.poor)"
+            [class.orange]="checkRange(dataItem.analyticalAbilityValue, analyticalAbilityRate.poor, analyticalAbilityRate.fair)"
+            [class.green]="checkRange(dataItem.analyticalAbilityValue, analyticalAbilityRate.fair, analyticalAbilityRate.good)"
+            [class.darkgreen]="checkRange(dataItem.analyticalAbilityValue, analyticalAbilityRate.good, analyticalAbilityRate.verygood)"
+            [class.purple]="checkRange(dataItem.analyticalAbilityValue, analyticalAbilityRate.verygood, 100)"
+            >{{ dataItem.analyticalAbilityValue }}</span>
+          </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column title="Quick thinking" [headerClass]="'table-header-cell'"
+        [class]="'table-cell'">
+        <ng-template kendoGridCellTemplate let-dataItem >
+            <span
+            [class.red]="checkRange(dataItem.quickThinkingValue, 0, quickThinkingRate.poor)"
+            [class.orange]="checkRange(dataItem.quickThinkingValue, quickThinkingRate.poor, quickThinkingRate.fair)"
+            [class.green]="checkRange(dataItem.quickThinkingValue, quickThinkingRate.fair, quickThinkingRate.good)"
+            [class.darkgreen]="checkRange(dataItem.quickThinkingValue, quickThinkingRate.good, quickThinkingRate.verygood)"
+            [class.purple]="checkRange(dataItem.quickThinkingValue, quickThinkingRate.verygood, 100)"
+            >{{ dataItem.quickThinkingValue }}</span>
+          </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column  title="Performance under preassure"
+        [headerClass]="'table-header-cell'" [class]="'table-cell'">
+        <ng-template kendoGridCellTemplate let-dataItem >
+            <span
+            [class.red]="checkRange(dataItem.performanceUnderPreassureValue, 0, performanceUnderPreassureRate.poor)"
+            [class.orange]="checkRange(dataItem.performanceUnderPreassureValue, performanceUnderPreassureRate.poor, performanceUnderPreassureRate.fair)"
+            [class.green]="checkRange(dataItem.performanceUnderPreassureValue, performanceUnderPreassureRate.fair, performanceUnderPreassureRate.good)"
+            [class.darkgreen]="checkRange(dataItem.performanceUnderPreassureValue, performanceUnderPreassureRate.good, performanceUnderPreassureRate.verygood)"
+            [class.purple]="checkRange(dataItem.performanceUnderPreassureValue, performanceUnderPreassureRate.verygood, 100)"
+            >{{ dataItem.performanceUnderPreassureValue }}</span>
+          </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column title="Adaptability" [headerClass]="'table-header-cell'"
+        [class]="'table-cell'">
+        <ng-template kendoGridCellTemplate let-dataItem >
+            <span
+            [class.red]="checkRange(dataItem.adaptabilityValue, 0, adaptabilityRate.poor)"
+            [class.orange]="checkRange(dataItem.adaptabilityValue, adaptabilityRate.poor, adaptabilityRate.fair)"
+            [class.green]="checkRange(dataItem.adaptabilityValue, adaptabilityRate.fair, adaptabilityRate.good)"
+            [class.darkgreen]="checkRange(dataItem.adaptabilityValue, adaptabilityRate.good, adaptabilityRate.verygood)"
+            [class.purple]="checkRange(dataItem.adaptabilityValue, adaptabilityRate.verygood, 100)"
+            >{{ dataItem.adaptabilityValue }}</span>
+          </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column title="Average score" [headerClass]="'table-header-cell'"
+        [class]="'table-cell'">
+        <ng-template kendoGridCellTemplate let-dataItem >
+            <span
+            [class.red]="checkRange(dataItem.averageScoreValue, 0, averageScoreRate.poor)"
+            [class.orange]="checkRange(dataItem.averageScoreValue, averageScoreRate.poor, averageScoreRate.fair)"
+            [class.green]="checkRange(dataItem.averageScoreValue, averageScoreRate.fair, averageScoreRate.good)"
+            [class.darkgreen]="checkRange(dataItem.averageScoreValue, averageScoreRate.good, averageScoreRate.verygood)"
+            [class.purple]="checkRange(dataItem.averageScoreValue, averageScoreRate.verygood, 100)"
+            >{{ dataItem.averageScoreValue }}</span>
+          </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column format="{0}%" title="Completion" [headerClass]="'table-header-cell'"
+        [class]="'table-cell'">
+        <ng-template kendoGridCellTemplate let-dataItem >
+            <span
+            [class.red]="checkRange(dataItem.completionValue, 0, completionRate.poor)"
+            [class.orange]="checkRange(dataItem.completionValue, completionRate.poor, completionRate.fair)"
+            [class.green]="checkRange(dataItem.completionValue, completionRate.fair, completionRate.good)"
+            [class.darkgreen]="checkRange(dataItem.completionValue, completionRate.good, completionRate.verygood)"
+            [class.purple]="checkRange(dataItem.completionValue, completionRate.verygood, 100)"
+            >{{ dataItem.completionValue }}</span>
+          </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column title="View report" width="75" [headerClass]="'table-header-cell'" [class]="'table-cell'">
+        <ng-template kendoGridCellTemplate let-dataItem>
+          <i class="material-icons">attachment</i>
+        </ng-template>
+      </kendo-grid-column>
+    </kendo-grid>
+
+  </div>
+</div>

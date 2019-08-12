@@ -1,6 +1,8 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interface';
 import { PERSONAL_SCORES } from 'src/app/_constant-mocks/personal-scores.constants';
+import { IInsight } from 'src/app/_models/interfaces/insight.interface';
+import { INSIGHTS } from 'src/app/_constant-mocks/insights.constant';
 
 @Component({
   selector: 'deepwater-green-page',
@@ -27,8 +29,6 @@ export class GreenPageComponent {
 };
 
 personalScoreReports: IPersonalScore[] = PERSONAL_SCORES;
-
-
-// personScoreReports: IPersonScore[] = PERSON_SCORES
+generalInsights: IInsight[] = INSIGHTS;
 
 }
