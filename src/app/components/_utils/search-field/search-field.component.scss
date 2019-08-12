@@ -5,6 +5,8 @@
         border: none;
         width: 30%;
         transition: width .5s;
+        position: absolute;
+        right: 45%;
         outline: none;
         background-image: url('./../../../../assets/img/icons/search.svg');
         background-repeat: no-repeat;
@@ -33,7 +35,9 @@
     .csv {
 		width: 45%;
 		color: $color-dark-gray;
-		font-weight: bold;
+        font-weight: bold;
+        position: absolute;
+        right: 0;
         img {
             height: 20px;
             cursor: pointer;
