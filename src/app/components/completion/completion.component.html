@@ -6,11 +6,17 @@
 
   <div class="row no-gutters">
     <div class="col-3 central-vertical-align">
-      <deepwater-radial-gauge [value]="90" [text]="'25/28 Exedlg'" [color]="'blue'"></deepwater-radial-gauge>
+      <deepwater-radial-gauge [value]="average" 
+      [text]="'Average completion rate'" [color]="'#0f5da5'">
+      </deepwater-radial-gauge>
     </div>
+
     <div class="col-9">
-      <deepwater-bar-charts></deepwater-bar-charts>
+      <deepwater-games-bar-charts
+      [gamesData]="gamesData"
+      ></deepwater-games-bar-charts>
     </div>
+
   </div>
 
 

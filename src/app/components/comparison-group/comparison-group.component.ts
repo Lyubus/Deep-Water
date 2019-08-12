@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation, Output, EventEmitter } from '@angular/core';
+import { IKeyValuePair } from 'src/app/_models/interfaces/key-value.interface';
 
 @Component({
   selector: 'deepwater-comparison-group',
@@ -8,7 +9,10 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 })
 export class ComparisonGroupComponent implements OnInit {
 
-  @Input('defaultOption') defaultOption: string;
+  @Input() selected: number = null;
+  @Output() selectedChange: EventEmitter<any> = new EventEmitter<any>();
+
+  @Input() optionsCollection: IKeyValuePair[] = [];
 
   constructor() { }
 

@@ -1,10 +1,15 @@
 <div class="content-container padded">
   <span class="header text-center">
-    completion rate
+    {{personalScore.examinee}}
   </span>
 
-  <div>
+  <span class="subheader text-center">
+    Average score
+  </span>
 
+  <div class="d-flex justify-content-center">
+    <deepwater-radial-gauge [value]="average" [text]="'Mark'"
+     [color]="personalScore.color"></deepwater-radial-gauge>
   </div>
 
 </div>

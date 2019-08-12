@@ -1,5 +1,5 @@
-<div class="content-container padded personal-report-component">
-  <div class="row no-gutters central-vertical-align">
+<div class="content-container personal-report-component">
+  <div class="row no-gutters central-vertical-align padded report-heading">
 
     <div class="col-7">
       <span class="header">
@@ -17,6 +17,43 @@
     <div class="col-2">
       <deepwater-search-field [placeholder]="'Criteria'"></deepwater-search-field>
     </div>
+  </div>
+
+  <div>
+    <kendo-grid [data]="view" [sortable]="{mode: 'multiple'}" 
+    [sort]="sort" (sortChange)="sortChange($event)">
+      <kendo-grid-column  title="#" width="50" [headerClass]="'table-header-cell'"
+      [class]="'table-cell'">
+      </kendo-grid-column>
+      <kendo-grid-column field="examinee" title="Examinees" width="150" 
+      [headerClass]="'table-header-cell'">
+      </kendo-grid-column>
+      <kendo-grid-column field="analyticalAbilityValue" title="Analytical ability" 
+      [headerClass]="'table-header-cell'" [class]="'table-cell'">
+      </kendo-grid-column>
+      <kendo-grid-column field="quickThinkingValue" title="Quick thinking"  
+      [headerClass]="'table-header-cell'" [class]="'table-cell'">
+      </kendo-grid-column>
+      <kendo-grid-column field="performanceUnderPreassureValue" title="Performance under preassure"  
+      [headerClass]="'table-header-cell'" [class]="'table-cell'">
+      </kendo-grid-column>
+      <kendo-grid-column field="adaptabilityValue" title="Adaptability"  
+      [headerClass]="'table-header-cell'" [class]="'table-cell'">
+      </kendo-grid-column>
+      <kendo-grid-column field="averageScoreValue" title="Average score"  
+      [headerClass]="'table-header-cell'" [class]="'table-cell'">
+      </kendo-grid-column>
+      <kendo-grid-column field="completionValue" format="{0}%" title="Completion"  
+      [headerClass]="'table-header-cell'" [class]="'table-cell'">
+      </kendo-grid-column>
+      <kendo-grid-column  title="View report" width="75" 
+      [headerClass]="'table-header-cell'" [class]="'table-cell'">
+        <ng-template kendoGridCellTemplate let-dataItem>
+            <i class="material-icons">attachment</i>
+        </ng-template>
+      </kendo-grid-column>
+    </kendo-grid>
 
   </div>
+  
 </div>

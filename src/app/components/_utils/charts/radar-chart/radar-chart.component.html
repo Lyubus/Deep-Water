@@ -1,0 +1,16 @@
+<kendo-chart [categoryAxis]="categoryAxisConfig"
+[valueAxis]="valueAxisConfig"
+[legend]="{visible:false}">
+
+  <kendo-chart-series>
+    <kendo-chart-series-item type="radarArea"
+                             name="Market value as of 2007"
+                             [color]="color"
+                             [data]="radarData"
+                             field="value" 
+                             [tooltip]="{visible:true, format: '{0}%'}"
+                             categoryField="name">
+    </kendo-chart-series-item>
+  </kendo-chart-series>
+
+</kendo-chart>

@@ -19,7 +19,7 @@ import { CompletionChartComponent } from './components/completion-chart/completi
 import { SkillsListComponent } from './components/skills-list/skills-list.component';
 import { TopWidgetComponent } from './components/top-widget/top-widget.component';
 import { ProgressWidgetComponent } from './components/progress-widget/progress-widget.component';
-import { InsightsComponent } from './components/insights/insights.component';
+import { InsightsComponent } from './components/_utils/insights/insights.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
 import { ScatterChartComponent } from './components/_utils/charts/scatter-chart/scatter-chart.component';
@@ -29,10 +29,20 @@ import { ComparisonGroupComponent } from './components/comparison-group/comparis
 import { BarchartsComparisonComponent } from './components/barcharts-comparison/barcharts-comparison.component';
 import { BarchartsPairedVerticalComponent } from './components/_utils/charts/barcharts-paired-vertical/barcharts-paired-vertical.component';
 import { CompletionComponent } from './components/completion/completion.component';
-import { BarChartsComponent } from './components/_utils/charts/bar-charts/bar-charts.component';
+import { GamesBarChartsComponent } from './components/_utils/charts/games-bar-charts/games-bar-charts.component';
 import { PersonalReportsComponent } from './components/personal-reports/personal-reports.component';
 import { SearchFieldComponent } from './components/_utils/search-field/search-field.component';
 import { RadialGaugeComponent } from './components/_utils/radial-gauge/radial-gauge.component';
+import { VioletPageComponent } from './pages/violet-page/violet-page.component';
+import { IndigoPageComponent } from './pages/indigo-page/indigo-page.component';
+import { GreenPageComponent } from './pages/green-page/green-page.component';
+import { PageHeadComponent } from './components/page-head/page-head.component';
+import { TestimonialCompletionRateComponent } from './components/testimonial-completion-rate/testimonial-completion-rate.component';
+import { GroupInsightsComponent } from './components/group-insights/group-insights.component';
+import { GeneralInsightsComponent } from './components/general-insights/general-insights.component';
+import { RadarChartComponent } from './components/_utils/charts/radar-chart/radar-chart.component';
+import { BulletChartsComponent } from './components/_utils/charts/bullet-charts/bullet-charts.component';
+import { PerformanceWithComparisonComponent } from './components/performance-with-comparison/performance-with-comparison.component';
 
 
 @NgModule({
@@ -57,9 +67,19 @@ import { RadialGaugeComponent } from './components/_utils/radial-gauge/radial-ga
     BarchartsComparisonComponent,
     BarchartsPairedVerticalComponent,
     CompletionComponent,
-      BarChartsComponent,
+      GamesBarChartsComponent,
       PersonalReportsComponent,
-      SearchFieldComponent
+      SearchFieldComponent,
+      VioletPageComponent,
+      IndigoPageComponent,
+      GreenPageComponent,
+      PageHeadComponent,
+      TestimonialCompletionRateComponent,
+      GroupInsightsComponent,
+      GeneralInsightsComponent,
+      RadarChartComponent,
+      BulletChartsComponent,
+      PerformanceWithComparisonComponent
   ],
   imports: [
     BrowserModule,

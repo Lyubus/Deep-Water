@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'deepwater-radial-gauge',
@@ -6,15 +6,11 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./radial-gauge.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class RadialGaugeComponent implements OnInit {
+export class RadialGaugeComponent {
 
-  @Input('value') value: number;
-  @Input('color') color: string;
-  @Input('text') text: string;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input() value: number;
+  @Input() color: string;
+  @Input() text: string;
+  @Input() legendText: string;
 
 }

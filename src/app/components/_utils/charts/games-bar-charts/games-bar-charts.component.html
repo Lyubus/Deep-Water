@@ -1,0 +1,28 @@
+<kendo-chart [style.height.px]="chartHeight">
+
+    <kendo-chart-title [color]="defaultTextColor" [align]="'center'"
+      text="% Average completion rate"></kendo-chart-title>
+  
+    <kendo-chart-category-axis>
+      <kendo-chart-category-axis-item [categories]="categories" [labels]="catLabelsConfig"
+        [majorGridLines]="{visible: false}" [minorGridLines]="{visible: false}" [majorTicks]="{visible: false}"
+        [minorTicks]="{visible: false}" [line]="{color: 'transparent'}" [axisCrossingValue]="0">
+      </kendo-chart-category-axis-item>
+    </kendo-chart-category-axis>
+  
+    <kendo-chart-value-axis>
+      <kendo-chart-value-axis-item [majorGridLines]="{visible: false}" [minorGridLines]="{visible: false}"
+        [line]="{color: 'transparent'}" [majorTicks]="{visible: false}" [minorTicks]="{visible: false}"
+        [labels]="valueLabelsConfig" [min]="0" [max]="100">
+      </kendo-chart-value-axis-item>
+    </kendo-chart-value-axis>
+  
+    <kendo-chart-series>
+      <kendo-chart-series-item type="bar" [gap]=".7" categoryField="game"
+      colorField="color" field="score"
+      [spacing]=".7" [data]="gamesData" [border]="{width: 0}">
+      </kendo-chart-series-item>
+    </kendo-chart-series>
+  
+    <!-- <kendo-chart-tooltip format="{0}%"></kendo-chart-tooltip> -->
+  </kendo-chart>

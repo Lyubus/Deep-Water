@@ -1,21 +1,28 @@
 <kendo-chart>
   <kendo-chart-series>
 
-    <kendo-chart-series-item type="scatter" *ngFor="let series of chargeData" [color]="mainColor" [markers]="markerConfiguration"
-      [labels]="labelConfiguration" [data]="series" [tooltip]="tooltipConfiguration"
-       xField="position" yField="score" [categoryAxis]="xAxisCategories">
-
+    <kendo-chart-series-item type="scatter" [color]="color" [markers]="markerConfiguration"
+      [labels]="labelConfiguration" [data]="scatterChartData.data" 
+      [categoryAxis]="xAxisCategories" xField="category"
+      yField="value">
+      <kendo-chart-series-item-tooltip>
+          <ng-template let-dataItem="dataItem">
+              {{ dataItem.actor }}
+          </ng-template>
+        </kendo-chart-series-item-tooltip>
     </kendo-chart-series-item>
   </kendo-chart-series>
 
   <kendo-chart-x-axis>
-    <kendo-chart-x-axis-item [labels]="xAxeLabelsConfig" [min]="0" [max]="8"  >
+    <kendo-chart-x-axis-item [labels]="xAxeLabelsConfig" [min]="0" [max]="scatterChartData.categoriesMap.size">
     </kendo-chart-x-axis-item>
   </kendo-chart-x-axis>
 
   <kendo-chart-y-axis>
-    <kendo-chart-y-axis-item [labels]="{ format: '{0}' }" [min]="40" [max]="100">
+    <kendo-chart-y-axis-item [labels]="{ format: '{0}' }" [min]="0" [max]="100">
     </kendo-chart-y-axis-item>
   </kendo-chart-y-axis>
-  
+
+
+
 </kendo-chart>

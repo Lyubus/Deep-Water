@@ -14,11 +14,15 @@ body {
   margin: 0;
 }
 
+.content-overlay {
+  padding: 32px $standard-content-padding 15px $standard-content-padding;
+}
+
 .content-container {
   cursor: default;
   margin: $margin-content-containers 7px;
   border-radius: 5px;
-  border: solid gray 1px;
+  border: solid $color-gray 1px;
   box-shadow: $default-box-shadow;
 
   &.padded {
@@ -30,6 +34,13 @@ body {
     font-weight: 900;
     font-size: 24px;
     display: block;
+  }
+
+  .subheader{
+    font-weight: 500;
+    font-size: 22px;
+    display: block;
+    color: $color-dark-gray;
   }
 }
 
@@ -50,4 +61,29 @@ body {
 .central-vertical-align {
   display: flex !important;
   align-items: center;
+}
+
+.theme-switcher {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  z-index: 2;
+
+  button {
+    min-height: 30px;
+    min-width: 30px;
+    border: none;
+
+    &.purple {
+      background-color: purple;
+    }
+
+    &.green {
+      background-color: green;
+    }
+
+    &.blue {
+      background-color: blue;
+    }
+  }
 }
