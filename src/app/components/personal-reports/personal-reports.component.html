@@ -19,33 +19,8 @@
     </div>
   </div>
 
-  <div class="person-score-view">
-    <kendo-grid [data]="personScoreView" [sortable]="{mode: 'multiple'}" [sort]="sort"
-      (sortChange)="sortChange($event)">
-
-      <kendo-grid-column field="assesedSkillValue" title="Assesed skills" [headerClass]="'table-header-cell'"
-        [class]="'table-cell'">
-      </kendo-grid-column>
-      <kendo-grid-column field="poorValue" title="Poor" [headerClass]="'table-header-cell table-header-cell-poor'" [class]="'table-cell'">
-      </kendo-grid-column>
-      <kendo-grid-column field="fairValue" format="{0}%" title="Fair" [headerClass]="'table-header-cell table-header-cell-fair'"
-        [class]="'table-cell'">
-      </kendo-grid-column>
-      <kendo-grid-column field="goodValue" title="Good" [headerClass]="'table-header-cell table-header-cell-good'" [class]="'table-cell'">
-      </kendo-grid-column>
-      <kendo-grid-column field="veryGoodValue" title="Very good" [headerClass]="'table-header-cell table-header-cell-very-good'"
-        [class]="'table-cell'">
-      </kendo-grid-column>
-      <kendo-grid-column field="excellentValue" title="Excellent" [headerClass]="'table-header-cell'"
-        [class]="'table-cell'">
-      </kendo-grid-column>
-    </kendo-grid>
-  </div>
-
-
-
   <div>
-    <kendo-grid [data]="view" [sortable]="{mode: 'multiple'}" [sort]="sort" (sortChange)="sortChange($event)">
+    <kendo-grid [data]="personScoreView" [sortable]="{mode: 'multiple'}" [sort]="sort" (sortChange)="sortChange($event)">
       <kendo-grid-column title="#" width="50" [headerClass]="'table-header-cell'" [class]="'table-cell'">
       </kendo-grid-column>
       <kendo-grid-column field="examinee" title="Examinees" width="150" [headerClass]="'table-header-cell'">
