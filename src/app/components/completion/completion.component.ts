@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { IGameScore } from 'src/app/_models/interfaces/game-scores.interface';
-import { MEDIUM_GAMES_SCORES } from '../../_constant-mocks/game-scores.constants';
 import * as _ from 'lodash';
 
 @Component({

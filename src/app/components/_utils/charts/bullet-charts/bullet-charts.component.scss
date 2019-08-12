@@ -1,0 +1,18 @@
+@import '../../../../../styles.scss';
+@import '../../../../../assets/scss/theming/theme.scss';
+
+
+.bulletchart-area {
+
+  .row {
+    min-height: 50px;
+  }
+
+  font-size: 24px;
+  text-align: left;
+  color: #666666;
+  word-wrap: break-word;
+  word-break: break-word;
+  text-overflow: ellipsis;
+
+}

@@ -1,30 +1,39 @@
-<div class="row no-gutters">
-<div class="col-3">
+<div class="bulletchart-area">
+  <!-- <div class="row no-gutters central-vertical-align">
+    <div class="col-8 offset-lg-4">
+    </div>
+  </div> -->
 
+  <div class="row no-gutters central-vertical-align" *ngFor="let data of bulletChartData">
+    <div class="col-3">
+      {{data.name}}
+    </div>
+    <div class="col-1">
+      <span> {{data.value}}</span>
+    </div>
+    <div class="col-8">
+
+      <kendo-chart style="height: 35px;">
+        <kendo-chart-series>
+
+          <kendo-chart-series-item type="bullet" [data]="[[0, data.boundary]]">
+          </kendo-chart-series-item>
+
+          <kendo-chart-series-item-labels [align]="'right'" [color]="white" [visible]="true">
+          </kendo-chart-series-item-labels>
+
+          <!-- <kendo-chart-category-axis>
+          <kendo-chart-category-axis-item [majorGridLines]="hidden" [minorGridLines]="hidden">
+          </kendo-chart-category-axis-item>
+        </kendo-chart-category-axis> -->
+
+          <kendo-chart-value-axis>
+            <kendo-chart-value-axis-item [majorGridLines]="hidden" [minorTicks]="hidden" [min]="0" [max]="100"
+              [plotBands]="data.plotBands" [visible]="false">
+            </kendo-chart-value-axis-item>
+          </kendo-chart-value-axis>
+        </kendo-chart-series>
+      </kendo-chart>
+    </div>
+  </div>
 </div>
-<div class="col-9">
-  <kendo-chart style="height: 40px;">
-    <kendo-chart-series>
-
-      <kendo-chart-series-item type="bullet" 
-      [data]="[[0, bulletChartData.analyticalAbilityValue]]" 
-      [color]="bulletChartData.color">
-      </kendo-chart-series-item>
-
-      <!-- <kendo-chart-category-axis>
-        <kendo-chart-category-axis-item [majorGridLines]="hidden" [minorGridLines]="hidden">
-        </kendo-chart-category-axis-item>
-      </kendo-chart-category-axis> -->
-
-      <kendo-chart-value-axis>
-        <kendo-chart-value-axis-item [majorGridLines]="hidden" [minorTicks]="hidden"
-                                     [min]="0" [max]="100" [plotBands]="plotBands">
-        </kendo-chart-value-axis-item>
-      </kendo-chart-value-axis>
-    </kendo-chart-series>
-  </kendo-chart>
-</div>
-</div>
- 
- 
- 

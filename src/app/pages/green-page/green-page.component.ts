@@ -18,7 +18,7 @@ export class GreenPageComponent {
     adaptabilityValue: 97,
     averageScoreValue: 55,
     completionValue: 42,
-    color: 'red',
+    color: '#fb6900',
     flexibleThinkingValue: 0,
     strategicThinkingValue: 0,
     planningValue: 0,
