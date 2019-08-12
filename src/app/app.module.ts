@@ -44,6 +44,7 @@ import { RadarChartComponent } from './components/_utils/charts/radar-chart/rada
 import { BulletChartsComponent } from './components/_utils/charts/bullet-charts/bullet-charts.component';
 import { PerformanceWithComparisonComponent } from './components/performance-with-comparison/performance-with-comparison.component';
 import { LaurelLeafComponent } from './components/_utils/laurel-leaf/laurel-leaf.component';
+import { ScoreRateComponentComponent } from './components/_utils/score-rate-component/score-rate-component.component';
 
 
 @NgModule({
@@ -81,7 +82,8 @@ import { LaurelLeafComponent } from './components/_utils/laurel-leaf/laurel-leaf
       RadarChartComponent,
       BulletChartsComponent,
       PerformanceWithComparisonComponent,
-      LaurelLeafComponent
+      LaurelLeafComponent,
+      ScoreRateComponentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,49 @@
+@import '../../../../styles.scss';
+@import '../../../../assets/scss/colors.scss';
+@import '../../../../assets/scss/sizes.scss';
+@import '../../../../assets/scss/theming/theme.scss';
+
+.score-rate-component {
+    .score-rate {
+        padding-right: 20px;
+
+        div {
+            width: 19%;
+            margin: 0 .5%;
+            color: $color-white;
+            font-weight: bold;
+            display: inline-block;
+            padding: 3px 10px;
+        }
+    }
+
+    .table-header-cell {
+        padding: 3px 0;
+	}
+	
+
+    button.table-header-cell {
+        border: none;
+        font-weight: normal;
+        border-radius: 2px;
+        font-size: 14px;
+        padding: 3px 10px;
+	}
+	
+	p {
+		color: $color-gray;
+		margin: 1px 0;
+	}
+
+    .input-field {
+		text-align: left;
+		color: $color-gray;
+        [type="number"] {
+            width: 50px;
+            height: 25px;
+            text-align: right;
+            font-weight: bold;
+            color: $color-gray;
+        }
+    }
+}
