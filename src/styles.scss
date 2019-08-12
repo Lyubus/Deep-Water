@@ -29,14 +29,18 @@ body {
     padding: 15px 25px;
   }
 
-  .header{
+  .header {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 24px;
     display: block;
+
+    .material-icons {
+      color: $color-gray;
+    }
   }
 
-  .subheader{
+  .subheader {
     font-weight: 500;
     font-size: 22px;
     display: block;
@@ -44,17 +48,22 @@ body {
   }
 }
 
-.same-height{
-  & > div{
+.same-height {
+  &>div {
     padding-bottom: calc(#{$margin-content-containers} * 2);
-    .content-container{
+
+    .content-container {
       height: 100%;
       padding: 15px 10px;
     }
   }
 }
 
-.material-icons{
+deepwater-laurel-leaf {
+  display: inline-block;
+}
+
+.material-icons {
   cursor: pointer;
 }
 

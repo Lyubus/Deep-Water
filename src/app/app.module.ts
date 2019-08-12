@@ -43,6 +43,7 @@ import { GeneralInsightsComponent } from './components/general-insights/general-
 import { RadarChartComponent } from './components/_utils/charts/radar-chart/radar-chart.component';
 import { BulletChartsComponent } from './components/_utils/charts/bullet-charts/bullet-charts.component';
 import { PerformanceWithComparisonComponent } from './components/performance-with-comparison/performance-with-comparison.component';
+import { LaurelLeafComponent } from './components/_utils/laurel-leaf/laurel-leaf.component';
 
 
 @NgModule({
@@ -79,7 +80,8 @@ import { PerformanceWithComparisonComponent } from './components/performance-wit
       GeneralInsightsComponent,
       RadarChartComponent,
       BulletChartsComponent,
-      PerformanceWithComparisonComponent
+      PerformanceWithComparisonComponent,
+      LaurelLeafComponent
   ],
   imports: [
     BrowserModule,
