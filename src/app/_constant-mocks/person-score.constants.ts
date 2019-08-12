@@ -1,0 +1,68 @@
+import { IPersonScore } from '../_models/interfaces/person-score.interface';
+
+export const PERSON_SCORES: IPersonScore[] = [
+    {
+        assesedSkillValue: 'Flexible thinking',
+        poorValue: 0,
+        fairValue: 0,
+        goodValue: 0,
+        veryGoodValue: 0,
+        excellentValue: 100,
+    },
+    {
+        assesedSkillValue: 'Perfomance under presure',
+        poorValue: 0,
+        fairValue: 0,
+        goodValue: 0,
+        veryGoodValue: 0,
+        excellentValue: 100,
+    },
+    {
+        assesedSkillValue: 'Strategic thinking',
+        poorValue: 0,
+        fairValue: 0,
+        goodValue: 0,
+        veryGoodValue: 0,
+        excellentValue: 100,
+    },
+    {
+        assesedSkillValue: 'Planning',
+        poorValue: 0,
+        fairValue: 0,
+        goodValue: 0,
+        veryGoodValue: 0,
+        excellentValue: 100,
+    },
+    {
+        assesedSkillValue: 'Eficiency',
+        poorValue: 0,
+        fairValue: 0,
+        goodValue: 0,
+        veryGoodValue: 0,
+        excellentValue: 100,
+    },
+    {
+        assesedSkillValue: 'Analytical ability',
+        poorValue: 0,
+        fairValue: 0,
+        goodValue: 0,
+        veryGoodValue: 0,
+        excellentValue: 100,
+    },
+    {
+        assesedSkillValue: 'Quick thinking',
+        poorValue: 0,
+        fairValue: 0,
+        goodValue: 0,
+        veryGoodValue: 0,
+        excellentValue: 100,
+    },
+    {
+        assesedSkillValue: 'Average score',
+        poorValue: 0,
+        fairValue: 0,
+        goodValue: 0,
+        veryGoodValue: 0,
+        excellentValue: 100,
+    },
+];

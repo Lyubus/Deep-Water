@@ -1,4 +1,5 @@
 import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interface';
+import { IPersonScore } from 'src/app/_models/interfaces/person-score.interface';
 import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 import { SortDescriptor, orderBy } from '@progress/kendo-data-query';
 import { GridDataResult, DataStateChangeEvent } from '@progress/kendo-angular-grid';
@@ -12,6 +13,7 @@ import { GridDataResult, DataStateChangeEvent } from '@progress/kendo-angular-gr
 export class PersonalReportsComponent implements OnInit {
 
   @Input() personalScoreData: IPersonalScore[];
+  @Input() personScoreData: IPersonScore[];
 
   public sort: SortDescriptor[] = [{
     field: 'examinee',
@@ -19,11 +21,13 @@ export class PersonalReportsComponent implements OnInit {
   }];
 
   public view: GridDataResult;
+  public personScoreView: GridDataResult;
 
   constructor() { }
 
   ngOnInit(): void {
     this.loadProducts();
+    this.loadPersonScore();
   }
 
   public sortChange(sort: SortDescriptor[]): void {
@@ -38,8 +42,14 @@ export class PersonalReportsComponent implements OnInit {
     };
   }
 
+  private loadPersonScore(): void {
+    this.personScoreView = {
+      data: orderBy(this.personScoreData, this.sort),
+      total: this.personScoreData.length
+    };
+  }
+
   public dataStateChange(state: DataStateChangeEvent): void {
     debugger;
   }
-
 }
