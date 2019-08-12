@@ -45,8 +45,7 @@
 
       .expand-more {
         position: absolute;
-        top: 3px;
-        right: 3px;
+        top: 5px;
       }
 
       @include themify($themes) {
@@ -125,7 +124,8 @@
 
   .expand-less {
     position: absolute;
-    top: 3px;
+    top: 5px;
+    right: 8px;
   }
 
   &>div {
