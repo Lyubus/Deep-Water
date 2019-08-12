@@ -2,6 +2,7 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { PlotBand } from '@progress/kendo-angular-charts';
 import { IBulletChartDataItem } from 'src/app/_models/interfaces/bulletchart-data.interface';
 import * as _ from 'lodash';
+import { convertToR3QueryMetadata } from '@angular/core/src/render3/jit/directive';
 
 @Component({
   selector: 'deepwater-bullet-charts',
@@ -13,6 +14,11 @@ export class BulletChartsComponent implements OnChanges {
 
   @Input() chartData: IBulletChartDataItem[] = [];
   bulletChartData: any = [];
+
+  labelsConfig = {
+    content: (e) => e.value,
+    visible: true,
+  };
 
   public hidden: any = { visible: false };
 

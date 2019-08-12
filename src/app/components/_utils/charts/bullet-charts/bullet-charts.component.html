@@ -16,11 +16,11 @@
       <kendo-chart style="height: 35px;">
         <kendo-chart-series>
 
-          <kendo-chart-series-item type="bullet" [data]="[[0, data.boundary]]">
+          <kendo-chart-series-item type="bullet" [data]="[[0, data.boundary]]"
+          [labels]="labelsConfig"
+          >
           </kendo-chart-series-item>
-
-          <kendo-chart-series-item-labels [align]="'right'" [color]="white" [visible]="true">
-          </kendo-chart-series-item-labels>
+s>
 
           <!-- <kendo-chart-category-axis>
           <kendo-chart-category-axis-item [majorGridLines]="hidden" [minorGridLines]="hidden">
