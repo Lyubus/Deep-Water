@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { IKeyValuePair } from 'src/app/_models/interfaces/key-value.interface';
 import { PERSONAL_SCORES } from 'src/app/_constant-mocks/personal-scores.constants';
 import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interface';
@@ -9,7 +9,7 @@ import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interf
   styleUrls: ['./violet-page.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class VioletPageComponent implements OnInit {
+export class VioletPageComponent  {
 
   comparisonCollection: IKeyValuePair[] = [
     { key: 0, value: 'item1' },
@@ -17,7 +17,7 @@ export class VioletPageComponent implements OnInit {
   ];
   selectedComparer = 0;
 
-  personalScoreData: IPersonalScore[] = PERSONAL_SCORES
+  personalScoreData: IPersonalScore[] = PERSONAL_SCORES;
   
   comparer1Profile: IPersonalScore = {
     examinee: 'Laila Piraino',
@@ -48,10 +48,5 @@ export class VioletPageComponent implements OnInit {
     planningValue: 0,
     eficiencyValue: 0,
   };
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }
