@@ -14,6 +14,30 @@ export class PersonalReportsComponent implements OnChanges {
 
   @Input() personalScoreData: IPersonalScore[];
 
+  skills: any[] = [
+    {
+      title: 'Flexible thinking',
+      poor: 55,
+      fair: 75,
+      good: 85,
+      veryGood: 95
+    },
+    {
+      title: 'Strategic thinking',
+      poor: 55,
+      fair: 75,
+      good: 85,
+      veryGood: 95
+    },
+    {
+      title: 'Planing',
+      poor: 55,
+      fair: 75,
+      good: 85,
+      veryGood: 95
+    }
+  ];
+
   public sort: SortDescriptor[] = [{
     field: 'examinee',
     dir: 'asc'

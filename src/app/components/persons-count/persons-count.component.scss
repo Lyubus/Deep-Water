@@ -4,12 +4,19 @@
 .examinees {
   .counter {
     font-size: 55px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
     @include themify($themes) {
       color: themed('headlineColor');
-    }
 
-    .material-icons {
-      font-size: 60px;
+      .material-icons {
+        font-size: 60px;
+        color: themed('headlineColor');
+      }
     }
   }
 }

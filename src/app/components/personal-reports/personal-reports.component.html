@@ -19,6 +19,8 @@
     </div>
   </div>
 
+  <deepwater-score-rate-component [skillsData]="skills"></deepwater-score-rate-component>
+
   <div>
     <kendo-grid [data]="personScoreView" [sortable]="{mode: 'multiple'}" [sort]="sort" (sortChange)="sortChange($event)">
       <kendo-grid-column title="#" width="50" [headerClass]="'table-header-cell'" [class]="'table-cell'">

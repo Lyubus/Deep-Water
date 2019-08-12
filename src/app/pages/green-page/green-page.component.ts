@@ -10,6 +10,7 @@ import { PERSONAL_SCORES } from 'src/app/_constant-mocks/personal-scores.constan
 })
 export class GreenPageComponent {
 
+  allPersonalReports: IPersonalScore[] = PERSONAL_SCORES;
   personReport: IPersonalScore = {
     examinee: 'Rossana Fremont',
     analyticalAbilityValue: 42,
