@@ -14,44 +14,31 @@ export class PersonalReportsComponent implements OnChanges {
 
   @Input() personalScoreData: IPersonalScore[];
 
-  skills: any[] = [
-    {
-      title: 'Flexible thinking',
-      poor: 55,
-      fair: 75,
-      good: 85,
-      veryGood: 95
-    },
-    {
-      title: 'Strategic thinking',
-      poor: 55,
-      fair: 75,
-      good: 85,
-      veryGood: 95
-    },
-    {
-      title: 'Planing',
-      poor: 55,
-      fair: 75,
-      good: 85,
-      veryGood: 95
-    }
+  public personScoreView: GridDataResult;
+  public sort: SortDescriptor[] = [
+    //   {
+    //   field: 'examinee',
+    //   dir: 'asc'
+    // }
   ];
 
-  public sort: SortDescriptor[] = [{
-    field: 'examinee',
-    dir: 'asc'
-  }];
-
-  public personScoreView: GridDataResult;
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.personalScoreData) {
-      this.personScoreView = {
-        data: orderBy(this.personalScoreData, this.sort),
-        total: this.personalScoreData.length
-      };
+      this.reloadTable();
     }
+  }
+
+  public sortChange(sort: SortDescriptor[]): void {
+    this.sort = sort;
+    this.reloadTable();
+  }
+
+  private reloadTable(): void {
+    this.personScoreView = {
+      data: orderBy(this.personalScoreData, this.sort),
+      total: this.personalScoreData.length
+    };
   }
 
   public dataStateChange(state: DataStateChangeEvent): void {
