@@ -46,6 +46,11 @@
         }
       }
 
+      span:not(.number) {
+        position: relative;
+        top: -15px;
+      }
+
       &.caret {
         width: 15%;
         display: flex;
