@@ -28,35 +28,39 @@ export class ReportWithRankingComponent implements OnChanges {
       this.analyticalAbilityRate,
       this.quickThinkingRate,
       this.averageScoreRate
-    ]
+    ];
   }
 
 
   @Input() personalScoreData: IPersonalScore[];
   skillRankings: SkillRanking[] = [];
-
-  sort: SortDescriptor[] = [{
-    field: 'examinee',
-    dir: 'asc'
-  }];
-
+  sort: SortDescriptor[] = [];
   personScoreView: GridDataResult;
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.personalScoreData) {
-      this.personScoreView = {
-        data: orderBy(this.personalScoreData, this.sort),
-        total: this.personalScoreData.length
-      };
+      this.reloadTable();
     }
   }
 
+  public sortChange(sort: SortDescriptor[]): void {
+    this.sort = sort;
+    this.reloadTable();
+  }
+
+  private reloadTable(): void {
+    this.personScoreView = {
+      data: orderBy(this.personalScoreData, this.sort),
+      total: this.personalScoreData.length
+    };
+  }
+
   checkRange(val, bottom, top) {
-    return val !== null && bottom !== null && top!== null && val > bottom && val <= top;
+    return val !== null && bottom !== null && top !== null && val > bottom && val <= top;
   }
 
   dataStateChange(state: DataStateChangeEvent): void {
-    
+
   }
 
 }

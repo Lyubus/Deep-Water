@@ -75,39 +75,42 @@
           <span>{{ rowIndex + 1 }}</span>
         </ng-template>
       </kendo-grid-column>
-      <kendo-grid-column title="Examinees" width="150" [headerClass]="'table-header-cell'" [class]="'table-cell'">
+      <kendo-grid-column title="Examinees" field="examinee" width="150" [headerClass]="'table-header-cell'" [class]="'table-cell'">
         <ng-template kendoGridCellTemplate let-dataItem>
           <span>{{ dataItem.examinee }}</span>
         </ng-template>
       </kendo-grid-column>
-      <kendo-grid-column title="Analytical ability" [headerClass]="'table-header-cell'" [class]="'table-cell'">
+      <kendo-grid-column field="analyticalAbilityValue" title="Analytical ability" [headerClass]="'table-header-cell'" [class]="'table-cell'">
         <ng-template kendoGridCellTemplate let-dataItem>
           <span [class.red]="checkRange(dataItem.analyticalAbilityValue, 0, analyticalAbilityRate.poor)"
             [class.orange]="checkRange(dataItem.analyticalAbilityValue, analyticalAbilityRate.poor, analyticalAbilityRate.fair)"
             [class.green]="checkRange(dataItem.analyticalAbilityValue, analyticalAbilityRate.fair, analyticalAbilityRate.good)"
             [class.darkgreen]="checkRange(dataItem.analyticalAbilityValue, analyticalAbilityRate.good, analyticalAbilityRate.verygood)"
-            [class.purple]="checkRange(dataItem.analyticalAbilityValue, analyticalAbilityRate.verygood, 100)">{{ dataItem.analyticalAbilityValue }}</span>
+            [class.purple]="checkRange(dataItem.analyticalAbilityValue, analyticalAbilityRate.verygood, 100)">
+            {{ dataItem.analyticalAbilityValue }}</span>
         </ng-template>
       </kendo-grid-column>
-      <kendo-grid-column title="Quick thinking" [headerClass]="'table-header-cell'" [class]="'table-cell'">
+      <kendo-grid-column field="quickThinkingValue" title="Quick thinking" [headerClass]="'table-header-cell'" [class]="'table-cell'">
         <ng-template kendoGridCellTemplate let-dataItem>
           <span [class.red]="checkRange(dataItem.quickThinkingValue, 0, quickThinkingRate.poor)"
             [class.orange]="checkRange(dataItem.quickThinkingValue, quickThinkingRate.poor, quickThinkingRate.fair)"
             [class.green]="checkRange(dataItem.quickThinkingValue, quickThinkingRate.fair, quickThinkingRate.good)"
             [class.darkgreen]="checkRange(dataItem.quickThinkingValue, quickThinkingRate.good, quickThinkingRate.verygood)"
-            [class.purple]="checkRange(dataItem.quickThinkingValue, quickThinkingRate.verygood, 100)">{{ dataItem.quickThinkingValue }}</span>
+            [class.purple]="checkRange(dataItem.quickThinkingValue, quickThinkingRate.verygood, 100)">
+            {{ dataItem.quickThinkingValue }}</span>
         </ng-template>
       </kendo-grid-column>
-      <kendo-grid-column title="Performance under preassure" [headerClass]="'table-header-cell'" [class]="'table-cell'">
+      <kendo-grid-column field="performanceUnderPreassureValue" title="Performance under preassure" [headerClass]="'table-header-cell'" [class]="'table-cell'">
         <ng-template kendoGridCellTemplate let-dataItem>
           <span [class.red]="checkRange(dataItem.performanceUnderPreassureValue, 0, performanceUnderPreassureRate.poor)"
             [class.orange]="checkRange(dataItem.performanceUnderPreassureValue, performanceUnderPreassureRate.poor, performanceUnderPreassureRate.fair)"
             [class.green]="checkRange(dataItem.performanceUnderPreassureValue, performanceUnderPreassureRate.fair, performanceUnderPreassureRate.good)"
             [class.darkgreen]="checkRange(dataItem.performanceUnderPreassureValue, performanceUnderPreassureRate.good, performanceUnderPreassureRate.verygood)"
-            [class.purple]="checkRange(dataItem.performanceUnderPreassureValue, performanceUnderPreassureRate.verygood, 100)">{{ dataItem.performanceUnderPreassureValue }}</span>
+            [class.purple]="checkRange(dataItem.performanceUnderPreassureValue, performanceUnderPreassureRate.verygood, 100)">
+            {{ dataItem.performanceUnderPreassureValue }}</span>
         </ng-template>
       </kendo-grid-column>
-      <kendo-grid-column title="Adaptability" [headerClass]="'table-header-cell'" [class]="'table-cell'">
+      <kendo-grid-column field="adaptabilityValue" title="Adaptability" [headerClass]="'table-header-cell'" [class]="'table-cell'">
         <ng-template kendoGridCellTemplate let-dataItem>
           <span [class.red]="checkRange(dataItem.adaptabilityValue, 0, adaptabilityRate.poor)"
             [class.orange]="checkRange(dataItem.adaptabilityValue, adaptabilityRate.poor, adaptabilityRate.fair)"
@@ -116,7 +119,7 @@
             [class.purple]="checkRange(dataItem.adaptabilityValue, adaptabilityRate.verygood, 100)">{{ dataItem.adaptabilityValue }}</span>
         </ng-template>
       </kendo-grid-column>
-      <kendo-grid-column title="Average score" [headerClass]="'table-header-cell'" [class]="'table-cell'">
+      <kendo-grid-column field="averageScoreValue" title="Average score" [headerClass]="'table-header-cell'" [class]="'table-cell'">
         <ng-template kendoGridCellTemplate let-dataItem>
           <span [class.red]="checkRange(dataItem.averageScoreValue, 0, averageScoreRate.poor)"
             [class.orange]="checkRange(dataItem.averageScoreValue, averageScoreRate.poor, averageScoreRate.fair)"
@@ -125,7 +128,7 @@
             [class.purple]="checkRange(dataItem.averageScoreValue, averageScoreRate.verygood, 100)">{{ dataItem.averageScoreValue }}</span>
         </ng-template>
       </kendo-grid-column>
-      <kendo-grid-column format="{0}%" title="Completion" [headerClass]="'table-header-cell'" [class]="'table-cell'">
+      <kendo-grid-column field="completionValue" format="{0}%" title="Completion" [headerClass]="'table-header-cell'" [class]="'table-cell'">
         <ng-template kendoGridCellTemplate let-dataItem>
           <span [class.red]="checkRange(dataItem.completionValue, 0, completionRate.poor)"
             [class.orange]="checkRange(dataItem.completionValue, completionRate.poor, completionRate.fair)"
