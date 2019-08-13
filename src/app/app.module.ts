@@ -40,7 +40,6 @@ import { GeneralInsightsComponent } from './components/general-insights/general-
 import { RadarChartComponent } from './components/_utils/charts/radar-chart/radar-chart.component';
 import { BulletChartsComponent } from './components/_utils/charts/bullet-charts/bullet-charts.component';
 import { LaurelLeafComponent } from './components/_utils/laurel-leaf/laurel-leaf.component';
-import { ScoreRateComponentComponent } from './components/_utils/score-rate-component/score-rate-component.component';
 import { ReportWithRankingComponent } from './components/report-with-ranking/report-with-ranking.component';
 import { FormsModule } from '@angular/forms';
 import { PerformanceWithComparisonComponent } from './components/performance-with-comparison/performance-with-comparison.component';
@@ -78,7 +77,6 @@ import { PerformanceWithComparisonComponent } from './components/performance-wit
       RadarChartComponent,
       BulletChartsComponent,
       LaurelLeafComponent,
-      ScoreRateComponentComponent,
       ReportWithRankingComponent,
       PerformanceWithComparisonComponent
   ],
