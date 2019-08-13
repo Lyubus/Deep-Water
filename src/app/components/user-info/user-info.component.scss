@@ -2,29 +2,33 @@
 @import '../../../assets/scss/colors.scss';
 @import '../../../assets/scss/sizes.scss';
 
-.material-icons {
-  font-size: 30px;
-}
-
-.username {
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 32px;
-
+.user-info-component {
   .material-icons {
-    font-size: 34px;
+    font-size: 30px;
+  }
+
+  .username {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 32px;
+
+    .material-icons {
+      font-size: 40px;
+      color: $color-black;
+    }
+  }
+
+  .d-block {
+    font-size: 20px;
+
+    &:not(.font-weight-bold) {
+      opacity: .7;
+    }
+  }
+
+  .opacity-icon {
+    opacity: .7;
+    font-size: 24px;
     color: $color-black;
   }
-}
-
-.d-block {
-  font-size: 20px;
-  &:not(.font-weight-bold) {
-    opacity: .7;
-  }
-}
-
-.opacity-icon {
-  opacity: .7;
-  font-size: 24px;
 }
