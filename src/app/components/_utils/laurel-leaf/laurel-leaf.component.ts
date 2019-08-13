@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { LAUREL_LEAF_DATAS } from 'src/app/_constant-mocks/laurel-leaf.constant';
 
 @Component({
@@ -6,20 +6,20 @@ import { LAUREL_LEAF_DATAS } from 'src/app/_constant-mocks/laurel-leaf.constant'
   templateUrl: './laurel-leaf.component.html',
   styleUrls: ['./laurel-leaf.component.scss']
 })
-export class LaurelLeafComponent implements OnInit {
+export class LaurelLeafComponent implements OnChanges {
 
-  @Input('score') score: number;
-  @Input('description') description: string;
+  @Input() score: number;
+  @Input() description: string;
   imgPath: string;
 
-  constructor() { }
-
-  ngOnInit() {
-    LAUREL_LEAF_DATAS.map((x: { imgPath: string, score: number }) => {
-      if (Math.floor(this.score / 10) === x.score) {
-        this.imgPath = x.imgPath;
-      }
-    });
+  ngOnChanges(chnages) {
+    if (chnages.score) {
+      LAUREL_LEAF_DATAS.map((x: { imgPath: string, score: number }) => {
+        if (Math.ceil(this.score / 10) === x.score) {
+          this.imgPath = x.imgPath;
+        }
+      });
+    }
   }
 
 }

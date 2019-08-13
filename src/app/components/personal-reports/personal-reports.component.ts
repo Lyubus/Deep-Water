@@ -55,6 +55,5 @@ export class PersonalReportsComponent implements OnChanges {
   }
 
   public dataStateChange(state: DataStateChangeEvent): void {
-    debugger;
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewEncapsulation, Output, EventEmitter } from '@angular/core';
-import { IKeyValuePair } from 'src/app/_models/interfaces/key-value.interface';
+import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interface';
 
 @Component({
   selector: 'deepwater-comparison-group',
@@ -7,16 +7,10 @@ import { IKeyValuePair } from 'src/app/_models/interfaces/key-value.interface';
   styleUrls: ['./comparison-group.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ComparisonGroupComponent implements OnInit {
+export class ComparisonGroupComponent {
 
-  @Input() selected: number = null;
-  @Output() selectedChange: EventEmitter<any> = new EventEmitter<any>();
-
-  @Input() optionsCollection: IKeyValuePair[] = [];
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input() selected: IPersonalScore = null;
+  @Output() selectedChange: EventEmitter<IPersonalScore> = new EventEmitter<IPersonalScore>();
+  @Input() optionsCollection: IPersonalScore[] = [];
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnChanges, Input } from '@angular/core';
+import { ITestimonialDataItem } from 'src/app/_models/interfaces/testimonial-data.interface';
 
 @Component({
   selector: 'deepwater-testimonial-completion-rate',
@@ -6,19 +7,17 @@ import { Component, OnChanges, Input } from '@angular/core';
   styleUrls: ['./testimonial-completion-rate.component.scss']
 })
 export class TestimonialCompletionRateComponent implements OnChanges {
-
-  @Input() testimonial: string;
-  @Input() valueNumer: number;
-  @Input() allNumber: number;
-  @Input() color: string = '#809400';
-
-  label: string;
-  percentage: number;
+  
+  @Input() testimonials: any[] = [];
 
   ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
-    if (changes.valueNumer || changes.allNumber) {
-      this.label = `${this.valueNumer}/${this.allNumber} Examinees`;
-      this.percentage = Math.round(this.valueNumer / this.allNumber * 100);
+    if (changes.testimonials) {
+      this.testimonials.forEach(
+        t => {
+          t.label = `${t.valueNumer}/${t.allNumber} Examinees`;
+          t.percentage = Math.round(t.valueNumer / t.allNumber * 100);
+        }
+      )
     }
   }
 

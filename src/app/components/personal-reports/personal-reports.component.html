@@ -1,27 +1,31 @@
 <div class="content-container personal-report-component">
   <div class="row no-gutters central-vertical-align padded report-heading">
 
-    <div class="col-9">
+    <div class="col-7">
       <span class="header">
         Personal Reports
       </span>
     </div>
 
-    <div class="col-2 text-right">
+    <div class="col-3 text-right">
       <label class="central-vertical-align">
         <input type="checkbox" class="mr-2">
         Define your criteria
       </label>
     </div>
 
-    <div class="col-1 criteria-search">
+    <div class="col-2 criteria-search">
       <deepwater-search-field [placeholder]="'Criteria'"></deepwater-search-field>
     </div>
   </div>
 
   <div>
-    <kendo-grid [data]="personScoreView" [sortable]="{mode: 'multiple'}" [sort]="sort" (sortChange)="sortChange($event)">
+    <kendo-grid [data]="personScoreView" [sortable]="{mode: 'multiple'}" [sort]="sort"
+      (sortChange)="sortChange($event)">
       <kendo-grid-column title="#" width="50" [headerClass]="'table-header-cell'" [class]="'table-cell'">
+        <ng-template kendoGridCellTemplate let-rowIndex="rowIndex">
+          <span>{{ rowIndex + 1 }}</span>
+        </ng-template>
       </kendo-grid-column>
       <kendo-grid-column field="examinee" title="Examinees" width="150" [headerClass]="'table-header-cell'">
       </kendo-grid-column>

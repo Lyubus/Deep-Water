@@ -1,6 +1,8 @@
 <div class="theme-bluetheme">
 
-  <deepwater-page-head></deepwater-page-head>
+    <deepwater-page-head
+    [title]="'some project report'"
+    ></deepwater-page-head>
 
   <div class="page-overlay">
     <div class="content-overlay">
@@ -10,12 +12,13 @@
           <deepwater-persons-count></deepwater-persons-count>
         </div>
 
-        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-          <deepwater-testimonial-completion-rate [testimonial]="'Analitycal ability'" [valueNumer]="4" [allNumber]="28">
+        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+          <deepwater-testimonial-completion-rate 
+         [testimonials]="testimonials">
           </deepwater-testimonial-completion-rate>
         </div>
 
-        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
           <deepwater-skills-list></deepwater-skills-list>
         </div>
       </div>

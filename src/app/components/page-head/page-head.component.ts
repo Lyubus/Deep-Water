@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
   selector: 'deepwater-page-head',
@@ -6,16 +6,10 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./page-head.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class PageHeadComponent implements OnInit {
+export class PageHeadComponent{
 
-  constructor() { }
+  @Input() title: string;
 
-  ngOnInit() {
-  }
-
-  onSignOut() {
   
-  }
-
-
+  onSignOut() {}
 }

@@ -11,42 +11,23 @@ import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interf
 })
 export class VioletPageComponent  {
 
-  comparisonCollection: IKeyValuePair[] = [
-    { key: 0, value: 'item1' },
-    { key: 2, value: 'item2' },
-  ];
-  selectedComparer = 0;
-
-  personalScoreData: IPersonalScore[] = PERSONAL_SCORES;
-  
   comparer1Profile: IPersonalScore = {
-    examinee: 'Laila Piraino',
-    analyticalAbilityValue: 84,
+    examinee: 'Joanie Koeller',
+    analyticalAbilityValue: 47,
     quickThinkingValue: 27,
-    performanceUnderPreassureValue: 84,
-    adaptabilityValue: 27,
-    averageScoreValue: 84,
-    completionValue: 54,
+    performanceUnderPreassureValue: 99,
+    adaptabilityValue: 48,
+    averageScoreValue: 37,
+    completionValue: 44,
     color: '#0da3ff',
     flexibleThinkingValue: 0,
     strategicThinkingValue: 0,
     planningValue: 0,
-    eficiencyValue: 0,
+    eficiencyValue: 0
   };
 
-  comparer2Profile: IPersonalScore = {
-    examinee: 'Queen Rudy',
-    analyticalAbilityValue: 12,
-    quickThinkingValue: 69,
-    performanceUnderPreassureValue: 45,
-    adaptabilityValue: 99,
-    averageScoreValue: 66,
-    completionValue: 90,
-    color: '#45566b',
-    flexibleThinkingValue: 0,
-    strategicThinkingValue: 0,
-    planningValue: 0,
-    eficiencyValue: 0,
-  };
+  personalScoreData: IPersonalScore[] = PERSONAL_SCORES;
+  comparer2Profile: IPersonalScore = this.personalScoreData[0];
+
 
 }

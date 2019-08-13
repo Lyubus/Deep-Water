@@ -56,7 +56,7 @@ export class ReportWithRankingComponent implements OnChanges {
   }
 
   dataStateChange(state: DataStateChangeEvent): void {
-    debugger;
+    
   }
 
 }

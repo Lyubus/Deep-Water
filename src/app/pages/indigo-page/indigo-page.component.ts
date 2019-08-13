@@ -15,6 +15,14 @@ export class IndigoPageComponent {
 
   gamesData: IGameScore[] = MEDIUM_GAMES_SCORES;
   insights: IInsight[] = INSIGHTS_WITH_ICONS;
+  testimonials: any[] = [
+    {
+    testimonial: "Analitycal ability",
+    valueNumer: 4,
+    allNumber: 28,
+    color: '#e41e26'
+  }
+]
 
   radarChartData: IRadarChartData[] = [
     { name: 'Calculation', value: 98 },

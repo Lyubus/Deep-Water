@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, OnChanges } from '@angular/core';
 import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interface';
 import * as _ from 'lodash';
 
@@ -8,15 +8,13 @@ import * as _ from 'lodash';
   styleUrls: ['./completion-chart.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class CompletionChartComponent implements OnInit {
+export class CompletionChartComponent implements OnChanges {
 
   @Input() personalScore: IPersonalScore;
   average: number = 0;
 
-  constructor() { }
-
-  ngOnInit() {
-    if(this.personalScore){
+  ngOnChanges(chnages) {
+    if(chnages.personalScore){
       this.average =  Math.round(_.meanBy(
         [
           this.personalScore.analyticalAbilityValue,

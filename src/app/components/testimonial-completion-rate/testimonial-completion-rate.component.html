@@ -3,9 +3,9 @@
       completion rate
     </span>
   
-    <div class="d-flex justify-content-center">
-      <deepwater-radial-gauge [value]="percentage" [text]="label"
-       [color]="color" [legendText]="testimonial">
+    <div class="d-flex justify-content-center" *ngFor="let testt of testimonials">
+      <deepwater-radial-gauge [value]="testt.percentage" [text]="testt.label"
+       [color]="testt.color" [legendText]="testt.testimonial">
       </deepwater-radial-gauge>
     </div>
   

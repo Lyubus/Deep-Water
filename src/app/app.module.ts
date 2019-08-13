@@ -11,7 +11,6 @@ import 'hammerjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ScoreChartComponent } from './components/score-chart/score-chart.component';
 import { PersonsCountComponent } from './components/persons-count/persons-count.component';
 import { CompletionChartComponent } from './components/completion-chart/completion-chart.component';
 import { SkillsListComponent } from './components/skills-list/skills-list.component';
@@ -49,7 +48,6 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    ScoreChartComponent,
     PersonsCountComponent,
     CompletionChartComponent,
     SkillsListComponent,

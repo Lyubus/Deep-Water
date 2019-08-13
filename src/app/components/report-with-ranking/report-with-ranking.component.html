@@ -1,20 +1,20 @@
 <div class="report-component content-container">
   <div class="row no-gutters central-vertical-align padded report-heading">
 
-    <div class="col-9">
+    <div class="col-7">
       <span class="header">
         Personal Reports
       </span>
     </div>
 
-    <div class="col-2 text-right">
+    <div class="col-3 text-right">
       <label class="central-vertical-align">
         <input type="checkbox" class="mr-2">
         Define your criteria
       </label>
     </div>
 
-    <div class="col-1 criteria-search">
+    <div class="col-2 criteria-search">
       <deepwater-search-field [placeholder]="'Criteria'"></deepwater-search-field>
     </div>
   </div>
@@ -51,7 +51,7 @@
                 <div class="col-2">0</div>
                 <div class="col-2"><input type="number" min="1" max="99"
                   [(ngModel)]="skill.poor" ></div>
-                <div class="col-2"><input type="number" [min]="skill.poor" max="99"
+                <div class="col-2"><input type="number" [min]="1" max="99"
                   [(ngModel)]="skill.fair" ></div>
                 <div class="col-2"><input type="number" min="1" max="99" 
                   [(ngModel)]="skill.good" ></div>
