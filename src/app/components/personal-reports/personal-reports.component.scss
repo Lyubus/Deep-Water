@@ -8,7 +8,7 @@
     padding-bottom: 20px;
 
     .report-heading {
-        padding: 0 10px;
+        padding: 0 25px;
     }
 
     .header {
@@ -61,6 +61,7 @@
         cursor: pointer;
         user-select: none;
         color: $color-dark-gray;
+        float: left;
     }
 
     .material-icons {
@@ -102,10 +103,6 @@
 
     input[type="checkbox"]:checked:after {
         display: block;
-    }
-
-    .criteria-search {
-        flex: 0 0 7%;
     }
 
     .person-score-view{

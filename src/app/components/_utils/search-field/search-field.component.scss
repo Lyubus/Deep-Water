@@ -3,21 +3,20 @@
 .search-field {
     .text-search-field {
         border: none;
-        width: 30%;
+        width: 50px;
         transition: width .5s;
-        position: absolute;
-        right: 45%;
         outline: none;
         background-image: url('./../../../../assets/img/icons/search.svg');
         background-repeat: no-repeat;
-        background-position: right;
+        background-position: center;
+        cursor: pointer;
 
         &::placeholder {
             color: transparent;
         }
 
         &:focus {
-            width: 55%;
+            width: 80px;
             border-bottom: 1px solid $color-dark-gray;
             background-image: none;
 
@@ -36,10 +35,10 @@
 		width: 45%;
 		color: $color-dark-gray;
         font-weight: bold;
-        position: absolute;
-        right: 0;
         img {
             height: 20px;
+        }
+        span, img {
             cursor: pointer;
         }
     }
