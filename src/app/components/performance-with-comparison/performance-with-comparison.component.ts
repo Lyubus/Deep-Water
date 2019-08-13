@@ -1,7 +1,8 @@
 import { Component, Input, OnChanges, SimpleChanges, Output, EventEmitter  } from '@angular/core';
 import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interface';
+import { IComparisonGroup } from 'src/app/_models/interfaces/comparison-group.interface';
 import { IBulletChartDataItem } from 'src/app/_models/interfaces/bulletchart-data.interface';
-import { PERSONAL_SCORES } from 'src/app/_constant-mocks/personal-scores.constants';
+import { COMPARISON_GROUPS } from 'src/app/_constant-mocks/comparison-group.constants';
 import * as _ from 'lodash';
 
 @Component({
@@ -12,11 +13,10 @@ import * as _ from 'lodash';
 export class PerformanceWithComparisonComponent implements OnChanges {
 
   @Input() bulletChartData: IPersonalScore;
-  @Input() selected: IPersonalScore = null;
-  @Output() selectedChange: EventEmitter<IPersonalScore> = new EventEmitter<IPersonalScore>();
-  @Input() optionsCollection: IPersonalScore[] = [];
-  personalScoreData: IPersonalScore[] = PERSONAL_SCORES;
-  
+  @Input() selected: IComparisonGroup = null;
+  @Output() selectedChange: EventEmitter<IComparisonGroup> = new EventEmitter<IComparisonGroup>();
+  @Input() optionsCollection: IComparisonGroup[] = COMPARISON_GROUPS;
+
   chartData: IBulletChartDataItem[];
 
   ngOnChanges(changes: SimpleChanges): void {
