@@ -22,10 +22,10 @@ export class GreenPageComponent {
     averageScoreValue: 55,
     completionValue: 42,
     color: '#fb6900',
-    flexibleThinkingValue: 0,
-    strategicThinkingValue: 0,
-    planningValue: 0,
-    eficiencyValue: 0,
+    flexibleThinkingValue: 86,
+    strategicThinkingValue: 12,
+    planningValue: 43,
+    eficiencyValue: 85,
 };
 
 personalScoreReports: IPersonalScore[] = PERSONAL_SCORES;

@@ -14,21 +14,22 @@
     <div class="col-8">
 
       <kendo-chart style="height: 35px;">
-        <kendo-chart-series>
+        <kendo-chart-series >
 
-          <kendo-chart-series-item type="bullet" [data]="[[0, data.boundary]]"
+          <kendo-chart-series-item  
+          type="bullet" [data]="[[0, data.boundary]]"
           [labels]="labelsConfig"
-          >
-          </kendo-chart-series-item>
+          ></kendo-chart-series-item>
 s>
 
-          <!-- <kendo-chart-category-axis>
+          <kendo-chart-category-axis>
           <kendo-chart-category-axis-item [majorGridLines]="hidden" [minorGridLines]="hidden">
           </kendo-chart-category-axis-item>
-        </kendo-chart-category-axis> -->
+        </kendo-chart-category-axis>
 
           <kendo-chart-value-axis>
-            <kendo-chart-value-axis-item [majorGridLines]="hidden" [minorTicks]="hidden" [min]="0" [max]="100"
+            <kendo-chart-value-axis-item [majorGridLines]="hidden" 
+            [minorTicks]="{visible: true}" [min]="0" [max]="100"
               [plotBands]="data.plotBands" [visible]="false">
             </kendo-chart-value-axis-item>
           </kendo-chart-value-axis>

@@ -43,6 +43,7 @@ import { LaurelLeafComponent } from './components/_utils/laurel-leaf/laurel-leaf
 import { ScoreRateComponentComponent } from './components/_utils/score-rate-component/score-rate-component.component';
 import { ReportWithRankingComponent } from './components/report-with-ranking/report-with-ranking.component';
 import { FormsModule } from '@angular/forms';
+import { PerformanceWithComparisonComponent } from './components/performance-with-comparison/performance-with-comparison.component';
 
 
 @NgModule({
@@ -78,7 +79,8 @@ import { FormsModule } from '@angular/forms';
       BulletChartsComponent,
       LaurelLeafComponent,
       ScoreRateComponentComponent,
-      ReportWithRankingComponent
+      ReportWithRankingComponent,
+      PerformanceWithComparisonComponent
   ],
   imports: [
     BrowserModule,
