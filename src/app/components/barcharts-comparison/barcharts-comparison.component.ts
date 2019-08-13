@@ -26,8 +26,8 @@ export class BarchartsComparisonComponent implements OnChanges {
             x.performanceUnderPreassureValue,
             x.adaptabilityValue
           ]
-        }
-      })
+        };
+      });
 
       this.columnChartsData = {
         data: coldata,
@@ -36,7 +36,7 @@ export class BarchartsComparisonComponent implements OnChanges {
           'Quick thinking',
           'Perfornabce under preassure',
           'Adaptability']
-      }
+      };
     }
   }
 
