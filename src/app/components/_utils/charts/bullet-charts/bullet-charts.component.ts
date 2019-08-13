@@ -15,7 +15,11 @@ export class BulletChartsComponent implements OnChanges {
 
   labelsConfig = {
     content: (e) => e.value,
+    font: `font-family: 'Open Sans', sans-serif; font-size: 20px;
+     font-weight: bold; `,
     visible: true,
+    position: 'top',
+    color: 'white'
   };
 
   public hidden: any = { visible: false };
