@@ -13,7 +13,7 @@
     word-break: break-word;
 
     p {
-      font-size: 14px;
+      font-size: $extra-small-size;
       color: grey;
     }
   }
@@ -25,7 +25,7 @@
     span {
       display: block;
       text-align: center;
-      font-size: 24px;
+      font-size: $medium-size;
       color: gray;
       overflow: hidden;
       text-overflow: ellipsis;

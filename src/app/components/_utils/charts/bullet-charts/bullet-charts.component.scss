@@ -1,5 +1,6 @@
 @import '../../../../../styles.scss';
 @import '../../../../../assets/scss/theming/theme.scss';
+@import '../../../../../assets/scss/sizes.scss';
 
 
 .bulletchart-area {
@@ -8,7 +9,7 @@
     min-height: 50px;
   }
 
-  font-size: 24px;
+  font-size: $medium-size;
   text-align: left;
   color: #666666;
   word-wrap: break-word;

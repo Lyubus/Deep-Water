@@ -66,7 +66,7 @@
     border: none;
     font-weight: normal;
     border-radius: 3px;
-    font-size: 14px;
+    font-size: $extra-small-size;
     padding: 3px 10px;
   }
 
@@ -149,8 +149,8 @@
     cursor: pointer;
     appearance: none;
     outline: 0;
-    height: 18px;
-    width: 18px;
+    height: $small-size;
+    width: $small-size;
     border: 1px solid $color-dark-gray;
     outline: none;
     border-radius: 2px;
@@ -215,11 +215,12 @@
   }
 }
 
-
 .table-header-cell {
   @include themify($themes) {
     background-color: themed('tableHeaderColor');
-    text-align: center;
+    &:not(:nth-child(2)) {
+      text-align: center;
+    }
   }
 
   color: $color-white;

@@ -1,6 +1,8 @@
+@import './../../../assets/scss/sizes.scss';
+
 .skills-list-component {
   p {
-    font-size: 24px;
+    font-size: $medium-size;
     text-align: left;
     color: #666666;
     word-wrap: break-word;
