@@ -1,27 +1,30 @@
 @import './../../../../assets/scss/theming/theme.scss';
 
-.gauge-value {
-	/*		unworking colors		*/
-    @include themify($themes) {
-		color: themed('headlineColor');  
-	  }
-	font-size: 60px;
-}
-
-.circle {
-	border-radius: 50%;
-	height: 12px;
-    width: 12px;
-    display: inline-block;
-    margin-right: 5px;
-}
-
-p {
-	margin-bottom: 0;
-	text-align: center;
-
-	&.heading {
-		position: relative;
-		top: -15px;
+.radial-gauge-component {
+	.gauge-value {
+		/*		unworking colors		*/
+		@include themify($themes) {
+			color: themed('headlineColor');  
+		  }
+		font-size: 60px;
 	}
+	
+	.circle {
+		border-radius: 50%;
+		height: 12px;
+		width: 12px;
+		display: inline-block;
+		margin-right: 5px;
+	}
+	
+	p {
+		margin-bottom: 0;
+		text-align: center;
+	
+		&.heading {
+			position: relative;
+			top: -15px;
+		}
+	}
+	
 }

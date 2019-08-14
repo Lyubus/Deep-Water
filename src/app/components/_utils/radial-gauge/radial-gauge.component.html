@@ -1,12 +1,14 @@
-<div class="radial-gauge">
-  <kendo-arcgauge [value]="value" [transitions]="true" [color]="color">
-    <kendo-arcgauge-scale [startAngle]="-45" [endAngle]="225">
-    </kendo-arcgauge-scale>
-    <ng-template kendoArcGaugeCenterTemplate let-value="value" let-color="color">
-      <span class="gauge-value" [style.color]="color">{{ value }}%</span>
-    </ng-template>
-  </kendo-arcgauge>
-  <p class="heading">{{text}}</p>
-  <p *ngIf="legendText">
-    <span class="circle" [style.background-color]="color"></span>{{legendText}}</p>
+<div class="radial-gauge-component">
+  <div class="radial-gauge">
+    <kendo-arcgauge [value]="value" [transitions]="true" [color]="color">
+      <kendo-arcgauge-scale [startAngle]="-45" [endAngle]="225">
+      </kendo-arcgauge-scale>
+      <ng-template kendoArcGaugeCenterTemplate let-value="value" let-color="color">
+        <span class="gauge-value" [style.color]="color">{{ value }}%</span>
+      </ng-template>
+    </kendo-arcgauge>
+    <p class="heading">{{text}}</p>
+    <p *ngIf="legendText">
+      <span class="circle" [style.background-color]="color"></span>{{legendText}}</p>
+  </div>
 </div>
