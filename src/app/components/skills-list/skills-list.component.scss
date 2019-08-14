@@ -1,11 +1,29 @@
-li {
-  font-size: 24px;
-  text-align: left;
-  color: #666666;
-  word-wrap: break-word;
-  word-break: break-word;
-}
+.skills-list-component {
+  p {
+    font-size: 24px;
+    text-align: left;
+    color: #666666;
+    word-wrap: break-word;
+    word-break: break-word;
+    margin: 0;
 
-.skills-header{
-  margin-bottom:20px;
+    &::before {
+      content: '●';
+      font-size: 10px;
+      position: relative;
+      top: -5px;
+    }
+  }
+  
+  .skills-header{
+    margin-bottom:20px;
+  }
+
+  div {
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%);
+  }
 }

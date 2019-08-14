@@ -1,7 +1,7 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { IKeyValuePair } from 'src/app/_models/interfaces/key-value.interface';
-import { PERSONAL_SCORES } from 'src/app/_constant-mocks/personal-scores.constants';
-import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interface';
+import { Component, ViewEncapsulation, forwardRef, Inject } from '@angular/core';
+import { PERSONAL_SCORES } from './../../_constant-mocks/personal-scores.constants';
+import { IPersonalScore } from './../../_models/interfaces/personal-score.interface';
+import { BaseService } from './../../_services/base.service';
 
 @Component({
   selector: 'deepwater-violet-page',
@@ -9,7 +9,7 @@ import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interf
   styleUrls: ['./violet-page.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class VioletPageComponent  {
+export class VioletPageComponent {
 
   comparer1Profile: IPersonalScore = {
     examinee: 'Joanie Koeller',
@@ -27,7 +27,15 @@ export class VioletPageComponent  {
   };
 
   personalScoreData: IPersonalScore[] = PERSONAL_SCORES;
-  comparer2Profile: IPersonalScore = this.personalScoreData[0];
+  comparer2Profile: IPersonalScore;
 
-
+  constructor(@Inject(forwardRef(() => BaseService)) public baseService: BaseService) {
+    this.baseService.selectedChange.subscribe((data) => {
+      if (data) {
+        this.comparer2Profile = data;
+      } else {
+        this.comparer2Profile = this.personalScoreData[0];
+      }
+    });
+  }
 }

@@ -5,32 +5,33 @@
   </div> -->
 
   <div class="row no-gutters central-vertical-align" *ngFor="let data of bulletChartData">
-    <div class="col-md-3 col-8">
-      {{data.name}}
-      <i class="material-icons ml-2">help_outline</i>
+    <div class="col-lg-4 col-md-5 col-12">
+      <div class="row no-gutters central-vertical-align">
+        <div class="col-10 central-vertical-align">
+          {{data.name}}
+          <i class="material-icons ml-2">help_outline</i>
+        </div>
+        <div class="col-2 d-flex justify-content-end">
+          <span> {{data.value}}</span>
+        </div>
+      </div>
     </div>
-    <div class="col-md-1 col-4 d-flex justify-content-end">
-      <span> {{data.value}}</span>
-    </div>
-    <div class="col-md-8 col-12">
+    <div class="col-lg-8 col-md-7 col-12">
 
       <kendo-chart style="height: 35px;">
-        <kendo-chart-series >
+        <kendo-chart-series>
 
-          <kendo-chart-series-item  
-          type="bullet" [data]="[[0, data.boundary]]"
-          [labels]="labelsConfig"
-          ></kendo-chart-series-item>
-s>
+          <kendo-chart-series-item type="bullet" [data]="[[0, data.boundary]]" [labels]="labelsConfig">
+          </kendo-chart-series-item>
+          s>
 
           <kendo-chart-category-axis>
-          <kendo-chart-category-axis-item [majorGridLines]="hidden" [minorGridLines]="hidden">
-          </kendo-chart-category-axis-item>
-        </kendo-chart-category-axis>
+            <kendo-chart-category-axis-item [majorGridLines]="hidden" [minorGridLines]="hidden">
+            </kendo-chart-category-axis-item>
+          </kendo-chart-category-axis>
 
           <kendo-chart-value-axis>
-            <kendo-chart-value-axis-item [majorGridLines]="hidden" 
-            [minorTicks]="{visible: true}" [min]="0" [max]="100"
+            <kendo-chart-value-axis-item [majorGridLines]="hidden" [minorTicks]="{visible: true}" [min]="0" [max]="100"
               [plotBands]="data.plotBands" [visible]="false">
             </kendo-chart-value-axis-item>
           </kendo-chart-value-axis>

@@ -43,6 +43,8 @@ import { LaurelLeafComponent } from './components/_utils/laurel-leaf/laurel-leaf
 import { ReportWithRankingComponent } from './components/report-with-ranking/report-with-ranking.component';
 import { FormsModule } from '@angular/forms';
 import { PerformanceWithComparisonComponent } from './components/performance-with-comparison/performance-with-comparison.component';
+import { ComparisonGroupSelectComponent } from './components/_utils/comparison-group-select/comparison-group-select.component';
+import { BaseService } from './_services/base.service';
 
 
 @NgModule({
@@ -78,7 +80,8 @@ import { PerformanceWithComparisonComponent } from './components/performance-wit
       BulletChartsComponent,
       LaurelLeafComponent,
       ReportWithRankingComponent,
-      PerformanceWithComparisonComponent
+      PerformanceWithComparisonComponent,
+      ComparisonGroupSelectComponent
   ],
   imports: [
     BrowserModule,
@@ -89,7 +92,7 @@ import { PerformanceWithComparisonComponent } from './components/performance-wit
     GaugesModule,
     FormsModule
   ],
-  providers: [],
+  providers: [BaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

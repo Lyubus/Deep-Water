@@ -7,13 +7,7 @@
       </span>
     </div>
     <div class="col-xl-6 col-12 central-vertical-align">
-      <i class="material-icons select-arrow central-vertical-align">keyboard_arrow_down</i>
-      <select name="" [ngModel]="selected" (ngModelChange)="selectedChange.emit($event)">
-        <!-- <option value="" selected disabled hidden>{{defaultOption}}</option> ?? -->
-
-        <option [ngValue]="option" *ngFor="let option of optionsCollection">{{option.examinee}}</option>
-        
-      </select>
+      <deepwater-comparison-group-select class="w-100" [optionsCollection]="optionsCollection"></deepwater-comparison-group-select>
     </div>
   </div>
 </div>

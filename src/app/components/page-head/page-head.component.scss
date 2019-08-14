@@ -46,7 +46,7 @@
       .expand-more {
         position: absolute;
         top: 5px;
-        font-size: $medium-icon-size;
+        font-size: $medium-size;
       }
 
       @include themify($themes) {
@@ -127,7 +127,7 @@
     position: absolute;
     top: 5px;
     right: 8px;
-    font-size: $medium-icon-size;
+    font-size: $medium-size;
   }
 
   &>div {
