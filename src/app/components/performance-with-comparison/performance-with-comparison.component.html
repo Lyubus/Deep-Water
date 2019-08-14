@@ -1,8 +1,8 @@
 <div class="general-insights-component content-container padded">
-  <span class="header">
-      <div class="row">
-    Performance 
-      <div class="col-xl-6 col-12">
+  <span class="header pb-3">
+    Performance
+    <!-- <div class="row"> -->
+    <!-- <div class="col-xl-6 col-12">
         <span class="header central-vertical-align">
           choose comparison group:
         </span>
@@ -12,15 +12,13 @@
               <option [ngValue]="option" *ngFor="let option of optionsCollection">{{option.name}}</option>
             </select>
           </div>
-      </div>
-    </div>
+      </div> -->
+    <!-- </div> -->
   </span>
 
   <div class="row no-gutters">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <deepwater-bullet-charts
-      [chartData]="chartData"
-      ></deepwater-bullet-charts>
+      <deepwater-bullet-charts [chartData]="chartData"></deepwater-bullet-charts>
     </div>
   </div>
 </div>
