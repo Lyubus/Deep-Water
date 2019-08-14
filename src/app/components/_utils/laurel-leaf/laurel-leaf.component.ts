@@ -14,11 +14,8 @@ export class LaurelLeafComponent implements OnChanges {
 
   ngOnChanges(chnages) {
     if (chnages.score) {
-      LAUREL_LEAF_DATAS.map((x: { imgPath: string, score: number }) => {
-        if (Math.ceil(this.score / 10) === x.score) {
-          this.imgPath = x.imgPath;
-        }
-      });
+      const grade = Math.ceil(this.score / 10);
+      this.imgPath = LAUREL_LEAF_DATAS.get(grade);
     }
   }
 
