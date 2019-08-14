@@ -100,6 +100,7 @@
     height: 100%;
     @include themify($themes) {
       background-color: themed('tableHeaderColor');
+      text-align: center;
     }
   
     color: $color-white;
