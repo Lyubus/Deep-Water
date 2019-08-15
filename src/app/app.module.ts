@@ -45,6 +45,8 @@ import { FormsModule } from '@angular/forms';
 import { PerformanceWithComparisonComponent } from './components/performance-with-comparison/performance-with-comparison.component';
 import { ComparisonGroupSelectComponent } from './components/_utils/comparison-group-select/comparison-group-select.component';
 import { BaseService } from './_services/base.service';
+import { BarchartSingleComponent } from './components/_utils/charts/barchart-single/barchart-single.component';
+import { PerformanceWithBarchartsComponent } from './components/performance-with-barcharts/performance-with-barcharts.component';
 
 
 @NgModule({
@@ -81,7 +83,9 @@ import { BaseService } from './_services/base.service';
       LaurelLeafComponent,
       ReportWithRankingComponent,
       PerformanceWithComparisonComponent,
-      ComparisonGroupSelectComponent
+      ComparisonGroupSelectComponent,
+      BarchartSingleComponent,
+      PerformanceWithBarchartsComponent
   ],
   imports: [
     BrowserModule,

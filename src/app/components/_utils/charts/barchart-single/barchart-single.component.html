@@ -1,0 +1,22 @@
+<kendo-sparkline style="height: 70px; width: 100%">
+
+  <kendo-chart-value-axis>
+    <kendo-chart-value-axis-item [visible]="false" [min]="0" [max]="100" [majorGridLines]="{visible:false}"
+      [minorGridLines]="{visible:false}" [majorTicks]="{visible:false}" [minorTicks]="{visible:false}"
+      [line]="{visible:false}">
+    </kendo-chart-value-axis-item>
+  </kendo-chart-value-axis>
+
+  <kendo-chart-category-axis>
+      <kendo-chart-category-axis-item [labels]="catLabelsConfig"
+        [majorGridLines]="{visible: false}" [minorGridLines]="{visible: false}" [majorTicks]="{visible: false}"
+        [minorTicks]="{visible: false}" [line]="{color: 'transparent'}" [axisCrossingValue]="0">
+      </kendo-chart-category-axis-item>
+    </kendo-chart-category-axis>
+
+  <kendo-chart-series>
+    <kendo-chart-series-item [data]="[chartData.value]" 
+    type="bar" [labels]="seriesLabelsConfig" [color]="chartData.color">
+    </kendo-chart-series-item>
+  </kendo-chart-series>
+</kendo-sparkline>

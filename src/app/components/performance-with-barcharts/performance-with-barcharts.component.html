@@ -1,0 +1,46 @@
+<div class="general-insights-component content-container padded">
+  <div class="row no-gutters pb-2 central-vertical-align">
+    <div class="col-lg-4 col-md-5 col-12">
+      <span class="header">
+        Performance
+      </span>
+    </div>
+    <div class="col-lg-8 col-md-7 col-12">
+      <span>Choose comparison group:</span>
+      <deepwater-comparison-group-select [optionsCollection]="[{examinee: 'Manage around the world'}]"></deepwater-comparison-group-select>
+    </div>
+
+  </div>
+
+  <div class="row no-gutters">
+    <div class="col-12">
+      <div class="bulletchart-area">
+        <!-- <div class="row no-gutters central-vertical-align">
+          <div class="col-8 offset-lg-4">
+          </div>
+        </div> -->
+      
+        <div class="row no-gutters central-vertical-align"
+         *ngFor="let data of chartData">
+          <div class="col-lg-4 col-md-5 col-12">
+            <div class="row no-gutters central-vertical-align">
+              <div class="col-10 central-vertical-align">
+                {{data.name}}
+                <i class="material-icons ml-2">help_outline</i>
+              </div>
+              <div class="col-2 d-flex justify-content-end">
+                <span> {{data.value}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-7 col-12">
+      
+            <deepwater-barchart-single
+            [chartData]="data"
+            ></deepwater-barchart-single>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

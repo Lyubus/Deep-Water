@@ -1,0 +1,20 @@
+@import './../../../assets/scss/colors.scss';
+@import './../../../assets/scss/sizes.scss';
+
+.bulletchart-area {
+
+    .row {
+      min-height: 50px;
+    }
+  
+    font-size: $medium-size;
+    text-align: left;
+    color: #666666;
+    word-wrap: break-word;
+    word-break: break-word;
+    text-overflow: ellipsis;
+  
+    .material-icons {
+      color: $color-dark-gray;
+    }
+  }
