@@ -1,16 +1,25 @@
-<kendo-chart [categoryAxis]="catConfigs" [valueAxis]="valConfigs">
-  <kendo-chart-series-defaults type="column" 
-  [labels]="seriesLabelsConfig" [gap]="4" [spacing]="0.2">
+<kendo-chart [valueAxis]="valConfigs">
+  <kendo-chart-category-axis>
+    <kendo-chart-category-axis-item [categories]="categories" [majorGridLines]="{visible: false}"
+      [minorGridLines]="{visible: false}" [majorTicks]="{visible: false}" [minorTicks]="{visible: false}"
+      [line]="{color: 'transparent'}" [axisCrossingValue]="0">
+      <kendo-chart-category-axis-item-labels [color]="'#b5b5b5'">
+      </kendo-chart-category-axis-item-labels>
+    </kendo-chart-category-axis-item>
+  </kendo-chart-category-axis>
+
+  <kendo-chart-legend [align]="'center'" [orientation]="'horizontal'" position="top" [spacing]="50"
+    [markers]="{type: 'circle'}" [labels]="legendLabelsConfig" [width]="700">
+  </kendo-chart-legend>
+
+  <kendo-chart-series-defaults type="bar" [labels]="seriesLabelsConfig" [gap]="0.5" [spacing]="0.5">
+    <kendo-chart-series-defaults-labels [margin]="10" padding="10">
+    </kendo-chart-series-defaults-labels>
   </kendo-chart-series-defaults>
 
   <kendo-chart-series>
-    <kendo-chart-series-item *ngFor="let item of chartsData.data" 
-    [data]="item.values" [color]="item.color" [name]="item.person">
+    <kendo-chart-series-item *ngFor="let item of chartsData.data" [data]="item.values" [color]="item.color"
+      [name]="item.person">
     </kendo-chart-series-item>
   </kendo-chart-series>
-
-  <kendo-chart-legend [align]="'start'" [orientation]="'horizontal'" [position]="'top'" 
-  [markers]="{type: 'circle'}" [labels]="legendLabelsConfig" [width]="100">
-  </kendo-chart-legend>
-
 </kendo-chart>

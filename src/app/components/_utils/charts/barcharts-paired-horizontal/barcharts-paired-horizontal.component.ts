@@ -2,11 +2,12 @@ import { Component, Input, OnChanges } from '@angular/core';
 import { IColumnChartData } from 'src/app/_models/interfaces/columncharts-data.interface';
 
 @Component({
-  selector: 'deepwater-barcharts-paired-vertical',
-  templateUrl: './barcharts-paired-vertical.component.html',
-  styleUrls: ['./barcharts-paired-vertical.component.scss']
+  selector: 'deepwater-barcharts-paired-horizontal',
+  templateUrl: './barcharts-paired-horizontal.component.html',
+  styleUrls: ['./barcharts-paired-horizontal.component.scss']
 })
-export class BarchartsPairedVerticalComponent implements OnChanges {
+export class BarchartsPairedHorizontalComponent implements OnChanges {
+ 
 
   @Input() chartsData: IColumnChartData;
 
@@ -33,6 +34,7 @@ export class BarchartsPairedVerticalComponent implements OnChanges {
     max: 100,
   };
 
+
   seriesLabelsConfig = {
     font: `font-family: 'Open Sans', sans-serif; font-size: 20px;
      font-weight: bold; `,
@@ -43,21 +45,13 @@ export class BarchartsPairedVerticalComponent implements OnChanges {
   };
 
   legendLabelsConfig = {
-    font: `font-family: 'Open Sans', sans-serif; font-size: 20px;`,
-    visible: true,
+    font: `font-family: 'Open Sans', sans-serif; font-size: 20px;`
   };
 
-  public categories: string[] = [
-    'Average score',
-    'Analiitycal ability',
-    'Quick thinking',
-    'Performance under preassure',
-    'Adaptability',
-  ];
-
   ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
-    if (changes.comparisonData) {
+    if(changes.comparisonData){
       this.catConfigs.categories = this.chartsData.categories;
     }
   }
+
 }

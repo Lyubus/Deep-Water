@@ -4,6 +4,7 @@ import { MEDIUM_GAMES_SCORES } from 'src/app/_constant-mocks/game-scores.constan
 import { INSIGHTS_WITH_ICONS } from 'src/app/_constant-mocks/insights.constant';
 import { IInsight } from 'src/app/_models/interfaces/insight.interface';
 import { IRadarChartData } from 'src/app/_models/interfaces/radarchart-data.interface';
+import { IPersonalScore } from './../../_models/interfaces/personal-score.interface';
 
 @Component({
   selector: 'deepwater-indigo-page',
@@ -39,4 +40,24 @@ export class IndigoPageComponent {
     { name: 'Adaptability', value: 95 }
   ];
 
+  groupPerformanceComparerProfile1: IPersonalScore = {
+    examinee: 'Score 410',
+    analyticalAbilityValue: 79,
+    quickThinkingValue: 88,
+    performanceUnderPreassureValue: 67,
+    adaptabilityValue: 74,
+    averageScoreValue: 84,
+    color: '#0da3ff'
+  };
+
+  groupPerformanceComparerProfile2: IPersonalScore = {
+    examinee: 'Score 410',
+    analyticalAbilityValue: 97,
+    quickThinkingValue: 64,
+    performanceUnderPreassureValue: 90,
+    adaptabilityValue: 83,
+    averageScoreValue: 72,
+    completionValue: 44,
+    color: '#0ef025'
+  };
 }

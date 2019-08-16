@@ -3,11 +3,11 @@ import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interf
 import * as _ from 'lodash';
 
 @Component({
-  selector: 'deepwater-barcharts-comparison',
-  templateUrl: './barcharts-comparison.component.html',
-  styleUrls: ['./barcharts-comparison.component.scss']
+  selector: 'deepwater-barcharts-comparison-horizontal',
+  templateUrl: './barcharts-comparison-horizontal.component.html',
+  styleUrls: ['./barcharts-comparison-horizontal.component.scss']
 })
-export class BarchartsComparisonComponent implements OnChanges {
+export class BarchartsComparisonHorizontalComponent implements OnChanges {
 
   @Input() comparisonData: IPersonalScore[];
   columnChartsData;
@@ -20,11 +20,11 @@ export class BarchartsComparisonComponent implements OnChanges {
           color: x.color,
           person: x.examinee,
           values: [
+            x.averageScoreValue,
             x.analyticalAbilityValue,
             x.quickThinkingValue,
             x.performanceUnderPreassureValue,
             x.adaptabilityValue,
-            x.averageScoreValue
           ]
         };
       });
@@ -32,11 +32,12 @@ export class BarchartsComparisonComponent implements OnChanges {
       this.columnChartsData = {
         data: coldata,
         categories: [
+          'Average score',
           'Analiitycal ability',
           'Quick thinking',
           'Performance under preassure',
           'Adaptability',
-          'Average score']
+        ]
       };
     }
   }

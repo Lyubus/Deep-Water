@@ -8,9 +8,9 @@ export interface IPersonalScore {
     performanceUnderPreassureValue: number;
     adaptabilityValue: number;
     averageScoreValue: number;
-    completionValue: number;
-    flexibleThinkingValue: number;
-    strategicThinkingValue: number;
-    planningValue: number;
-    eficiencyValue: number;
+    completionValue?: number;
+    flexibleThinkingValue?: number;
+    strategicThinkingValue?: number;
+    planningValue?: number;
+    eficiencyValue?: number;
 }
