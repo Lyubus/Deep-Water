@@ -47,7 +47,7 @@ export class IndigoPageComponent {
     performanceUnderPreassureValue: 67,
     adaptabilityValue: 74,
     averageScoreValue: 84,
-    color: '#0da3ff'
+    color: '#479DDC'
   };
 
   groupPerformanceComparerProfile2: IPersonalScore = {
@@ -58,6 +58,6 @@ export class IndigoPageComponent {
     adaptabilityValue: 83,
     averageScoreValue: 72,
     completionValue: 44,
-    color: '#0ef025'
+    color: '#4EC872'
   };
 }
