@@ -2,14 +2,12 @@
   <kendo-chart-series>
 
     <kendo-chart-series-item type="scatter" [color]="color" [markers]="markerConfiguration"
-      [labels]="labelConfiguration" [data]="scatterChartData.data" 
-      [categoryAxis]="xAxisCategories" xField="category"
-      yField="value">
+      [data]="scatterChartData.data" xField="category" yField="value">
       <kendo-chart-series-item-tooltip>
-          <ng-template let-dataItem="dataItem">
-              {{ dataItem.actor }}
-          </ng-template>
-        </kendo-chart-series-item-tooltip>
+        <ng-template let-dataItem="dataItem">
+          {{ dataItem.actor }}
+        </ng-template>
+      </kendo-chart-series-item-tooltip>
     </kendo-chart-series-item>
   </kendo-chart-series>
 
