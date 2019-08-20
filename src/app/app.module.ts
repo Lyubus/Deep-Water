@@ -24,9 +24,11 @@ import { ScoreDistributionComponent } from './components/score-distribution/scor
 import { TopLeadersComponent } from './components/top-leaders/top-leaders.component';
 import { ComparisonGroupComponent } from './components/comparison-group/comparison-group.component';
 import { BarchartsComparisonComponent } from './components/barcharts-comparison/barcharts-comparison.component';
-import { BarchartsComparisonHorizontalComponent } from './components/barcharts-comparison-horizontal/barcharts-comparison-horizontal.component';
+import { BarchartsComparisonHorizontalComponent }
+  from './components/barcharts-comparison-horizontal/barcharts-comparison-horizontal.component';
 import { BarchartsPairedVerticalComponent } from './components/_utils/charts/barcharts-paired-vertical/barcharts-paired-vertical.component';
-import { BarchartsPairedHorizontalComponent } from './components/_utils/charts/barcharts-paired-horizontal/barcharts-paired-horizontal.component';
+import { BarchartsPairedHorizontalComponent }
+  from './components/_utils/charts/barcharts-paired-horizontal/barcharts-paired-horizontal.component';
 import { CompletionComponent } from './components/completion/completion.component';
 import { GamesBarChartsComponent } from './components/_utils/charts/games-bar-charts/games-bar-charts.component';
 import { PersonalReportsComponent } from './components/personal-reports/personal-reports.component';
@@ -45,7 +47,7 @@ import { LaurelLeafComponent } from './components/_utils/laurel-leaf/laurel-leaf
 import { ReportWithRankingComponent } from './components/report-with-ranking/report-with-ranking.component';
 import { FormsModule } from '@angular/forms';
 import { PerformanceWithComparisonComponent } from './components/performance-with-comparison/performance-with-comparison.component';
-import { ComparisonGroupSelectComponent } from './components/_utils/comparison-group-select/comparison-group-select.component';
+import { SelectComponent } from './components/_utils/select/select.component';
 
 
 @NgModule({
@@ -84,7 +86,8 @@ import { ComparisonGroupSelectComponent } from './components/_utils/comparison-g
     LaurelLeafComponent,
     ReportWithRankingComponent,
     PerformanceWithComparisonComponent,
-    ComparisonGroupSelectComponent
+    SelectComponent,
+
   ],
   imports: [
     BrowserModule,

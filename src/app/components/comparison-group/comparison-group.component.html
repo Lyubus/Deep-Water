@@ -7,7 +7,8 @@
       </span>
     </div>
     <div class="col-xl-6 col-12 central-vertical-align">
-        <deepwater-comparison-group-select [optionsCollection]="[{examinee: 'Manage around the world'}]"></deepwater-comparison-group-select>
+        <deepwater-select [optionsCollection]="optionsCollection"
+         [(selected)]="selected"></deepwater-select>
     </div>
   </div>
 </div>

@@ -7,7 +7,7 @@ import { IColumnChartData } from 'src/app/_models/interfaces/columncharts-data.i
   styleUrls: ['./barcharts-paired-horizontal.component.scss']
 })
 export class BarchartsPairedHorizontalComponent implements OnChanges {
- 
+
 
   @Input() chartsData: IColumnChartData;
 
@@ -48,8 +48,8 @@ export class BarchartsPairedHorizontalComponent implements OnChanges {
     font: `font-family: 'Open Sans', sans-serif; font-size: 20px;`
   };
 
-  ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
-    if(changes.comparisonData){
+  ngOnChanges(changes: import('@angular/core').SimpleChanges): void {
+    if (changes.comparisonData) {
       this.catConfigs.categories = this.chartsData.categories;
     }
   }

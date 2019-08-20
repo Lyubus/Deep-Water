@@ -1,0 +1,6 @@
+<!-- <i class="material-icons select-arrow">keyboard_arrow_down</i> -->
+<select [ngModel]="selectedValue" (ngModelChange)="selected = $event">
+
+    <option [ngValue]="option" *ngFor="let option of optionsCollection">{{option.examinee}}</option>
+  
+  </select>

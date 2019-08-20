@@ -1,17 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'deepwater-search-field',
   templateUrl: './search-field.component.html',
   styleUrls: ['./search-field.component.scss']
 })
-export class SearchFieldComponent implements OnInit {
+export class SearchFieldComponent {
 
-  @Input('placeholder') placeholder: string;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input() placeholder: string;
 
 }

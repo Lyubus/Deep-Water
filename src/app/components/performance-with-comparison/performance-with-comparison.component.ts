@@ -1,7 +1,8 @@
-import { Component, Input, OnChanges, SimpleChanges  } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { IPersonalScore } from 'src/app/_models/interfaces/personal-score.interface';
 import { IBulletChartDataItem } from 'src/app/_models/interfaces/bulletchart-data.interface';
 import * as _ from 'lodash';
+import { PERSONAL_SCORES } from 'src/app/_constant-mocks/personal-scores.constants';
 
 @Component({
   selector: 'deepwater-performance-with-comparison',
@@ -13,6 +14,8 @@ export class PerformanceWithComparisonComponent implements OnChanges {
   @Input() bulletChartData: IPersonalScore;
 
   chartData: IBulletChartDataItem[];
+  options: IPersonalScore[] = PERSONAL_SCORES;
+  selectedOption = this.options[0];
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.bulletChartData) {
