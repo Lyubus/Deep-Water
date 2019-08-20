@@ -9,6 +9,7 @@ import { Component, ViewEncapsulation, Input } from '@angular/core';
 export class PageHeadComponent{
 
   @Input() title: string;
+  isOrganizationMenuOpened: boolean = false;
 
   
   onSignOut() {}
